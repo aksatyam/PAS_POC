@@ -20,6 +20,10 @@ import { useToast } from '@/lib/toast';
 import GenerateDialog from '@/components/documents/GenerateDialog';
 import DocumentViewer from '@/components/documents/DocumentViewer';
 
+export function generateStaticParams() {
+  return [];
+}
+
 type TabKey = 'details' | 'versions' | 'audit' | 'endorsements' | 'renewals' | 'timeline' | 'documents' | 'billing';
 
 function DetailSkeleton() {

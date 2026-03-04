@@ -13,6 +13,10 @@ import {
   BookOpen, Clock, CheckCircle, XCircle, AlertTriangle, Eye,
 } from 'lucide-react';
 
+export function generateStaticParams() {
+  return [];
+}
+
 type TabKey = 'overview' | 'invoices' | 'payments' | 'ledger';
 
 const statusColors: Record<string, string> = {

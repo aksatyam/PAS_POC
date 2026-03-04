@@ -8,6 +8,10 @@ import { formatDate, formatCurrency } from '@/lib/utils';
 import StatusBadge from '@/components/ui/StatusBadge';
 import { SkeletonText } from '@/components/ui/Skeleton';
 
+export function generateStaticParams() {
+  return [];
+}
+
 function DetailSkeleton() {
   return (
     <div className="animate-fade-in">

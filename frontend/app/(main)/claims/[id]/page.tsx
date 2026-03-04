@@ -19,6 +19,10 @@ import {
   Search, FileCheck, MessageSquare, ArrowRight,
 } from 'lucide-react';
 
+export function generateStaticParams() {
+  return [];
+}
+
 function DetailSkeleton() {
   return (
     <div className="animate-fade-in">
