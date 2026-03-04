@@ -208,6 +208,10 @@ export function getMockResponse(endpoint: string): any | null {
   // Exact match first
   if (mockResponses[endpoint]) return mockResponses[endpoint]();
 
+  // Detail route handling
+  const detailResult = matchDetailRoute(endpoint);
+  if (detailResult) return detailResult;
+
   // Pattern match for common endpoints
   for (const [pattern, handler] of Object.entries(mockResponses)) {
     if (endpoint.startsWith(pattern)) return handler();
@@ -215,6 +219,89 @@ export function getMockResponse(endpoint: string): any | null {
 
   // Default fallback for unknown endpoints
   return { success: true, data: [], pagination: { total: 0, page: 1, limit: 20, totalPages: 0 } };
+}
+
+function matchDetailRoute(endpoint: string): any | null {
+  let match: RegExpMatchArray | null;
+
+  // Policy detail & sub-resources
+  match = endpoint.match(/^\/policies\/(POL-\d+)(?:\/(.+))?$/);
+  if (match) {
+    const [, id, sub] = match;
+    const policies = generateMockPolicies();
+    const policy = policies.find(p => p.id === id) || policies[0];
+    if (!sub) return { success: true, data: policy };
+    if (sub === 'versions') return { success: true, data: [] };
+    if (sub === 'audit') return { success: true, data: generateMockAuditLogs(id) };
+    if (sub === 'endorsements') return { success: true, data: [] };
+    if (sub === 'renewals') return { success: true, data: [] };
+    if (sub === 'transitions') return { success: true, data: { allowedTransitions: ['Active', 'Lapsed', 'Cancelled'] } };
+    return { success: true, data: [] };
+  }
+
+  // Customer detail
+  match = endpoint.match(/^\/customers\/(CUS-\d+)$/);
+  if (match) {
+    const customers = generateMockCustomers();
+    const customer = customers.find(c => c.id === match![1]) || customers[0];
+    const policies = generateMockPolicies().filter(p => p.customerId === customer.id);
+    return { success: true, data: { customer, policies } };
+  }
+
+  // Claim detail & sub-resources
+  match = endpoint.match(/^\/claims\/(CLM-\d+)(?:\/(.+))?$/);
+  if (match) {
+    const [, id, sub] = match;
+    const claims = generateMockClaims();
+    const claim = claims.find(c => c.id === id) || claims[0];
+    if (!sub) return { success: true, data: { ...claim, fraudScore: 35, fraudIndicators: ['Pattern mismatch'], adjudicationStatus: 'Investigation' } };
+    if (sub === 'reserve-history') return { success: true, data: generateMockReserves(id) };
+    if (sub === 'fraud-score') return { success: true, data: { score: 35, riskLevel: 'Medium', indicators: [{ name: 'Pattern Mismatch', score: 35, description: 'Claim pattern slightly unusual' }], assessment: 'Low risk', assessedAt: '2024-06-01T10:00:00Z' } };
+    if (sub === 'mitigations') return { success: true, data: [] };
+    return { success: true, data: [] };
+  }
+
+  // Billing account detail
+  match = endpoint.match(/^\/billing\/accounts\/(BIL-\d+)$/);
+  if (match) {
+    const accounts = generateMockBillingAccounts();
+    const account = accounts.find(a => a.id === match![1]) || accounts[0];
+    return { success: true, data: account };
+  }
+
+  // Billing account by policy
+  match = endpoint.match(/^\/billing\/accounts\/policy\/(POL-\d+)$/);
+  if (match) {
+    const accounts = generateMockBillingAccounts();
+    const account = accounts.find(a => a.policyId === match![1]) || null;
+    return { success: true, data: account };
+  }
+
+  // Billing invoices for account
+  match = endpoint.match(/^\/billing\/invoices\/account\/(BIL-\d+)$/);
+  if (match) {
+    return { success: true, data: generateMockInvoices(match[1]) };
+  }
+
+  // Billing payments for account
+  match = endpoint.match(/^\/billing\/payments\/account\/(BIL-\d+)$/);
+  if (match) {
+    return { success: true, data: generateMockPayments(match[1]) };
+  }
+
+  // Billing ledger
+  match = endpoint.match(/^\/billing\/ledger\/(BIL-\d+)$/);
+  if (match) {
+    return { success: true, data: generateMockLedger(match[1]) };
+  }
+
+  // Documents for policy
+  match = endpoint.match(/^\/documents\/policy\/(POL-\d+)$/);
+  if (match) {
+    return { success: true, data: [] };
+  }
+
+  return null;
 }
 
 /* ── Mock data generators ─────────────────────────────────────── */
@@ -355,6 +442,73 @@ function generateMockNotifications() {
     recipientId: 'demo-user-001',
     isRead: i > 4,
     createdAt: new Date(Date.now() - i * 3600000).toISOString(),
+  }));
+}
+
+function generateMockAuditLogs(entityId: string) {
+  const actions = ['Created', 'Status Changed', 'Updated', 'Reviewed'];
+  return Array.from({ length: 5 }, (_, i) => ({
+    id: `AUD-${entityId}-${i + 1}`,
+    entityId,
+    action: actions[i % 4],
+    actor: { userId: 'demo-user-001', role: 'Admin' },
+    timestamp: new Date(Date.now() - i * 86400000).toISOString(),
+    details: {},
+  }));
+}
+
+function generateMockReserves(claimId: string) {
+  return Array.from({ length: 3 }, (_, i) => ({
+    id: `RES-${claimId}-${i + 1}`,
+    claimId,
+    type: ['Initial', 'Adjustment', 'Final'][i] || 'Adjustment',
+    amount: 50000 + i * 25000,
+    previousAmount: i > 0 ? 50000 + (i - 1) * 25000 : 0,
+    reason: ['Initial reserve set', 'Adjusted based on assessment', 'Final reserve'][i] || 'Adjustment',
+    setBy: 'demo-user-001',
+    setAt: new Date(Date.now() - (3 - i) * 86400000 * 7).toISOString(),
+  }));
+}
+
+function generateMockInvoices(billingAccountId: string) {
+  const statuses = ['Paid', 'Paid', 'Pending', 'Overdue'] as const;
+  return Array.from({ length: 4 }, (_, i) => ({
+    id: `INV-${billingAccountId.replace('BIL-', '')}-${i + 1}`,
+    billingAccountId,
+    invoiceNumber: `INV-${billingAccountId.replace('BIL-', '')}-${String(i + 1).padStart(3, '0')}`,
+    amount: 12500 + i * 2500,
+    amountPaid: i < 2 ? 12500 + i * 2500 : 0,
+    status: statuses[i],
+    dueDate: `2024-${String(3 + i * 3).padStart(2, '0')}-15`,
+    issuedDate: `2024-${String(2 + i * 3).padStart(2, '0')}-01`,
+    lineItems: [{ description: 'Premium Installment', amount: 12500 + i * 2500, quantity: 1 }],
+  }));
+}
+
+function generateMockPayments(billingAccountId: string) {
+  const methods = ['ACH', 'Wire', 'Check'] as const;
+  return Array.from({ length: 3 }, (_, i) => ({
+    id: `PAY-${billingAccountId.replace('BIL-', '')}-${i + 1}`,
+    billingAccountId,
+    amount: 12500 + i * 2500,
+    method: methods[i % 3],
+    status: 'Completed' as const,
+    reference: `REF-${1000000 + i * 111}`,
+    processedDate: `2024-${String(3 + i * 3).padStart(2, '0')}-10`,
+    notes: i === 0 ? 'Initial payment' : '',
+  }));
+}
+
+function generateMockLedger(billingAccountId: string) {
+  return Array.from({ length: 6 }, (_, i) => ({
+    id: `LED-${billingAccountId.replace('BIL-', '')}-${i + 1}`,
+    billingAccountId,
+    date: `2024-${String(1 + i * 2).padStart(2, '0')}-01`,
+    type: i % 2 === 0 ? 'Debit' : 'Credit',
+    description: i % 2 === 0 ? 'Premium Charge' : 'Payment Received',
+    amount: 12500,
+    balance: 50000 - i * 12500,
+    reference: i % 2 === 1 ? `PAY-${billingAccountId.replace('BIL-', '')}-${Math.ceil(i / 2)}` : `INV-${billingAccountId.replace('BIL-', '')}-${Math.ceil((i + 1) / 2)}`,
   }));
 }
 

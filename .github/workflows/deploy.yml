@@ -32,13 +32,6 @@ jobs:
         working-directory: frontend
         run: npm ci
 
-      - name: Remove dynamic routes for static export
-        run: |
-          rm -rf frontend/app/\(main\)/billing/\[id\]
-          rm -rf frontend/app/\(main\)/claims/\[id\]
-          rm -rf frontend/app/\(main\)/customers/\[id\]
-          rm -rf frontend/app/\(main\)/policies/\[id\]
-
       - name: Build
         working-directory: frontend
         env:
