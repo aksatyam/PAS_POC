@@ -189,7 +189,41 @@ const mockResponses: Record<string, () => any> = {
 
   '/underwriting/rules': () => ({
     success: true,
-    data: [],
+    data: generateMockUWRules(),
+  }),
+
+  '/uw/rules': () => ({
+    success: true,
+    data: generateMockUWRules(),
+  }),
+
+  '/policies/renewals/pending': () => ({
+    success: true,
+    data: generateMockRenewals(),
+    pagination: { total: 12, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  '/claims/fnol': () => ({
+    success: true,
+    data: generateMockFnol(),
+    pagination: { total: 8, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  '/documents': () => ({
+    success: true,
+    data: generateMockDocuments(),
+    pagination: { total: 15, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  '/compliance/requirements': () => ({
+    success: true,
+    data: generateMockComplianceRequirements(),
+    pagination: { total: 10, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  '/compliance/summary': () => ({
+    success: true,
+    data: generateMockComplianceSummary(),
   }),
 
   '/underwriting/referrals': () => ({
@@ -509,6 +543,200 @@ function generateMockLedger(billingAccountId: string) {
     amount: 12500,
     balance: 50000 - i * 12500,
     reference: i % 2 === 1 ? `PAY-${billingAccountId.replace('BIL-', '')}-${Math.ceil(i / 2)}` : `INV-${billingAccountId.replace('BIL-', '')}-${Math.ceil((i + 1) / 2)}`,
+  }));
+}
+
+function generateMockRenewals() {
+  const statuses = ['Pending', 'Quoted', 'Accepted', 'Declined', 'Expired'] as const;
+  return Array.from({ length: 12 }, (_, i) => ({
+    id: `REN-${String(8001 + i).padStart(4, '0')}`,
+    originalPolicyId: `POL-${String(1001 + i).padStart(4, '0')}`,
+    renewedPolicyId: statuses[i % 5] === 'Accepted' ? `POL-${String(1101 + i).padStart(4, '0')}` : undefined,
+    renewalDate: `2025-${String((i % 12) + 1).padStart(2, '0')}-01`,
+    newPremiumAmount: 28000 + Math.floor(Math.random() * 80000),
+    newCoverageAmount: 5000000 + Math.floor(Math.random() * 15000000),
+    newStartDate: `2025-${String((i % 12) + 1).padStart(2, '0')}-01`,
+    newEndDate: `2026-${String((i % 12) + 1).padStart(2, '0')}-01`,
+    premiumChange: Math.floor(Math.random() * 10000) - 3000,
+    status: statuses[i % 5],
+    uwReEvaluated: i % 3 === 0,
+    newRiskScore: 25 + (i * 7) % 60,
+    createdAt: '2025-01-15T10:00:00Z',
+    createdBy: 'Akash Satyam',
+  }));
+}
+
+function generateMockFnol() {
+  const claimTypes = ['Default', 'Property Damage', 'Fraud', 'Other'] as const;
+  const statuses = ['Submitted', 'Processing', 'Claim Created'] as const;
+  const reporters = ['Rajesh Kumar', 'Priya Sharma', 'Amit Patel', 'Sneha Reddy', 'Vikram Singh'];
+  return Array.from({ length: 8 }, (_, i) => ({
+    id: `FNOL-${String(9001 + i).padStart(4, '0')}`,
+    policyId: `POL-${String(1001 + (i % 10)).padStart(4, '0')}`,
+    claimType: claimTypes[i % 4],
+    incidentDate: `2025-${String((i % 12) + 1).padStart(2, '0')}-${String(5 + i).padStart(2, '0')}T14:30:00Z`,
+    incidentLocation: ['Mumbai Central', 'Delhi NCR', 'Bangalore East', 'Hyderabad Tech Park', 'Chennai Marina', 'Pune Hinjewadi', 'Kolkata Salt Lake', 'Ahmedabad SG Highway'][i],
+    description: [
+      'Borrower defaulted on mortgage payments for 3 consecutive months',
+      'Property sustained water damage from pipe burst on 2nd floor',
+      'Suspected fraudulent documentation in loan application',
+      'Insurance claim for structural damage after heavy rainfall',
+      'Credit protection triggered due to job loss of primary borrower',
+      'Property damage from electrical short circuit in kitchen area',
+      'Default claim initiated after borrower relocation without notice',
+      'Wind and storm damage to commercial property roof structure',
+    ][i],
+    reportedBy: reporters[i % 5],
+    contactPhone: `+91 ${9800000000 + i * 1234}`,
+    contactEmail: `${reporters[i % 5].toLowerCase().replace(' ', '.')}@example.com`,
+    damageDescription: [
+      'Three consecutive EMI defaults totaling ₹2.5L',
+      'Extensive water damage to flooring and walls of 3 rooms',
+      'Forged income documents and employment verification',
+      'Cracks in foundation and wall structure, roof leaking',
+      'Primary borrower unemployed for 4 months, unable to pay',
+      'Complete rewiring needed, appliances damaged by power surge',
+      'Borrower absconded, property found in poor condition',
+      'Roof sheets blown off, water ingress in storage area',
+    ][i],
+    estimatedAmount: 100000 + i * 75000,
+    partiesInvolved: [
+      { name: reporters[i % 5], role: 'Policyholder', contact: `+91 ${9800000000 + i * 1234}` },
+      { name: 'Field Inspector', role: 'Investigator', contact: '+91 9876543210' },
+    ],
+    documents: [],
+    status: statuses[i % 3],
+    claimId: statuses[i % 3] === 'Claim Created' ? `CLM-${String(2001 + i).padStart(4, '0')}` : undefined,
+    createdAt: new Date(Date.now() - i * 86400000 * 2).toISOString(),
+    createdBy: 'demo-user-001',
+  }));
+}
+
+function generateMockDocuments() {
+  const categories = ['Policy', 'Claims', 'Underwriting', 'Correspondence', 'Billing', 'General'] as const;
+  const types = ['Certificate', 'Application', 'Assessment Report', 'Invoice', 'Notice', 'Agreement', 'Endorsement', 'Claim Form'];
+  const mimeTypes = ['application/pdf', 'application/pdf', 'image/jpeg', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/pdf'];
+  const uploaders = ['Akash Satyam', 'Priya Sharma', 'Rahul Verma', 'Sneha Patel', 'Amit Kumar'];
+  return Array.from({ length: 15 }, (_, i) => ({
+    id: `DOC-${String(10001 + i).padStart(5, '0')}`,
+    policyId: `POL-${String(1001 + (i % 10)).padStart(4, '0')}`,
+    claimId: i % 4 === 1 ? `CLM-${String(2001 + i).padStart(4, '0')}` : undefined,
+    type: types[i % types.length],
+    category: categories[i % categories.length],
+    filename: [
+      'Policy_Certificate_POL1001.pdf', 'Claim_Application_CLM2002.pdf',
+      'Risk_Assessment_UW4003.pdf', 'Premium_Notice_Q1.pdf',
+      'Invoice_INV30040.pdf', 'KYC_Verification.pdf',
+      'Endorsement_E001.pdf', 'Loss_Report_CLM2008.pdf',
+      'Property_Valuation.pdf', 'Credit_Report_CUS0109.pdf',
+      'Terms_Agreement_V2.docx', 'Inspection_Photo_01.jpg',
+      'Renewal_Offer_REN8013.pdf', 'Payment_Receipt_Q2.pdf',
+      'Compliance_Audit_2025.pdf',
+    ][i],
+    mimeType: mimeTypes[i % mimeTypes.length],
+    size: 50000 + Math.floor(Math.random() * 2000000),
+    uploadDate: new Date(Date.now() - i * 86400000 * 3).toISOString(),
+    uploadedBy: uploaders[i % uploaders.length],
+    version: 1 + Math.floor(i / 5),
+    generatedFrom: i % 5 === 0 ? 'System Auto-Generated' : undefined,
+    metadata: {
+      isVerified: i % 3 === 0,
+    },
+  }));
+}
+
+function generateMockComplianceRequirements() {
+  const categories = ['Regulatory', 'Financial', 'Operational', 'Data Privacy', 'Reporting'] as const;
+  const statuses = ['Compliant', 'Non-Compliant', 'Due', 'In Progress', 'Not Applicable'] as const;
+  const priorities = ['Low', 'Medium', 'High', 'Critical'] as const;
+  const recurrences = ['One-Time', 'Monthly', 'Quarterly', 'Annual'] as const;
+  const names = [
+    'IRDAI Annual Filing', 'Anti-Money Laundering (AML) Compliance', 'Data Protection Audit',
+    'Solvency Ratio Reporting', 'Claims Processing SLA', 'KYC Documentation Standards',
+    'Premium Collection Guidelines', 'Reinsurance Treaty Compliance', 'Grievance Redressal Compliance',
+    'GDPR Data Subject Rights',
+  ];
+  const descriptions = [
+    'Submit annual regulatory filing to IRDAI with financials and operational metrics',
+    'Ensure all AML policies and transaction monitoring systems are current',
+    'Conduct quarterly data protection audit covering PII handling and storage',
+    'Maintain and report solvency ratio above minimum threshold of 150%',
+    'Process all claims within 30-day SLA as per regulatory requirement',
+    'Verify and maintain KYC documentation for all active policyholders',
+    'Follow RBI and IRDAI guidelines for premium collection and refund processing',
+    'Ensure all reinsurance treaty terms and obligations are met',
+    'Respond to all customer grievances within 15 business days',
+    'Ensure compliance with GDPR data subject access and deletion requests',
+  ];
+  const authorities = ['IRDAI', 'RBI', 'SEBI', 'GDPR Authority', 'Internal Audit'];
+
+  return names.map((name, i) => ({
+    id: `CMP-${String(11001 + i).padStart(5, '0')}`,
+    name,
+    description: descriptions[i],
+    category: categories[i % categories.length],
+    authority: authorities[i % authorities.length],
+    status: statuses[i % statuses.length],
+    dueDate: i % 3 !== 2 ? `2025-${String((i % 12) + 1).padStart(2, '0')}-${String(15 + (i % 15)).padStart(2, '0')}` : undefined,
+    completedDate: statuses[i % statuses.length] === 'Compliant' ? `2025-${String((i % 12) + 1).padStart(2, '0')}-10` : undefined,
+    assignedTo: i % 2 === 0 ? 'demo-user-001' : undefined,
+    evidence: statuses[i % statuses.length] === 'Compliant' ? `Evidence attached - Ref: EVD-${1000 + i}` : undefined,
+    notes: i % 3 === 0 ? 'Review completed by compliance team' : undefined,
+    priority: priorities[i % priorities.length],
+    recurrence: recurrences[i % recurrences.length],
+    createdAt: '2025-01-01T00:00:00Z',
+    updatedAt: new Date(Date.now() - i * 86400000).toISOString(),
+  }));
+}
+
+function generateMockComplianceSummary() {
+  return {
+    total: 10,
+    compliant: 2,
+    nonCompliant: 2,
+    due: 2,
+    inProgress: 2,
+    overdueCount: 1,
+    byCategory: {
+      Regulatory: 2,
+      Financial: 2,
+      Operational: 2,
+      'Data Privacy': 2,
+      Reporting: 2,
+    },
+    byPriority: {
+      Low: 2,
+      Medium: 3,
+      High: 3,
+      Critical: 2,
+    },
+  };
+}
+
+function generateMockUWRules() {
+  const categories = ['Risk Assessment', 'Eligibility', 'Pricing', 'Compliance'] as const;
+  const decisions = ['Auto-Approve', 'Refer', 'Reject'] as const;
+  const rules = [
+    { name: 'Credit Score Minimum', field: 'creditScore', operator: 'gte' as const, value: 650, criteria: 'Minimum credit score for auto-approval', decision: 'Auto-Approve' as const, priority: 1 },
+    { name: 'High LTV Rejection', field: 'ltvRatio', operator: 'gt' as const, value: 95, criteria: 'Reject applications with LTV above 95%', decision: 'Reject' as const, priority: 1 },
+    { name: 'Age Eligibility', field: 'applicantAge', operator: 'between' as const, value: [21, 65], criteria: 'Applicant must be between 21 and 65 years', decision: 'Refer' as const, priority: 2 },
+    { name: 'Premium Threshold', field: 'annualPremium', operator: 'gt' as const, value: 100000, criteria: 'Refer high-premium policies for manual review', decision: 'Refer' as const, priority: 3 },
+    { name: 'Property Zone Restriction', field: 'propertyZone', operator: 'eq' as const, value: 'Zone C', criteria: 'Auto-reject applications from restricted zones', decision: 'Reject' as const, priority: 2 },
+    { name: 'Income Minimum', field: 'income', operator: 'gte' as const, value: 300000, criteria: 'Minimum annual income requirement', decision: 'Auto-Approve' as const, priority: 3 },
+    { name: 'High Risk Score Referral', field: 'riskScore', operator: 'gt' as const, value: 70, criteria: 'Refer high risk score applications for review', decision: 'Refer' as const, priority: 1 },
+    { name: 'Low Credit Score Rejection', field: 'creditScore', operator: 'lt' as const, value: 500, criteria: 'Auto-reject very low credit scores', decision: 'Reject' as const, priority: 1 },
+    { name: 'Property Value Cap', field: 'propertyValue', operator: 'lte' as const, value: 50000000, criteria: 'Max property value for standard underwriting', decision: 'Auto-Approve' as const, priority: 4 },
+    { name: 'Compliance Check - AML', field: 'amlStatus', operator: 'eq' as const, value: 'Clear', criteria: 'AML check must be clear for approval', decision: 'Refer' as const, priority: 1 },
+  ];
+
+  return rules.map((rule, i) => ({
+    id: `UWR-${String(12001 + i).padStart(5, '0')}`,
+    ...rule,
+    category: categories[i % categories.length],
+    notes: `Rule ${i + 1}: ${rule.criteria}`,
+    isActive: i < 8,
+    createdAt: '2025-01-01T00:00:00Z',
+    updatedAt: new Date(Date.now() - i * 86400000 * 5).toISOString(),
   }));
 }
 
