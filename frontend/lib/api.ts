@@ -1,12 +1,22 @@
 import Cookies from 'js-cookie';
+import { getMockResponse } from './mock-data';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/v1';
+const IS_DEMO = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
 
 interface FetchOptions extends RequestInit {
   params?: Record<string, string | number>;
 }
 
 async function fetchApi<T = any>(endpoint: string, options: FetchOptions = {}): Promise<T> {
+  // In demo mode, return mock data instead of calling the API
+  if (IS_DEMO) {
+    // Simulate network delay
+    await new Promise(r => setTimeout(r, 200 + Math.random() * 300));
+    const mock = getMockResponse(endpoint);
+    if (mock) return mock as T;
+  }
+
   const { params, ...fetchOpts } = options;
   let url = `${API_URL}${endpoint}`;
 

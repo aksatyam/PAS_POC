@@ -43,6 +43,7 @@ jobs:
         working-directory: frontend
         env:
           NEXT_PUBLIC_BASE_PATH: /PAS_POC
+          NEXT_PUBLIC_DEMO_MODE: 'true'
         run: npm run build
 
       - name: Add 404 fallback for SPA routing

@@ -3,7 +3,10 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import Cookies from 'js-cookie';
 import { api } from './api';
+import { getDemoUser, DEMO_USER } from './mock-data';
 import { User, UserRole } from '@/types';
+
+const IS_DEMO = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
 
 interface AuthContextType {
   user: User | null;
@@ -20,6 +23,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const loadUser = useCallback(async () => {
+    if (IS_DEMO) {
+      // In demo mode, check if we have a stored demo session
+      const demoSession = Cookies.get('demoUser');
+      if (demoSession) {
+        try {
+          setUser(JSON.parse(demoSession));
+        } catch {
+          Cookies.remove('demoUser');
+        }
+      }
+      setIsLoading(false);
+      return;
+    }
+
     const token = Cookies.get('accessToken');
     if (!token) {
       setIsLoading(false);
@@ -39,6 +56,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => { loadUser(); }, [loadUser]);
 
   const login = async (email: string, password: string) => {
+    if (IS_DEMO) {
+      await new Promise(r => setTimeout(r, 500)); // Simulate delay
+      const demoUser = getDemoUser(email, password);
+      if (demoUser) {
+        Cookies.set('demoUser', JSON.stringify(demoUser), { expires: 1 });
+        Cookies.set('accessToken', 'demo-token', { expires: 1 });
+        setUser(demoUser);
+        return;
+      }
+      throw new Error('Invalid credentials. Use demo credentials (e.g. admin@imgc.com / demo123)');
+    }
+
     const res = await api.post('/auth/login', { email, password });
     if (res.success && res.data) {
       Cookies.set('accessToken', res.data.tokens.accessToken, { expires: 1 / 24 });
@@ -50,6 +79,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const logout = async () => {
+    if (IS_DEMO) {
+      Cookies.remove('demoUser');
+      Cookies.remove('accessToken');
+      setUser(null);
+      return;
+    }
     try {
       await api.post('/auth/logout');
     } catch { /* ignore */ }

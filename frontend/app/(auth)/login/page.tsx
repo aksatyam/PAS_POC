@@ -221,6 +221,19 @@ export default function LoginPage() {
             </button>
           </form>
 
+          {/* Demo credentials hint */}
+          {process.env.NEXT_PUBLIC_DEMO_MODE === 'true' && (
+            <div className="mt-5 p-3.5 bg-amber-50 border border-amber-200 rounded-xl">
+              <p className="text-amber-800 text-xs font-semibold mb-1.5">Demo Credentials</p>
+              <div className="space-y-1 text-[11px] text-amber-700">
+                <p><span className="font-medium">Admin:</span> admin@imgc.com</p>
+                <p><span className="font-medium">Underwriter:</span> underwriter@imgc.com</p>
+                <p><span className="font-medium">Claims:</span> claims@imgc.com</p>
+                <p className="text-amber-600 mt-1.5">Password for all: <span className="font-mono font-semibold">demo123</span></p>
+              </div>
+            </div>
+          )}
+
           {/* Divider */}
           <div className="relative mt-8 mb-6">
             <div className="absolute inset-0 flex items-center">
