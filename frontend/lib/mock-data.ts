@@ -226,6 +226,85 @@ const mockResponses: Record<string, () => any> = {
     data: generateMockComplianceSummary(),
   }),
 
+  '/reports/policies': () => ({
+    success: true,
+    data: {
+      total: 1247,
+      active: 892,
+      totalPremium: 45820000,
+      totalCoverage: 2890000000,
+      byStatus: {
+        Draft: 45, Quoted: 78, Bound: 32, Issued: 156,
+        Active: 892, Endorsed: 23, Lapsed: 12, Cancelled: 9,
+      },
+      byType: {
+        'Mortgage Guarantee': 645,
+        'Credit Protection': 387,
+        'Coverage Plus': 215,
+      },
+    },
+  }),
+
+  '/reports/claims': () => ({
+    success: true,
+    data: {
+      total: 342,
+      totalAmount: 18750000,
+      totalSettled: 12430000,
+      byStatus: {
+        Filed: 67, 'Under Review': 89, Approved: 45, Rejected: 28, Settled: 113,
+      },
+    },
+  }),
+
+  '/reports/underwriting': () => ({
+    success: true,
+    data: {
+      total: 1893,
+      avgRiskScore: 42.7,
+      autoApproveRate: 65.8,
+      byDecision: {
+        'Auto-Approve': 1245,
+        Refer: 412,
+        Reject: 236,
+      },
+    },
+  }),
+
+  '/reports/billing': () => ({
+    success: true,
+    data: {
+      totalAccounts: 892,
+      totalOutstanding: 3240000,
+      totalOverdue: 485000,
+      totalCollected: 42580000,
+      agingBuckets: [
+        { label: '0-30 days', amount: 180000 },
+        { label: '31-60 days', amount: 195000 },
+        { label: '61-90 days', amount: 78000 },
+        { label: '90+ days', amount: 32000 },
+      ],
+    },
+  }),
+
+  '/reports/executive': () => ({
+    success: true,
+    data: {
+      lossRatio: 58.2,
+      combinedRatio: 86.6,
+      retentionRate: 91.3,
+      collectionRate: 94.7,
+      expenseRatio: 28.4,
+      avgClaimCycleTime: 22,
+      avgClaimSeverity: 36400,
+    },
+  }),
+
+  '/reports/export': () => ({
+    success: true,
+    data: { url: '#', message: 'Export generated (demo mode)' },
+  }),
+
   '/underwriting/referrals': () => ({
     success: true,
     data: [],
