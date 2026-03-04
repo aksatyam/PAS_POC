@@ -315,6 +315,46 @@ const mockResponses: Record<string, () => any> = {
     success: true,
     data: [],
   }),
+
+  // ── Admin endpoints ────────────────────────────────────────────
+  '/admin/users': () => ({
+    success: true,
+    data: generateMockAdminUsers(),
+    pagination: { total: 8, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  '/admin/logs': () => ({
+    success: true,
+    data: generateMockAdminAuditLogs(),
+    pagination: { total: 20, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  // ── Integrations endpoints ─────────────────────────────────────
+  '/integrations/keys': () => ({
+    success: true,
+    data: generateMockApiKeys(),
+    pagination: { total: 5, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  '/integrations/webhooks': () => ({
+    success: true,
+    data: generateMockWebhooks(),
+    pagination: { total: 4, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  // ── Bulk operations endpoint ───────────────────────────────────
+  '/bulk': () => ({
+    success: true,
+    data: generateMockBulkOperations(),
+    pagination: { total: 6, page: 1, limit: 20, totalPages: 1 },
+  }),
+
+  // ── Products endpoint ──────────────────────────────────────────
+  '/products': () => ({
+    success: true,
+    data: generateMockProducts(),
+    pagination: { total: 6, page: 1, limit: 20, totalPages: 1 },
+  }),
 };
 
 export function getMockResponse(endpoint: string): any | null {
@@ -816,6 +856,199 @@ function generateMockUWRules() {
     isActive: i < 8,
     createdAt: '2025-01-01T00:00:00Z',
     updatedAt: new Date(Date.now() - i * 86400000 * 5).toISOString(),
+  }));
+}
+
+function generateMockAdminUsers() {
+  const users = [
+    { name: 'Akash Satyam', email: 'admin@imgc.com', role: 'Admin' as const, isActive: true },
+    { name: 'Priya Sharma', email: 'underwriter@imgc.com', role: 'Underwriter' as const, isActive: true },
+    { name: 'Rahul Verma', email: 'claims@imgc.com', role: 'Claims' as const, isActive: true },
+    { name: 'Sneha Patel', email: 'ops@imgc.com', role: 'Operations' as const, isActive: true },
+    { name: 'Amit Kumar', email: 'viewer@imgc.com', role: 'Viewer' as const, isActive: true },
+    { name: 'Kavita Joshi', email: 'kavita.joshi@imgc.com', role: 'Underwriter' as const, isActive: true },
+    { name: 'Suresh Iyer', email: 'suresh.iyer@imgc.com', role: 'Claims' as const, isActive: false },
+    { name: 'Deepa Nair', email: 'deepa.nair@imgc.com', role: 'Viewer' as const, isActive: true },
+  ];
+  return users.map((u, i) => ({
+    id: `USR-${String(1001 + i).padStart(4, '0')}`,
+    ...u,
+    createdAt: new Date(Date.now() - (users.length - i) * 86400000 * 30).toISOString(),
+    updatedAt: new Date(Date.now() - i * 86400000 * 5).toISOString(),
+  }));
+}
+
+function generateMockAdminAuditLogs() {
+  const actions = [
+    'User Login', 'Policy Created', 'Policy Updated', 'Claim Filed', 'Claim Approved',
+    'User Role Changed', 'Payment Recorded', 'UW Evaluation', 'Document Uploaded', 'Settings Updated',
+    'Policy Cancelled', 'User Created', 'Bulk Operation Executed', 'Report Exported',
+    'Webhook Configured', 'API Key Generated', 'Compliance Updated', 'Rule Modified',
+    'Password Reset', 'Session Expired',
+  ];
+  const resources = ['Policy', 'Claim', 'User', 'Billing', 'Underwriting', 'Document', 'System'];
+  const actors = [
+    { userId: 'USR-1001', role: 'Admin' },
+    { userId: 'USR-1002', role: 'Underwriter' },
+    { userId: 'USR-1003', role: 'Claims' },
+    { userId: 'USR-1004', role: 'Operations' },
+    { userId: 'USR-1005', role: 'Viewer' },
+  ];
+  const ips = ['192.168.1.10', '10.0.0.25', '172.16.0.50', '192.168.2.100', '10.1.1.15'];
+  return Array.from({ length: 20 }, (_, i) => ({
+    id: `LOG-${String(20001 + i).padStart(5, '0')}`,
+    actor: actors[i % actors.length],
+    action: actions[i % actions.length],
+    resource: { type: resources[i % resources.length], id: `${resources[i % resources.length].toUpperCase().slice(0, 3)}-${1000 + i}` },
+    ipAddress: ips[i % ips.length],
+    timestamp: new Date(Date.now() - i * 3600000 * 4).toISOString(),
+    before: i % 3 === 0 ? { status: 'Active' } : undefined,
+    after: i % 3 === 0 ? { status: 'Updated' } : undefined,
+    metadata: { browser: 'Chrome 120', os: 'Windows 11' },
+  }));
+}
+
+function generateMockApiKeys() {
+  const keys = [
+    { name: 'Production API Key', permissions: ['policies.read', 'policies.write', 'claims.read', 'claims.write'], rateLimit: 500, usageCount: 12450 },
+    { name: 'Analytics Dashboard', permissions: ['policies.read', 'claims.read', 'billing.read'], rateLimit: 200, usageCount: 8320 },
+    { name: 'Mobile App Integration', permissions: ['policies.read', 'documents.read'], rateLimit: 100, usageCount: 3210 },
+    { name: 'Partner Portal', permissions: ['policies.read', 'underwriting.read'], rateLimit: 150, usageCount: 1560 },
+    { name: 'Legacy System Sync', permissions: ['policies.read', 'policies.write', 'billing.read', 'billing.write', 'payments.write'], rateLimit: 1000, usageCount: 45200 },
+  ];
+  return keys.map((k, i) => ({
+    id: `KEY-${String(30001 + i).padStart(5, '0')}`,
+    ...k,
+    key: `imgc_${i === 0 ? 'live' : 'test'}_${String.fromCharCode(65 + i)}${'x'.repeat(20)}${'0'.repeat(8)}`,
+    isActive: i !== 3,
+    lastUsedAt: i < 3 ? new Date(Date.now() - i * 3600000).toISOString() : undefined,
+    createdAt: new Date(Date.now() - (keys.length - i) * 86400000 * 60).toISOString(),
+  }));
+}
+
+function generateMockWebhooks() {
+  const webhooks = [
+    { name: 'Policy Events Webhook', url: 'https://partner-api.example.com/webhooks/policies', events: ['policy.created', 'policy.updated', 'policy.cancelled'], status: 'Active', failureCount: 0, lastDeliveryStatus: 200 },
+    { name: 'Claims Notification', url: 'https://claims-system.example.com/hooks/claims', events: ['claim.filed', 'claim.updated', 'claim.settled'], status: 'Active', failureCount: 2, lastDeliveryStatus: 200 },
+    { name: 'Underwriting Integration', url: 'https://uw-engine.example.com/api/webhook', events: ['underwriting.evaluated', 'underwriting.overridden'], status: 'Active', failureCount: 0, lastDeliveryStatus: 200 },
+    { name: 'Payment Alerts (Disabled)', url: 'https://billing.example.com/alerts', events: ['payment.recorded', 'invoice.generated'], status: 'Inactive', failureCount: 5, lastDeliveryStatus: 500 },
+  ];
+  return webhooks.map((w, i) => ({
+    id: `WHK-${String(40001 + i).padStart(5, '0')}`,
+    ...w,
+    secret: `whsec_${'x'.repeat(24)}`,
+    lastDeliveryAt: i < 3 ? new Date(Date.now() - i * 7200000).toISOString() : undefined,
+    maxRetries: 3,
+    createdAt: new Date(Date.now() - (webhooks.length - i) * 86400000 * 45).toISOString(),
+  }));
+}
+
+function generateMockBulkOperations() {
+  const ops = [
+    { type: 'renewal', status: 'Completed', totalItems: 45, processedItems: 45, successCount: 42, failureCount: 3 },
+    { type: 'cancel', status: 'Completed', totalItems: 12, processedItems: 12, successCount: 12, failureCount: 0 },
+    { type: 'claim-update', status: 'Completed', totalItems: 28, processedItems: 28, successCount: 25, failureCount: 3 },
+    { type: 'invoice', status: 'Completed', totalItems: 150, processedItems: 150, successCount: 148, failureCount: 2 },
+    { type: 'renewal', status: 'Partial', totalItems: 60, processedItems: 55, successCount: 50, failureCount: 5 },
+    { type: 'claim-update', status: 'Failed', totalItems: 20, processedItems: 8, successCount: 3, failureCount: 5 },
+  ];
+  return ops.map((op, i) => ({
+    id: `BULK-${String(50001 + i).padStart(5, '0')}`,
+    ...op,
+    results: Array.from({ length: Math.min(op.processedItems, 5) }, (_, j) => ({
+      entityId: `POL-${String(1001 + j).padStart(4, '0')}`,
+      success: j < op.successCount,
+      message: j < op.successCount ? 'Processed successfully' : 'Validation error: missing required field',
+    })),
+    startedAt: new Date(Date.now() - (ops.length - i) * 86400000 * 7).toISOString(),
+    completedAt: op.status !== 'Processing' ? new Date(Date.now() - (ops.length - i) * 86400000 * 7 + 300000).toISOString() : undefined,
+    createdBy: 'Akash Satyam',
+  }));
+}
+
+function generateMockProducts() {
+  const products = [
+    {
+      name: 'IMGC Mortgage Guarantee Standard', code: 'MGS-001', description: 'Standard mortgage guarantee insurance product covering residential properties up to ₹5 Cr',
+      status: 'Active' as const, policyType: 'Mortgage Guarantee' as const, defaultTermMonths: 240, minPremium: 15000, maxPremium: 500000, commissionRate: 8.5,
+      coverageOptions: [
+        { name: 'Standard Coverage', minAmount: 1000000, maxAmount: 50000000, defaultAmount: 5000000 },
+        { name: 'Extended Coverage', minAmount: 5000000, maxAmount: 100000000, defaultAmount: 25000000 },
+      ],
+      eligibilityCriteria: [
+        { field: 'creditScore', label: 'Credit Score', operator: 'gte', value: 650 },
+        { field: 'ltvRatio', label: 'LTV Ratio', operator: 'lte', value: 90 },
+        { field: 'applicantAge', label: 'Applicant Age', operator: 'between', value: [21, 65] },
+      ],
+      requiredDocuments: ['KYC Documents', 'Income Proof', 'Property Valuation Report', 'Loan Sanction Letter'],
+    },
+    {
+      name: 'IMGC Credit Protection Plus', code: 'CPP-001', description: 'Credit protection insurance for personal and business loans with job loss coverage',
+      status: 'Active' as const, policyType: 'Credit Protection' as const, defaultTermMonths: 60, minPremium: 5000, maxPremium: 200000, commissionRate: 10.0,
+      coverageOptions: [
+        { name: 'Basic Protection', minAmount: 500000, maxAmount: 10000000, defaultAmount: 2000000 },
+        { name: 'Premium Protection', minAmount: 2000000, maxAmount: 50000000, defaultAmount: 10000000 },
+      ],
+      eligibilityCriteria: [
+        { field: 'creditScore', label: 'Credit Score', operator: 'gte', value: 600 },
+        { field: 'income', label: 'Annual Income', operator: 'gte', value: 300000 },
+      ],
+      requiredDocuments: ['KYC Documents', 'Income Proof', 'Employment Certificate'],
+    },
+    {
+      name: 'IMGC Coverage Plus Elite', code: 'CPE-001', description: 'Comprehensive coverage combining mortgage guarantee with additional property protection',
+      status: 'Active' as const, policyType: 'Coverage Plus' as const, defaultTermMonths: 120, minPremium: 25000, maxPremium: 750000, commissionRate: 12.0,
+      coverageOptions: [
+        { name: 'Elite Coverage', minAmount: 5000000, maxAmount: 200000000, defaultAmount: 50000000 },
+      ],
+      eligibilityCriteria: [
+        { field: 'creditScore', label: 'Credit Score', operator: 'gte', value: 700 },
+        { field: 'propertyValue', label: 'Property Value', operator: 'gte', value: 5000000 },
+        { field: 'ltvRatio', label: 'LTV Ratio', operator: 'lte', value: 80 },
+      ],
+      requiredDocuments: ['KYC Documents', 'Income Proof', 'Property Valuation Report', 'Loan Sanction Letter', 'Property Insurance Certificate'],
+    },
+    {
+      name: 'IMGC Affordable Housing Guarantee', code: 'AHG-001', description: 'Special mortgage guarantee for affordable housing segment with relaxed eligibility',
+      status: 'Active' as const, policyType: 'Mortgage Guarantee' as const, defaultTermMonths: 300, minPremium: 5000, maxPremium: 100000, commissionRate: 6.0,
+      coverageOptions: [
+        { name: 'Affordable Coverage', minAmount: 500000, maxAmount: 5000000, defaultAmount: 2000000 },
+      ],
+      eligibilityCriteria: [
+        { field: 'creditScore', label: 'Credit Score', operator: 'gte', value: 550 },
+        { field: 'income', label: 'Annual Income', operator: 'lte', value: 600000 },
+      ],
+      requiredDocuments: ['KYC Documents', 'Income Proof', 'PMAY Eligibility Certificate'],
+    },
+    {
+      name: 'IMGC Commercial Property Guarantee', code: 'CMPG-001', description: 'Mortgage guarantee for commercial properties and business premises',
+      status: 'Draft' as const, policyType: 'Mortgage Guarantee' as const, defaultTermMonths: 180, minPremium: 50000, maxPremium: 2000000, commissionRate: 7.5,
+      coverageOptions: [
+        { name: 'Commercial Standard', minAmount: 10000000, maxAmount: 500000000, defaultAmount: 50000000 },
+      ],
+      eligibilityCriteria: [
+        { field: 'creditScore', label: 'Credit Score', operator: 'gte', value: 700 },
+        { field: 'propertyValue', label: 'Property Value', operator: 'gte', value: 10000000 },
+      ],
+      requiredDocuments: ['KYC Documents', 'Business Registration', 'Financial Statements', 'Property Valuation Report', 'Commercial Lease Agreement'],
+    },
+    {
+      name: 'IMGC Rural Housing Guarantee', code: 'RHG-001', description: 'Mortgage guarantee tailored for rural housing projects and self-construction',
+      status: 'Inactive' as const, policyType: 'Mortgage Guarantee' as const, defaultTermMonths: 240, minPremium: 3000, maxPremium: 50000, commissionRate: 5.0,
+      coverageOptions: [
+        { name: 'Rural Coverage', minAmount: 200000, maxAmount: 2500000, defaultAmount: 1000000 },
+      ],
+      eligibilityCriteria: [
+        { field: 'creditScore', label: 'Credit Score', operator: 'gte', value: 500 },
+      ],
+      requiredDocuments: ['KYC Documents', 'Income Proof', 'Land Ownership Certificate'],
+    },
+  ];
+  return products.map((p, i) => ({
+    id: `PRD-${String(60001 + i).padStart(5, '0')}`,
+    ...p,
+    createdAt: new Date(Date.now() - (products.length - i) * 86400000 * 90).toISOString(),
+    updatedAt: new Date(Date.now() - i * 86400000 * 15).toISOString(),
   }));
 }
 
