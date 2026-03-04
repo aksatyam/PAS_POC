@@ -1,0 +1,19 @@
+{
+  "underwritingRules": [
+    {"id":"R001","criteria":"Credit Score >= 750 AND LTV <= 70%","decision":"Auto-Approve","notes":"Low risk profile","isActive":true},
+    {"id":"R002","criteria":"Credit Score 650-749 OR LTV 70-80%","decision":"Refer","notes":"Manual review required","isActive":true},
+    {"id":"R003","criteria":"Credit Score < 650 OR LTV > 80%","decision":"Reject","notes":"High risk threshold","isActive":true},
+    {"id":"R004","criteria":"Age < 21 OR Age > 65","decision":"Refer","notes":"Age boundary check","isActive":true},
+    {"id":"R005","criteria":"Income < 3x Annual Premium","decision":"Reject","notes":"Affordability check","isActive":true},
+    {"id":"R006","criteria":"Property in Restricted Zone","decision":"Reject","notes":"Geographic risk","isActive":true}
+  ],
+  "restrictedZones": ["Flood Zone A","Seismic Zone V","Coastal Erosion Zone","Industrial Hazard Zone"],
+  "policyTypes": ["Mortgage Guarantee","Credit Protection","Coverage Plus"],
+  "claimTypes": ["Default","Property Damage","Fraud","Other"],
+  "system": {
+    "maxLoginAttempts": 5,
+    "sessionTimeout": 3600,
+    "paginationDefault": 20,
+    "paginationMax": 100
+  }
+}

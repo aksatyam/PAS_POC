@@ -1,0 +1,102 @@
+[
+  {
+    "id": "USR001",
+    "email": "admin@pas.com",
+    "name": "Rajesh Kumar",
+    "role": "Admin",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR002",
+    "email": "ops1@pas.com",
+    "name": "Priya Sharma",
+    "role": "Operations",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR003",
+    "email": "ops2@pas.com",
+    "name": "Amit Patel",
+    "role": "Operations",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR004",
+    "email": "uw1@pas.com",
+    "name": "Sunita Reddy",
+    "role": "Underwriter",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR005",
+    "email": "uw2@pas.com",
+    "name": "Vikram Singh",
+    "role": "Underwriter",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR006",
+    "email": "claims1@pas.com",
+    "name": "Meera Iyer",
+    "role": "Claims",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR007",
+    "email": "claims2@pas.com",
+    "name": "Arjun Nair",
+    "role": "Claims",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR008",
+    "email": "viewer1@pas.com",
+    "name": "Kavita Joshi",
+    "role": "Viewer",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR009",
+    "email": "viewer2@pas.com",
+    "name": "Rohit Gupta",
+    "role": "Viewer",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": true,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "USR010",
+    "email": "admin2@pas.com",
+    "name": "Deepa Menon",
+    "role": "Admin",
+    "hashedPassword": "$2a$12$jLB80dO0iJDVy0jgVeru5u2QnL56Pzl5L.sLKRuF1DOWlgrkQRYj.",
+    "isActive": false,
+    "createdAt": "2025-02-01T10:00:00Z",
+    "updatedAt": "2025-06-01T10:00:00Z"
+  }
+]

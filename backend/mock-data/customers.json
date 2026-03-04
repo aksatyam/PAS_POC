@@ -1,0 +1,632 @@
+[
+  {
+    "id": "CUST001",
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@email.com",
+    "phone": "+919800000000",
+    "dob": "1965-01-01",
+    "address": {
+      "street": "100, MG Road",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "contact": {
+      "primary": "+919800000000",
+      "secondary": "+918700000000",
+      "email": "aarav.sharma@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "CUST002",
+    "name": "Vivaan Verma",
+    "email": "vivaan.verma@email.com",
+    "phone": "+919801111111",
+    "dob": "1967-02-02",
+    "address": {
+      "street": "107, Park Street",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110001"
+    },
+    "contact": {
+      "primary": "+919801111111",
+      "secondary": "+918702222222",
+      "email": "vivaan.verma@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-02-02T10:00:00Z",
+    "updatedAt": "2025-03-02T10:00:00Z"
+  },
+  {
+    "id": "CUST003",
+    "name": "Aditya Gupta",
+    "email": "aditya.gupta@email.com",
+    "phone": "+919802222222",
+    "dob": "1969-03-03",
+    "address": {
+      "street": "114, Anna Nagar",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "contact": {
+      "primary": "+919802222222",
+      "secondary": "+918704444444",
+      "email": "aditya.gupta@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-03-03T10:00:00Z",
+    "updatedAt": "2025-04-03T10:00:00Z"
+  },
+  {
+    "id": "CUST004",
+    "name": "Sai Patel",
+    "email": "sai.patel@email.com",
+    "phone": "+919803333333",
+    "dob": "1971-04-04",
+    "address": {
+      "street": "121, Banjara Hills",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "contact": {
+      "primary": "+919803333333",
+      "secondary": "+918706666666",
+      "email": "sai.patel@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-04-04T10:00:00Z",
+    "updatedAt": "2025-05-04T10:00:00Z"
+  },
+  {
+    "id": "CUST005",
+    "name": "Arjun Reddy",
+    "email": "arjun.reddy@email.com",
+    "phone": "+919804444444",
+    "dob": "1973-05-05",
+    "address": {
+      "street": "128, Koramangala",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001"
+    },
+    "contact": {
+      "primary": "+919804444444",
+      "secondary": "+918708888888",
+      "email": "arjun.reddy@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-05-05T10:00:00Z",
+    "updatedAt": "2025-06-05T10:00:00Z"
+  },
+  {
+    "id": "CUST006",
+    "name": "Reyansh Nair",
+    "email": "reyansh.nair@email.com",
+    "phone": "+919805555555",
+    "dob": "1975-06-06",
+    "address": {
+      "street": "135, Connaught Place",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "contact": {
+      "primary": "+919805555555",
+      "secondary": "+918711111110",
+      "email": "reyansh.nair@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-06-06T10:00:00Z",
+    "updatedAt": "2025-07-06T10:00:00Z"
+  },
+  {
+    "id": "CUST007",
+    "name": "Krishna Iyer",
+    "email": "krishna.iyer@email.com",
+    "phone": "+919806666666",
+    "dob": "1977-07-07",
+    "address": {
+      "street": "142, Salt Lake",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001"
+    },
+    "contact": {
+      "primary": "+919806666666",
+      "secondary": "+918713333332",
+      "email": "krishna.iyer@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-01-07T10:00:00Z",
+    "updatedAt": "2025-02-07T10:00:00Z"
+  },
+  {
+    "id": "CUST008",
+    "name": "Ishaan Joshi",
+    "email": "ishaan.joshi@email.com",
+    "phone": "+919807777777",
+    "dob": "1979-08-08",
+    "address": {
+      "street": "149, SG Highway",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001"
+    },
+    "contact": {
+      "primary": "+919807777777",
+      "secondary": "+918715555554",
+      "email": "ishaan.joshi@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-02-08T10:00:00Z",
+    "updatedAt": "2025-03-08T10:00:00Z"
+  },
+  {
+    "id": "CUST009",
+    "name": "Shaurya Mehta",
+    "email": "shaurya.mehta@email.com",
+    "phone": "+919808888888",
+    "dob": "1981-09-09",
+    "address": {
+      "street": "156, Vaishali Nagar",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001"
+    },
+    "contact": {
+      "primary": "+919808888888",
+      "secondary": "+918717777776",
+      "email": "shaurya.mehta@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-03-09T10:00:00Z",
+    "updatedAt": "2025-04-09T10:00:00Z"
+  },
+  {
+    "id": "CUST010",
+    "name": "Atharva Bhat",
+    "email": "atharva.bhat@email.com",
+    "phone": "+919809999999",
+    "dob": "1983-10-10",
+    "address": {
+      "street": "163, Gomti Nagar",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001"
+    },
+    "contact": {
+      "primary": "+919809999999",
+      "secondary": "+918719999998",
+      "email": "atharva.bhat@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-04-10T10:00:00Z",
+    "updatedAt": "2025-05-10T10:00:00Z"
+  },
+  {
+    "id": "CUST011",
+    "name": "Ananya Chopra",
+    "email": "ananya.chopra@email.com",
+    "phone": "+919811111110",
+    "dob": "1985-11-11",
+    "address": {
+      "street": "170, MG Road",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "contact": {
+      "primary": "+919811111110",
+      "secondary": "+918722222220",
+      "email": "ananya.chopra@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-05-11T10:00:00Z",
+    "updatedAt": "2025-06-11T10:00:00Z"
+  },
+  {
+    "id": "CUST012",
+    "name": "Diya Kapoor",
+    "email": "diya.kapoor@email.com",
+    "phone": "+919812222221",
+    "dob": "1987-12-12",
+    "address": {
+      "street": "177, Park Street",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110001"
+    },
+    "contact": {
+      "primary": "+919812222221",
+      "secondary": "+918724444442",
+      "email": "diya.kapoor@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-06-12T10:00:00Z",
+    "updatedAt": "2025-07-12T10:00:00Z"
+  },
+  {
+    "id": "CUST013",
+    "name": "Myra Malhotra",
+    "email": "myra.malhotra@email.com",
+    "phone": "+919813333332",
+    "dob": "1989-01-13",
+    "address": {
+      "street": "184, Anna Nagar",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "contact": {
+      "primary": "+919813333332",
+      "secondary": "+918726666664",
+      "email": "myra.malhotra@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-01-13T10:00:00Z",
+    "updatedAt": "2025-02-13T10:00:00Z"
+  },
+  {
+    "id": "CUST014",
+    "name": "Sara Saxena",
+    "email": "sara.saxena@email.com",
+    "phone": "+919814444443",
+    "dob": "1991-02-14",
+    "address": {
+      "street": "191, Banjara Hills",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "contact": {
+      "primary": "+919814444443",
+      "secondary": "+918728888886",
+      "email": "sara.saxena@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-02-14T10:00:00Z",
+    "updatedAt": "2025-03-14T10:00:00Z"
+  },
+  {
+    "id": "CUST015",
+    "name": "Aanya Agarwal",
+    "email": "aanya.agarwal@email.com",
+    "phone": "+919815555554",
+    "dob": "1993-03-15",
+    "address": {
+      "street": "198, Koramangala",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001"
+    },
+    "contact": {
+      "primary": "+919815555554",
+      "secondary": "+918731111108",
+      "email": "aanya.agarwal@email.com"
+    },
+    "riskCategory": "Low",
+    "createdAt": "2025-03-15T10:00:00Z",
+    "updatedAt": "2025-04-15T10:00:00Z"
+  },
+  {
+    "id": "CUST016",
+    "name": "Aadhya Mishra",
+    "email": "aadhya.mishra@email.com",
+    "phone": "+919816666665",
+    "dob": "1995-04-16",
+    "address": {
+      "street": "205, Connaught Place",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "contact": {
+      "primary": "+919816666665",
+      "secondary": "+918733333330",
+      "email": "aadhya.mishra@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-04-16T10:00:00Z",
+    "updatedAt": "2025-05-16T10:00:00Z"
+  },
+  {
+    "id": "CUST017",
+    "name": "Isha Pandey",
+    "email": "isha.pandey@email.com",
+    "phone": "+919817777776",
+    "dob": "1997-05-17",
+    "address": {
+      "street": "212, Salt Lake",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001"
+    },
+    "contact": {
+      "primary": "+919817777776",
+      "secondary": "+918735555552",
+      "email": "isha.pandey@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-05-17T10:00:00Z",
+    "updatedAt": "2025-06-17T10:00:00Z"
+  },
+  {
+    "id": "CUST018",
+    "name": "Riya Trivedi",
+    "email": "riya.trivedi@email.com",
+    "phone": "+919818888887",
+    "dob": "1999-06-18",
+    "address": {
+      "street": "219, SG Highway",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001"
+    },
+    "contact": {
+      "primary": "+919818888887",
+      "secondary": "+918737777774",
+      "email": "riya.trivedi@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-06-18T10:00:00Z",
+    "updatedAt": "2025-07-18T10:00:00Z"
+  },
+  {
+    "id": "CUST019",
+    "name": "Pari Desai",
+    "email": "pari.desai@email.com",
+    "phone": "+919819999998",
+    "dob": "2001-07-19",
+    "address": {
+      "street": "226, Vaishali Nagar",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001"
+    },
+    "contact": {
+      "primary": "+919819999998",
+      "secondary": "+918739999996",
+      "email": "pari.desai@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-01-19T10:00:00Z",
+    "updatedAt": "2025-02-19T10:00:00Z"
+  },
+  {
+    "id": "CUST020",
+    "name": "Kiara Kulkarni",
+    "email": "kiara.kulkarni@email.com",
+    "phone": "+919821111109",
+    "dob": "2003-08-20",
+    "address": {
+      "street": "233, Gomti Nagar",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001"
+    },
+    "contact": {
+      "primary": "+919821111109",
+      "secondary": "+918742222218",
+      "email": "kiara.kulkarni@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2025-03-20T10:00:00Z"
+  },
+  {
+    "id": "CUST021",
+    "name": "Rohan Rao",
+    "email": "rohan.rao@email.com",
+    "phone": "+919822222220",
+    "dob": "1965-09-21",
+    "address": {
+      "street": "240, MG Road",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "contact": {
+      "primary": "+919822222220",
+      "secondary": "+918744444440",
+      "email": "rohan.rao@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-03-21T10:00:00Z",
+    "updatedAt": "2025-04-21T10:00:00Z"
+  },
+  {
+    "id": "CUST022",
+    "name": "Nikhil Das",
+    "email": "nikhil.das@email.com",
+    "phone": "+919823333331",
+    "dob": "1967-10-22",
+    "address": {
+      "street": "247, Park Street",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110001"
+    },
+    "contact": {
+      "primary": "+919823333331",
+      "secondary": "+918746666662",
+      "email": "nikhil.das@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-04-22T10:00:00Z",
+    "updatedAt": "2025-05-22T10:00:00Z"
+  },
+  {
+    "id": "CUST023",
+    "name": "Sanjay Banerjee",
+    "email": "sanjay.banerjee@email.com",
+    "phone": "+919824444442",
+    "dob": "1969-11-23",
+    "address": {
+      "street": "254, Anna Nagar",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "contact": {
+      "primary": "+919824444442",
+      "secondary": "+918748888884",
+      "email": "sanjay.banerjee@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-05-23T10:00:00Z",
+    "updatedAt": "2025-06-23T10:00:00Z"
+  },
+  {
+    "id": "CUST024",
+    "name": "Manoj Mukherjee",
+    "email": "manoj.mukherjee@email.com",
+    "phone": "+919825555553",
+    "dob": "1971-12-24",
+    "address": {
+      "street": "261, Banjara Hills",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "contact": {
+      "primary": "+919825555553",
+      "secondary": "+918751111106",
+      "email": "manoj.mukherjee@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-06-24T10:00:00Z",
+    "updatedAt": "2025-07-24T10:00:00Z"
+  },
+  {
+    "id": "CUST025",
+    "name": "Karthik Sen",
+    "email": "karthik.sen@email.com",
+    "phone": "+919826666664",
+    "dob": "1973-01-25",
+    "address": {
+      "street": "268, Koramangala",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001"
+    },
+    "contact": {
+      "primary": "+919826666664",
+      "secondary": "+918753333328",
+      "email": "karthik.sen@email.com"
+    },
+    "riskCategory": "Medium",
+    "createdAt": "2025-01-25T10:00:00Z",
+    "updatedAt": "2025-02-25T10:00:00Z"
+  },
+  {
+    "id": "CUST026",
+    "name": "Venkatesh Ghosh",
+    "email": "venkatesh.ghosh@email.com",
+    "phone": "+919827777775",
+    "dob": "1975-02-26",
+    "address": {
+      "street": "275, Connaught Place",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "contact": {
+      "primary": "+919827777775",
+      "secondary": "+918755555550",
+      "email": "venkatesh.ghosh@email.com"
+    },
+    "riskCategory": "High",
+    "createdAt": "2025-02-26T10:00:00Z",
+    "updatedAt": "2025-03-26T10:00:00Z"
+  },
+  {
+    "id": "CUST027",
+    "name": "Suresh Bose",
+    "email": "suresh.bose@email.com",
+    "phone": "+919828888886",
+    "dob": "1977-03-27",
+    "address": {
+      "street": "282, Salt Lake",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001"
+    },
+    "contact": {
+      "primary": "+919828888886",
+      "secondary": "+918757777772",
+      "email": "suresh.bose@email.com"
+    },
+    "riskCategory": "High",
+    "createdAt": "2025-03-27T10:00:00Z",
+    "updatedAt": "2025-04-27T10:00:00Z"
+  },
+  {
+    "id": "CUST028",
+    "name": "Ganesh Chatterjee",
+    "email": "ganesh.chatterjee@email.com",
+    "phone": "+919829999997",
+    "dob": "1979-04-28",
+    "address": {
+      "street": "289, SG Highway",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001"
+    },
+    "contact": {
+      "primary": "+919829999997",
+      "secondary": "+918759999994",
+      "email": "ganesh.chatterjee@email.com"
+    },
+    "riskCategory": "High",
+    "createdAt": "2025-04-28T10:00:00Z",
+    "updatedAt": "2025-05-28T10:00:00Z"
+  },
+  {
+    "id": "CUST029",
+    "name": "Pranav Roy",
+    "email": "pranav.roy@email.com",
+    "phone": "+919831111108",
+    "dob": "1981-05-01",
+    "address": {
+      "street": "296, Vaishali Nagar",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001"
+    },
+    "contact": {
+      "primary": "+919831111108",
+      "secondary": "+918762222216",
+      "email": "pranav.roy@email.com"
+    },
+    "riskCategory": "High",
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2025-06-01T10:00:00Z"
+  },
+  {
+    "id": "CUST030",
+    "name": "Harish Sinha",
+    "email": "harish.sinha@email.com",
+    "phone": "+919832222219",
+    "dob": "1983-06-02",
+    "address": {
+      "street": "303, Gomti Nagar",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001"
+    },
+    "contact": {
+      "primary": "+919832222219",
+      "secondary": "+918764444438",
+      "email": "harish.sinha@email.com"
+    },
+    "riskCategory": "High",
+    "createdAt": "2025-06-02T10:00:00Z",
+    "updatedAt": "2025-07-02T10:00:00Z"
+  }
+]

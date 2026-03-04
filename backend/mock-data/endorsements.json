@@ -1,0 +1,88 @@
+[
+  {
+    "id": "END-00001",
+    "policyId": "POL-2025-00001",
+    "type": "Coverage Change",
+    "description": "Increase coverage amount from 500000 to 750000 per customer request",
+    "changes": {
+      "coverageAmount": {
+        "from": 500000,
+        "to": 750000
+      }
+    },
+    "premiumDelta": 8750,
+    "effectiveDate": "2025-06-15",
+    "status": "Applied",
+    "createdAt": "2025-06-10T09:00:00Z",
+    "createdBy": "USR002",
+    "approvedBy": "USR001",
+    "approvedAt": "2025-06-12T14:30:00Z"
+  },
+  {
+    "id": "END-00002",
+    "policyId": "POL-2025-00003",
+    "type": "Premium Adjustment",
+    "description": "Risk re-evaluation resulted in lower premium",
+    "changes": {
+      "premiumAmount": {
+        "from": 28500,
+        "to": 24500
+      }
+    },
+    "premiumDelta": -4000,
+    "effectiveDate": "2025-08-01",
+    "status": "Applied",
+    "createdAt": "2025-07-28T10:00:00Z",
+    "createdBy": "USR003",
+    "approvedBy": "USR001",
+    "approvedAt": "2025-07-30T11:00:00Z"
+  },
+  {
+    "id": "END-00003",
+    "policyId": "POL-2025-00005",
+    "type": "Beneficiary Change",
+    "description": "Update primary beneficiary on policy",
+    "changes": {},
+    "premiumDelta": 0,
+    "effectiveDate": "2025-09-01",
+    "status": "Pending",
+    "createdAt": "2025-08-25T08:00:00Z",
+    "createdBy": "USR002"
+  },
+  {
+    "id": "END-00004",
+    "policyId": "POL-2025-00010",
+    "type": "Term Extension",
+    "description": "Extend policy term by 6 months",
+    "changes": {
+      "endDate": {
+        "from": "2026-04-01",
+        "to": "2026-10-01"
+      }
+    },
+    "premiumDelta": 12500,
+    "effectiveDate": "2026-03-15",
+    "status": "Applied",
+    "createdAt": "2026-03-01T09:00:00Z",
+    "createdBy": "USR002",
+    "approvedBy": "USR001",
+    "approvedAt": "2026-03-02T16:00:00Z"
+  },
+  {
+    "id": "END-00005",
+    "policyId": "POL-2025-00015",
+    "type": "Coverage Change",
+    "description": "Decrease coverage due to partial repayment",
+    "changes": {
+      "coverageAmount": {
+        "from": 600000,
+        "to": 450000
+      }
+    },
+    "premiumDelta": -5250,
+    "effectiveDate": "2025-11-01",
+    "status": "Rejected",
+    "createdAt": "2025-10-20T10:00:00Z",
+    "createdBy": "USR004"
+  }
+]

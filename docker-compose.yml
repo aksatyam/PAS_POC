@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - '4000:4000'
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - JWT_SECRET=pas-prototype-jwt-secret-key-2026
+      - JWT_REFRESH_SECRET=pas-prototype-refresh-secret-key-2026
+      - JWT_EXPIRY=1h
+      - JWT_REFRESH_EXPIRY=7d
+      - CORS_ORIGIN=http://localhost:3000
+    healthcheck:
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:4000/api/v1/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - '3000:3000'
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:4000/api/v1
+    depends_on:
+      backend:
+        condition: service_healthy
+
+networks:
+  default:
+    name: pas-network

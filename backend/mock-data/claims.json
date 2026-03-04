@@ -1,0 +1,598 @@
+[
+  {
+    "id": "CLM001",
+    "policyId": "POL-2025-00001",
+    "claimType": "Default",
+    "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+    "amount": 50000,
+    "status": "Approved",
+    "filedDate": "2025-01-01T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-01-01T10:00:00Z"
+      },
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-01-01T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-03-03T23:18:48.133Z",
+    "reviewDate": "2026-03-03T23:18:31.049Z",
+    "assignedTo": "USR001",
+    "adjudicationStatus": "Negotiation"
+  },
+  {
+    "id": "CLM002",
+    "policyId": "POL-2025-00002",
+    "claimType": "Property Damage",
+    "description": "Fire damage to kitchen and living area of insured property",
+    "amount": 118367,
+    "status": "Filed",
+    "filedDate": "2025-02-02T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-02-02T10:00:00Z"
+      },
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-02-02T10:00:00Z"
+      },
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-02-02T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-02-02T10:00:00Z",
+    "updatedAt": "2025-03-02T10:00:00Z"
+  },
+  {
+    "id": "CLM003",
+    "policyId": "POL-2025-00003",
+    "claimType": "Fraud",
+    "description": "Identity fraud detected - applicant used fabricated credentials",
+    "amount": 205102,
+    "status": "Filed",
+    "filedDate": "2025-03-03T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-03-03T10:00:00Z"
+      },
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-03-03T10:00:00Z"
+      },
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-03-03T10:00:00Z"
+      },
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-03-03T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-03-03T10:00:00Z",
+    "updatedAt": "2025-04-03T10:00:00Z"
+  },
+  {
+    "id": "CLM004",
+    "policyId": "POL-2025-00004",
+    "claimType": "Other",
+    "description": "Legal dispute between co-borrowers affecting policy",
+    "amount": 310204,
+    "status": "Filed",
+    "filedDate": "2025-04-04T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-04-04T10:00:00Z"
+      },
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-04-04T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-04-04T10:00:00Z",
+    "updatedAt": "2025-05-04T10:00:00Z"
+  },
+  {
+    "id": "CLM005",
+    "policyId": "POL-2025-00005",
+    "claimType": "Default",
+    "description": "Default triggered by business closure of self-employed borrower",
+    "amount": 433674,
+    "status": "Filed",
+    "filedDate": "2025-05-05T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-05-05T10:00:00Z"
+      },
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-05-05T10:00:00Z"
+      },
+      {
+        "name": "identity_proof.pdf",
+        "uploadedAt": "2025-05-05T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-05-05T10:00:00Z",
+    "updatedAt": "2025-06-05T10:00:00Z"
+  },
+  {
+    "id": "CLM006",
+    "policyId": "POL-2025-00006",
+    "claimType": "Property Damage",
+    "description": "Flood damage to ground floor of mortgaged property in monsoon season",
+    "amount": 575511,
+    "status": "Under Review",
+    "filedDate": "2025-06-06T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-06-06T10:00:00Z"
+      },
+      {
+        "name": "identity_proof.pdf",
+        "uploadedAt": "2025-06-06T10:00:00Z"
+      },
+      {
+        "name": "witness_statement.pdf",
+        "uploadedAt": "2025-06-06T10:00:00Z"
+      },
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-06-06T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-06-06T10:00:00Z",
+    "updatedAt": "2025-07-06T10:00:00Z"
+  },
+  {
+    "id": "CLM007",
+    "policyId": "POL-2025-00007",
+    "claimType": "Fraud",
+    "description": "Property valuation inflated by 40% based on independent assessment",
+    "amount": 105102,
+    "status": "Under Review",
+    "filedDate": "2025-07-07T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "identity_proof.pdf",
+        "uploadedAt": "2025-07-07T10:00:00Z"
+      },
+      {
+        "name": "witness_statement.pdf",
+        "uploadedAt": "2025-07-07T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-07-07T10:00:00Z",
+    "updatedAt": "2025-08-07T10:00:00Z"
+  },
+  {
+    "id": "CLM008",
+    "policyId": "POL-2025-00008",
+    "claimType": "Other",
+    "description": "Request for coverage extension due to construction delay",
+    "amount": 228572,
+    "status": "Under Review",
+    "filedDate": "2025-08-08T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "witness_statement.pdf",
+        "uploadedAt": "2025-08-08T10:00:00Z"
+      },
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-08-08T10:00:00Z"
+      },
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-08-08T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-08-08T10:00:00Z",
+    "updatedAt": "2025-09-08T10:00:00Z"
+  },
+  {
+    "id": "CLM009",
+    "policyId": "POL-2025-00009",
+    "claimType": "Default",
+    "description": "Partial default - borrower paying less than minimum required",
+    "amount": 370409,
+    "status": "Under Review",
+    "filedDate": "2025-09-09T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-09-09T10:00:00Z"
+      },
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-09-09T10:00:00Z"
+      },
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-09-09T10:00:00Z"
+      },
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-09-09T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-09-09T10:00:00Z",
+    "updatedAt": "2025-10-09T10:00:00Z"
+  },
+  {
+    "id": "CLM010",
+    "policyId": "POL-2025-00010",
+    "claimType": "Property Damage",
+    "description": "Storm damage to roof and exterior of the mortgaged property",
+    "amount": 530613,
+    "status": "Under Review",
+    "filedDate": "2025-10-10T10:00:00Z",
+    "resolvedDate": null,
+    "documents": [
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-10-10T10:00:00Z"
+      },
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-10-10T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-10-10T10:00:00Z",
+    "updatedAt": "2025-11-10T10:00:00Z"
+  },
+  {
+    "id": "CLM011",
+    "policyId": "POL-2025-00011",
+    "claimType": "Fraud",
+    "description": "Suspected document forgery in income proof submitted at policy issuance",
+    "amount": 709185,
+    "status": "Approved",
+    "filedDate": "2025-11-11T10:00:00Z",
+    "resolvedDate": "2025-12-11T10:00:00Z",
+    "documents": [
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-11-11T10:00:00Z"
+      },
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-11-11T10:00:00Z"
+      },
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-11-11T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-11-11T10:00:00Z",
+    "updatedAt": "2025-12-11T10:00:00Z"
+  },
+  {
+    "id": "CLM012",
+    "policyId": "POL-2025-00012",
+    "claimType": "Other",
+    "description": "Regulatory change impacting policy coverage terms",
+    "amount": 906124,
+    "status": "Approved",
+    "filedDate": "2025-12-12T10:00:00Z",
+    "resolvedDate": "2025-12-12T10:00:00Z",
+    "documents": [
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-12-12T10:00:00Z"
+      },
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-12-12T10:00:00Z"
+      },
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-12-12T10:00:00Z"
+      },
+      {
+        "name": "identity_proof.pdf",
+        "uploadedAt": "2025-12-12T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-12-12T10:00:00Z",
+    "updatedAt": "2025-12-12T10:00:00Z"
+  },
+  {
+    "id": "CLM013",
+    "policyId": "POL-2025-00013",
+    "claimType": "Default",
+    "description": "Systematic default - borrower ceased all payments",
+    "amount": 160204,
+    "status": "Approved",
+    "filedDate": "2025-01-13T10:00:00Z",
+    "resolvedDate": "2025-03-13T10:00:00Z",
+    "documents": [
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-01-13T10:00:00Z"
+      },
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-01-13T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-01-13T10:00:00Z",
+    "updatedAt": "2025-02-13T10:00:00Z"
+  },
+  {
+    "id": "CLM014",
+    "policyId": "POL-2025-00014",
+    "claimType": "Property Damage",
+    "description": "Water seepage causing extensive damage to walls and flooring",
+    "amount": 338776,
+    "status": "Approved",
+    "filedDate": "2025-02-14T10:00:00Z",
+    "resolvedDate": "2025-04-14T10:00:00Z",
+    "documents": [
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-02-14T10:00:00Z"
+      },
+      {
+        "name": "identity_proof.pdf",
+        "uploadedAt": "2025-02-14T10:00:00Z"
+      },
+      {
+        "name": "witness_statement.pdf",
+        "uploadedAt": "2025-02-14T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-02-14T10:00:00Z",
+    "updatedAt": "2025-03-14T10:00:00Z"
+  },
+  {
+    "id": "CLM015",
+    "policyId": "POL-2025-00015",
+    "claimType": "Fraud",
+    "description": "Duplicate claim filed for same incident across different policies",
+    "amount": 535715,
+    "status": "Rejected",
+    "filedDate": "2025-03-15T10:00:00Z",
+    "resolvedDate": "2025-05-15T10:00:00Z",
+    "documents": [
+      {
+        "name": "identity_proof.pdf",
+        "uploadedAt": "2025-03-15T10:00:00Z"
+      },
+      {
+        "name": "witness_statement.pdf",
+        "uploadedAt": "2025-03-15T10:00:00Z"
+      },
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-03-15T10:00:00Z"
+      },
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-03-15T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-03-15T10:00:00Z",
+    "updatedAt": "2025-04-15T10:00:00Z"
+  },
+  {
+    "id": "CLM016",
+    "policyId": "POL-2025-00016",
+    "claimType": "Other",
+    "description": "Title dispute raised by third party on mortgaged property",
+    "amount": 751022,
+    "status": "Rejected",
+    "filedDate": "2025-04-16T10:00:00Z",
+    "resolvedDate": "2025-06-16T10:00:00Z",
+    "documents": [
+      {
+        "name": "witness_statement.pdf",
+        "uploadedAt": "2025-04-16T10:00:00Z"
+      },
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-04-16T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-04-16T10:00:00Z",
+    "updatedAt": "2025-05-16T10:00:00Z"
+  },
+  {
+    "id": "CLM017",
+    "policyId": "POL-2025-00017",
+    "claimType": "Default",
+    "description": "EMI default due to job loss, borrower unable to service loan",
+    "amount": 984696,
+    "status": "Rejected",
+    "filedDate": "2025-05-17T10:00:00Z",
+    "resolvedDate": "2025-07-17T10:00:00Z",
+    "documents": [
+      {
+        "name": "claim_form.pdf",
+        "uploadedAt": "2025-05-17T10:00:00Z"
+      },
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-05-17T10:00:00Z"
+      },
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-05-17T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-05-17T10:00:00Z",
+    "updatedAt": "2025-06-17T10:00:00Z"
+  },
+  {
+    "id": "CLM018",
+    "policyId": "POL-2025-00018",
+    "claimType": "Property Damage",
+    "description": "Structural cracks found in load-bearing walls of the property",
+    "amount": 1236737,
+    "status": "Settled",
+    "filedDate": "2025-06-18T10:00:00Z",
+    "resolvedDate": "2025-08-18T10:00:00Z",
+    "documents": [
+      {
+        "name": "damage_photos.zip",
+        "uploadedAt": "2025-06-18T10:00:00Z"
+      },
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-06-18T10:00:00Z"
+      },
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-06-18T10:00:00Z"
+      },
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-06-18T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-06-18T10:00:00Z",
+    "updatedAt": "2025-07-18T10:00:00Z"
+  },
+  {
+    "id": "CLM019",
+    "policyId": "POL-2025-00019",
+    "claimType": "Fraud",
+    "description": "Collusion between borrower and property assessor suspected",
+    "amount": 215307,
+    "status": "Settled",
+    "filedDate": "2025-07-19T10:00:00Z",
+    "resolvedDate": "2025-09-19T10:00:00Z",
+    "documents": [
+      {
+        "name": "police_report.pdf",
+        "uploadedAt": "2025-07-19T10:00:00Z"
+      },
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-07-19T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR006",
+    "createdAt": "2025-07-19T10:00:00Z",
+    "updatedAt": "2025-08-19T10:00:00Z"
+  },
+  {
+    "id": "CLM020",
+    "policyId": "POL-2025-00020",
+    "claimType": "Other",
+    "description": "Government acquisition notice for mortgaged property",
+    "amount": 448981,
+    "status": "Settled",
+    "filedDate": "2025-08-20T10:00:00Z",
+    "resolvedDate": "2025-10-20T10:00:00Z",
+    "documents": [
+      {
+        "name": "medical_certificate.pdf",
+        "uploadedAt": "2025-08-20T10:00:00Z"
+      },
+      {
+        "name": "property_assessment.pdf",
+        "uploadedAt": "2025-08-20T10:00:00Z"
+      },
+      {
+        "name": "bank_statement.pdf",
+        "uploadedAt": "2025-08-20T10:00:00Z"
+      }
+    ],
+    "createdBy": "USR007",
+    "createdAt": "2025-08-20T10:00:00Z",
+    "updatedAt": "2025-09-20T10:00:00Z"
+  },
+  {
+    "id": "CLM021",
+    "policyId": "",
+    "claimType": "Other",
+    "description": "",
+    "amount": 0,
+    "status": "Filed",
+    "filedDate": "2026-03-03T21:42:57.403Z",
+    "documents": [],
+    "createdBy": "USR001",
+    "updatedAt": "2026-03-03T21:42:57.403Z",
+    "fraudScore": 18,
+    "fraudIndicators": [
+      "Claim filed within 30 days of policy creation"
+    ]
+  },
+  {
+    "id": "CLM022",
+    "policyId": "",
+    "claimType": "Other",
+    "description": "",
+    "amount": 0,
+    "status": "Filed",
+    "filedDate": "2026-03-03T21:43:32.313Z",
+    "documents": [],
+    "createdBy": "USR001",
+    "updatedAt": "2026-03-03T21:43:32.313Z",
+    "fraudScore": 39,
+    "fraudIndicators": [
+      "Claim filed within 30 days of policy creation",
+      "Multiple claims on same policy within 90 days"
+    ]
+  },
+  {
+    "id": "CLM023",
+    "policyId": "POL-2025-00002",
+    "claimType": "Property_Damage",
+    "description": "Water pipe burst in basement causing extensive flooding. Damage to flooring, walls, and stored equipment. Building was occupied at the time of incident.",
+    "amount": 850000,
+    "status": "Filed",
+    "filedDate": "2026-03-04T00:35:41.703Z",
+    "documents": [],
+    "createdBy": "USR001",
+    "updatedAt": "2026-03-04T00:35:41.703Z",
+    "incidentDate": "2026-03-01T14:30:00Z",
+    "incidentLocation": "45 MG Road, Bengaluru, Karnataka 560001",
+    "reportedBy": "Ananya Desai",
+    "contactPhone": "+91-9876543210",
+    "fnolId": "FNOL-001",
+    "fraudScore": 50,
+    "fraudIndicators": [
+      "Claim amount exceeds 80% of coverage",
+      "Claim filed within 30 days of policy creation",
+      "Claim amount is suspiciously round number",
+      "Claimant has 3+ claims across all policies"
+    ]
+  }
+]

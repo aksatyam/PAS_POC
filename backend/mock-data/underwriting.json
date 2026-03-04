@@ -1,0 +1,920 @@
+[
+  {
+    "id": "UW001",
+    "policyId": "POL-2025-00001",
+    "applicantAge": 25,
+    "creditScore": 550,
+    "income": 400000,
+    "propertyValue": 650000,
+    "ltvRatio": 82,
+    "propertyZone": "Flood Zone A",
+    "annualPremium": 25000,
+    "riskScore": 70,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-01-01T11:00:00Z"
+  },
+  {
+    "id": "UW002",
+    "policyId": "POL-2025-00002",
+    "applicantAge": 28,
+    "creditScore": 651,
+    "income": 447000,
+    "propertyValue": 769388,
+    "ltvRatio": 73,
+    "propertyZone": "Residential Zone B",
+    "annualPremium": 27551,
+    "riskScore": 41,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-02-02T11:00:00Z"
+  },
+  {
+    "id": "UW003",
+    "policyId": "POL-2025-00003",
+    "applicantAge": 31,
+    "creditScore": 752,
+    "income": 494000,
+    "propertyValue": 888776,
+    "ltvRatio": 47,
+    "propertyZone": "Commercial Zone A",
+    "annualPremium": 30102,
+    "riskScore": 12,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-03-03T11:00:00Z"
+  },
+  {
+    "id": "UW004",
+    "policyId": "POL-2025-00004",
+    "applicantAge": 19,
+    "creditScore": 753,
+    "income": 541000,
+    "propertyValue": 1008164,
+    "ltvRatio": 48,
+    "propertyZone": "Commercial Zone B",
+    "annualPremium": 32653,
+    "riskScore": 43,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-04-04T11:00:00Z"
+  },
+  {
+    "id": "UW005",
+    "policyId": "POL-2025-00005",
+    "applicantAge": 37,
+    "creditScore": 754,
+    "income": 588000,
+    "propertyValue": 1127552,
+    "ltvRatio": 49,
+    "propertyZone": "Suburban Zone",
+    "annualPremium": 35204,
+    "riskScore": 14,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-05-05T11:00:00Z"
+  },
+  {
+    "id": "UW006",
+    "policyId": "POL-2025-00006",
+    "applicantAge": 40,
+    "creditScore": 555,
+    "income": 635000,
+    "propertyValue": 1246940,
+    "ltvRatio": 87,
+    "propertyZone": "Seismic Zone V",
+    "annualPremium": 37755,
+    "riskScore": 75,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-06-06T11:00:00Z"
+  },
+  {
+    "id": "UW007",
+    "policyId": "POL-2025-00007",
+    "applicantAge": 43,
+    "creditScore": 656,
+    "income": 682000,
+    "propertyValue": 1366328,
+    "ltvRatio": 78,
+    "propertyZone": "IT Corridor",
+    "annualPremium": 40306,
+    "riskScore": 46,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-07-07T11:00:00Z"
+  },
+  {
+    "id": "UW008",
+    "policyId": "POL-2025-00008",
+    "applicantAge": 67,
+    "creditScore": 757,
+    "income": 729000,
+    "propertyValue": 1485716,
+    "ltvRatio": 52,
+    "propertyZone": "Industrial Zone",
+    "annualPremium": 42857,
+    "riskScore": 47,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-08-08T11:00:00Z"
+  },
+  {
+    "id": "UW009",
+    "policyId": "POL-2025-00009",
+    "applicantAge": 49,
+    "creditScore": 758,
+    "income": 776000,
+    "propertyValue": 1605104,
+    "ltvRatio": 53,
+    "propertyZone": "Residential Zone A",
+    "annualPremium": 45408,
+    "riskScore": 18,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-09-09T11:00:00Z"
+  },
+  {
+    "id": "UW010",
+    "policyId": "POL-2025-00010",
+    "applicantAge": 52,
+    "creditScore": 759,
+    "income": 823000,
+    "propertyValue": 1724492,
+    "ltvRatio": 54,
+    "propertyZone": "Residential Zone B",
+    "annualPremium": 47959,
+    "riskScore": 19,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-10-10T11:00:00Z"
+  },
+  {
+    "id": "UW011",
+    "policyId": "POL-2025-00011",
+    "applicantAge": 55,
+    "creditScore": 560,
+    "income": 870000,
+    "propertyValue": 1843881,
+    "ltvRatio": 82,
+    "propertyZone": "Coastal Erosion Zone",
+    "annualPremium": 50510,
+    "riskScore": 80,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-11-11T11:00:00Z"
+  },
+  {
+    "id": "UW012",
+    "policyId": "POL-2025-00012",
+    "applicantAge": 58,
+    "creditScore": 661,
+    "income": 917000,
+    "propertyValue": 1963269,
+    "ltvRatio": 75,
+    "propertyZone": "Commercial Zone B",
+    "annualPremium": 53061,
+    "riskScore": 51,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-12-12T11:00:00Z"
+  },
+  {
+    "id": "UW013",
+    "policyId": "POL-2025-00013",
+    "applicantAge": 61,
+    "creditScore": 762,
+    "income": 964000,
+    "propertyValue": 2082657,
+    "ltvRatio": 57,
+    "propertyZone": "Suburban Zone",
+    "annualPremium": 55612,
+    "riskScore": 22,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-01-13T11:00:00Z"
+  },
+  {
+    "id": "UW014",
+    "policyId": "POL-2025-00014",
+    "applicantAge": 64,
+    "creditScore": 763,
+    "income": 1011000,
+    "propertyValue": 2202045,
+    "ltvRatio": 58,
+    "propertyZone": "Metro Core Zone",
+    "annualPremium": 58163,
+    "riskScore": 23,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-02-14T11:00:00Z"
+  },
+  {
+    "id": "UW015",
+    "policyId": "POL-2025-00015",
+    "applicantAge": 27,
+    "creditScore": 764,
+    "income": 1058000,
+    "propertyValue": 2321433,
+    "ltvRatio": 59,
+    "propertyZone": "IT Corridor",
+    "annualPremium": 60714,
+    "riskScore": 24,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-03-15T11:00:00Z"
+  },
+  {
+    "id": "UW016",
+    "policyId": "POL-2025-00016",
+    "applicantAge": 30,
+    "creditScore": 565,
+    "income": 1105000,
+    "propertyValue": 2440821,
+    "ltvRatio": 87,
+    "propertyZone": "Industrial Hazard Zone",
+    "annualPremium": 63265,
+    "riskScore": 85,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-04-16T11:00:00Z"
+  },
+  {
+    "id": "UW017",
+    "policyId": "POL-2025-00017",
+    "applicantAge": 33,
+    "creditScore": 666,
+    "income": 1152000,
+    "propertyValue": 2560209,
+    "ltvRatio": 72,
+    "propertyZone": "Residential Zone A",
+    "annualPremium": 65816,
+    "riskScore": 56,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002",
+      "R004"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-05-17T11:00:00Z"
+  },
+  {
+    "id": "UW018",
+    "policyId": "POL-2025-00018",
+    "applicantAge": 36,
+    "creditScore": 767,
+    "income": 1199000,
+    "propertyValue": 2679597,
+    "ltvRatio": 62,
+    "propertyZone": "Residential Zone B",
+    "annualPremium": 68367,
+    "riskScore": 27,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-06-18T11:00:00Z"
+  },
+  {
+    "id": "UW019",
+    "policyId": "POL-2025-00019",
+    "applicantAge": 39,
+    "creditScore": 768,
+    "income": 1246000,
+    "propertyValue": 2798985,
+    "ltvRatio": 63,
+    "propertyZone": "Commercial Zone A",
+    "annualPremium": 70918,
+    "riskScore": 28,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-07-19T11:00:00Z"
+  },
+  {
+    "id": "UW020",
+    "policyId": "POL-2025-00020",
+    "applicantAge": 42,
+    "creditScore": 769,
+    "income": 1293000,
+    "propertyValue": 2918373,
+    "ltvRatio": 64,
+    "propertyZone": "Commercial Zone B",
+    "annualPremium": 73469,
+    "riskScore": 29,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-08-20T11:00:00Z"
+  },
+  {
+    "id": "UW021",
+    "policyId": "POL-2025-00021",
+    "applicantAge": 45,
+    "creditScore": 570,
+    "income": 1340000,
+    "propertyValue": 3037762,
+    "ltvRatio": 82,
+    "propertyZone": "Flood Zone A",
+    "annualPremium": 76020,
+    "riskScore": 90,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-09-21T11:00:00Z"
+  },
+  {
+    "id": "UW022",
+    "policyId": "POL-2025-00022",
+    "applicantAge": 48,
+    "creditScore": 671,
+    "income": 1387000,
+    "propertyValue": 3157150,
+    "ltvRatio": 77,
+    "propertyZone": "Metro Core Zone",
+    "annualPremium": 78571,
+    "riskScore": 61,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-10-22T11:00:00Z"
+  },
+  {
+    "id": "UW023",
+    "policyId": "POL-2025-00023",
+    "applicantAge": 51,
+    "creditScore": 772,
+    "income": 1434000,
+    "propertyValue": 3276538,
+    "ltvRatio": 67,
+    "propertyZone": "IT Corridor",
+    "annualPremium": 81122,
+    "riskScore": 32,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-11-23T11:00:00Z"
+  },
+  {
+    "id": "UW024",
+    "policyId": "POL-2025-00024",
+    "applicantAge": 54,
+    "creditScore": 773,
+    "income": 1481000,
+    "propertyValue": 3395926,
+    "ltvRatio": 68,
+    "propertyZone": "Industrial Zone",
+    "annualPremium": 83673,
+    "riskScore": 33,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-12-24T11:00:00Z"
+  },
+  {
+    "id": "UW025",
+    "policyId": "POL-2025-00025",
+    "applicantAge": 57,
+    "creditScore": 774,
+    "income": 1528000,
+    "propertyValue": 3515314,
+    "ltvRatio": 69,
+    "propertyZone": "Residential Zone A",
+    "annualPremium": 86224,
+    "riskScore": 34,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-01-25T11:00:00Z"
+  },
+  {
+    "id": "UW026",
+    "policyId": "POL-2025-00026",
+    "applicantAge": 60,
+    "creditScore": 575,
+    "income": 1575000,
+    "propertyValue": 3634702,
+    "ltvRatio": 87,
+    "propertyZone": "Seismic Zone V",
+    "annualPremium": 88775,
+    "riskScore": 70,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-02-26T11:00:00Z"
+  },
+  {
+    "id": "UW027",
+    "policyId": "POL-2025-00027",
+    "applicantAge": 63,
+    "creditScore": 676,
+    "income": 1622000,
+    "propertyValue": 3754090,
+    "ltvRatio": 74,
+    "propertyZone": "Commercial Zone A",
+    "annualPremium": 91326,
+    "riskScore": 41,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R004"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-03-27T11:00:00Z"
+  },
+  {
+    "id": "UW028",
+    "policyId": "POL-2025-00028",
+    "applicantAge": 26,
+    "creditScore": 777,
+    "income": 1669000,
+    "propertyValue": 3873478,
+    "ltvRatio": 47,
+    "propertyZone": "Commercial Zone B",
+    "annualPremium": 93877,
+    "riskScore": 37,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-04-28T11:00:00Z"
+  },
+  {
+    "id": "UW029",
+    "policyId": "POL-2025-00029",
+    "applicantAge": 29,
+    "creditScore": 778,
+    "income": 1716000,
+    "propertyValue": 3992866,
+    "ltvRatio": 48,
+    "propertyZone": "Suburban Zone",
+    "annualPremium": 96428,
+    "riskScore": 38,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2025-05-01T11:00:00Z"
+  },
+  {
+    "id": "UW030",
+    "policyId": "POL-2025-00030",
+    "applicantAge": 32,
+    "creditScore": 779,
+    "income": 1763000,
+    "propertyValue": 4112254,
+    "ltvRatio": 49,
+    "propertyZone": "Metro Core Zone",
+    "annualPremium": 98979,
+    "riskScore": 39,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2025-06-02T11:00:00Z"
+  },
+  {
+    "id": "UW031",
+    "policyId": "POL-2026-00031",
+    "applicantAge": 35,
+    "creditScore": 580,
+    "income": 1810000,
+    "propertyValue": 4231643,
+    "ltvRatio": 82,
+    "propertyZone": "Coastal Erosion Zone",
+    "annualPremium": 101530,
+    "riskScore": 75,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-07-03T11:00:00Z"
+  },
+  {
+    "id": "UW032",
+    "policyId": "POL-2026-00032",
+    "applicantAge": 38,
+    "creditScore": 681,
+    "income": 1857000,
+    "propertyValue": 4351031,
+    "ltvRatio": 79,
+    "propertyZone": "Industrial Zone",
+    "annualPremium": 104081,
+    "riskScore": 46,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-08-04T11:00:00Z"
+  },
+  {
+    "id": "UW033",
+    "policyId": "POL-2026-00033",
+    "applicantAge": 41,
+    "creditScore": 782,
+    "income": 1904000,
+    "propertyValue": 4470419,
+    "ltvRatio": 52,
+    "propertyZone": "Residential Zone A",
+    "annualPremium": 106632,
+    "riskScore": 12,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-09-05T11:00:00Z"
+  },
+  {
+    "id": "UW034",
+    "policyId": "POL-2026-00034",
+    "applicantAge": 44,
+    "creditScore": 783,
+    "income": 1951000,
+    "propertyValue": 4589807,
+    "ltvRatio": 53,
+    "propertyZone": "Residential Zone B",
+    "annualPremium": 109183,
+    "riskScore": 13,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-10-06T11:00:00Z"
+  },
+  {
+    "id": "UW035",
+    "policyId": "POL-2026-00035",
+    "applicantAge": 47,
+    "creditScore": 784,
+    "income": 1998000,
+    "propertyValue": 4709195,
+    "ltvRatio": 54,
+    "propertyZone": "Commercial Zone A",
+    "annualPremium": 111734,
+    "riskScore": 14,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-11-07T11:00:00Z"
+  },
+  {
+    "id": "UW036",
+    "policyId": "POL-2026-00036",
+    "applicantAge": 50,
+    "creditScore": 585,
+    "income": 2045000,
+    "propertyValue": 4828583,
+    "ltvRatio": 87,
+    "propertyZone": "Industrial Hazard Zone",
+    "annualPremium": 114285,
+    "riskScore": 80,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-12-08T11:00:00Z"
+  },
+  {
+    "id": "UW037",
+    "policyId": "POL-2026-00037",
+    "applicantAge": 53,
+    "creditScore": 686,
+    "income": 2092000,
+    "propertyValue": 4947971,
+    "ltvRatio": 76,
+    "propertyZone": "Suburban Zone",
+    "annualPremium": 116836,
+    "riskScore": 51,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-01-09T11:00:00Z"
+  },
+  {
+    "id": "UW038",
+    "policyId": "POL-2026-00038",
+    "applicantAge": 56,
+    "creditScore": 787,
+    "income": 2139000,
+    "propertyValue": 5067359,
+    "ltvRatio": 57,
+    "propertyZone": "Metro Core Zone",
+    "annualPremium": 119387,
+    "riskScore": 17,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-02-10T11:00:00Z"
+  },
+  {
+    "id": "UW039",
+    "policyId": "POL-2026-00039",
+    "applicantAge": 59,
+    "creditScore": 788,
+    "income": 2186000,
+    "propertyValue": 5186747,
+    "ltvRatio": 58,
+    "propertyZone": "IT Corridor",
+    "annualPremium": 121938,
+    "riskScore": 18,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-03-11T11:00:00Z"
+  },
+  {
+    "id": "UW040",
+    "policyId": "POL-2026-00040",
+    "applicantAge": 62,
+    "creditScore": 789,
+    "income": 2233000,
+    "propertyValue": 5306135,
+    "ltvRatio": 59,
+    "propertyZone": "Industrial Zone",
+    "annualPremium": 124489,
+    "riskScore": 19,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-04-12T11:00:00Z"
+  },
+  {
+    "id": "UW041",
+    "policyId": "POL-2026-00041",
+    "applicantAge": 25,
+    "creditScore": 590,
+    "income": 2280000,
+    "propertyValue": 5425524,
+    "ltvRatio": 82,
+    "propertyZone": "Flood Zone A",
+    "annualPremium": 127040,
+    "riskScore": 85,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-05-13T11:00:00Z"
+  },
+  {
+    "id": "UW042",
+    "policyId": "POL-2026-00042",
+    "applicantAge": 28,
+    "creditScore": 691,
+    "income": 2327000,
+    "propertyValue": 5544912,
+    "ltvRatio": 73,
+    "propertyZone": "Residential Zone B",
+    "annualPremium": 129591,
+    "riskScore": 56,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-06-14T11:00:00Z"
+  },
+  {
+    "id": "UW043",
+    "policyId": "POL-2026-00043",
+    "applicantAge": 31,
+    "creditScore": 792,
+    "income": 2374000,
+    "propertyValue": 5664300,
+    "ltvRatio": 62,
+    "propertyZone": "Commercial Zone A",
+    "annualPremium": 132142,
+    "riskScore": 22,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-07-15T11:00:00Z"
+  },
+  {
+    "id": "UW044",
+    "policyId": "POL-2026-00044",
+    "applicantAge": 34,
+    "creditScore": 793,
+    "income": 2421000,
+    "propertyValue": 5783688,
+    "ltvRatio": 63,
+    "propertyZone": "Commercial Zone B",
+    "annualPremium": 134693,
+    "riskScore": 23,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-08-16T11:00:00Z"
+  },
+  {
+    "id": "UW045",
+    "policyId": "POL-2026-00045",
+    "applicantAge": 37,
+    "creditScore": 794,
+    "income": 2468000,
+    "propertyValue": 5903076,
+    "ltvRatio": 64,
+    "propertyZone": "Suburban Zone",
+    "annualPremium": 137244,
+    "riskScore": 24,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-09-17T11:00:00Z"
+  },
+  {
+    "id": "UW046",
+    "policyId": "POL-2026-00046",
+    "applicantAge": 40,
+    "creditScore": 595,
+    "income": 2515000,
+    "propertyValue": 6022464,
+    "ltvRatio": 87,
+    "propertyZone": "Seismic Zone V",
+    "annualPremium": 139795,
+    "riskScore": 90,
+    "decision": "Reject",
+    "rulesApplied": [
+      "R003"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-10-18T11:00:00Z"
+  },
+  {
+    "id": "UW047",
+    "policyId": "POL-2026-00047",
+    "applicantAge": 43,
+    "creditScore": 696,
+    "income": 2562000,
+    "propertyValue": 6141852,
+    "ltvRatio": 78,
+    "propertyZone": "IT Corridor",
+    "annualPremium": 142346,
+    "riskScore": 61,
+    "decision": "Refer",
+    "rulesApplied": [
+      "R002",
+      "R004"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-11-19T11:00:00Z"
+  },
+  {
+    "id": "UW048",
+    "policyId": "POL-2026-00048",
+    "applicantAge": 46,
+    "creditScore": 797,
+    "income": 2609000,
+    "propertyValue": 6261240,
+    "ltvRatio": 67,
+    "propertyZone": "Industrial Zone",
+    "annualPremium": 144897,
+    "riskScore": 27,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-12-20T11:00:00Z"
+  },
+  {
+    "id": "UW049",
+    "policyId": "POL-2026-00049",
+    "applicantAge": 49,
+    "creditScore": 798,
+    "income": 2656000,
+    "propertyValue": 6380628,
+    "ltvRatio": 68,
+    "propertyZone": "Residential Zone A",
+    "annualPremium": 147448,
+    "riskScore": 28,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001"
+    ],
+    "evaluatedBy": "USR004",
+    "evaluatedAt": "2026-01-21T11:00:00Z"
+  },
+  {
+    "id": "UW050",
+    "policyId": "POL-2026-00050",
+    "applicantAge": 52,
+    "creditScore": 799,
+    "income": 2703000,
+    "propertyValue": 650015,
+    "ltvRatio": 69,
+    "propertyZone": "Residential Zone B",
+    "annualPremium": 149999,
+    "riskScore": 29,
+    "decision": "Auto-Approve",
+    "rulesApplied": [
+      "R001",
+      "R004"
+    ],
+    "evaluatedBy": "USR005",
+    "evaluatedAt": "2026-02-22T11:00:00Z"
+  }
+]

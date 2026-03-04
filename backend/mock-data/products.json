@@ -1,0 +1,86 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Mortgage Guarantee Standard",
+    "code": "MG-STD",
+    "description": "Standard mortgage guarantee insurance for conforming loans up to $500,000",
+    "status": "Active",
+    "policyType": "Mortgage Guarantee",
+    "coverageOptions": [
+      { "name": "Primary Coverage", "minAmount": 50000, "maxAmount": 500000, "defaultAmount": 200000 },
+      { "name": "Extended Coverage", "minAmount": 10000, "maxAmount": 100000, "defaultAmount": 50000 }
+    ],
+    "ratingFactors": [
+      { "field": "creditScore", "label": "Credit Score", "type": "multiplier", "tiers": [{ "min": 300, "max": 579, "value": 2.5 }, { "min": 580, "max": 669, "value": 1.8 }, { "min": 670, "max": 739, "value": 1.2 }, { "min": 740, "max": 850, "value": 1.0 }] },
+      { "field": "ltvRatio", "label": "LTV Ratio", "type": "multiplier", "tiers": [{ "min": 0, "max": 0.8, "value": 1.0 }, { "min": 0.8, "max": 0.9, "value": 1.3 }, { "min": 0.9, "max": 1.0, "value": 1.6 }] }
+    ],
+    "eligibilityCriteria": [
+      { "field": "creditScore", "label": "Minimum Credit Score", "operator": "gte", "value": 580 },
+      { "field": "ltvRatio", "label": "Maximum LTV", "operator": "lte", "value": 0.97 },
+      { "field": "propertyValue", "label": "Max Property Value", "operator": "lte", "value": 650000 }
+    ],
+    "requiredDocuments": ["Application Form", "Credit Report", "Property Appraisal", "Income Verification"],
+    "defaultTermMonths": 12,
+    "minPremium": 500,
+    "maxPremium": 25000,
+    "commissionRate": 0.15,
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-06-01T14:30:00Z",
+    "createdBy": "USR-001"
+  },
+  {
+    "id": "PRD-002",
+    "name": "Credit Protection Plus",
+    "code": "CP-PLUS",
+    "description": "Enhanced credit protection insurance with extended coverage and lower deductibles",
+    "status": "Active",
+    "policyType": "Credit Protection",
+    "coverageOptions": [
+      { "name": "Base Coverage", "minAmount": 25000, "maxAmount": 250000, "defaultAmount": 100000 },
+      { "name": "Job Loss Rider", "minAmount": 5000, "maxAmount": 50000, "defaultAmount": 25000 }
+    ],
+    "ratingFactors": [
+      { "field": "creditScore", "label": "Credit Score", "type": "multiplier", "tiers": [{ "min": 300, "max": 579, "value": 3.0 }, { "min": 580, "max": 669, "value": 2.0 }, { "min": 670, "max": 739, "value": 1.3 }, { "min": 740, "max": 850, "value": 1.0 }] },
+      { "field": "income", "label": "Annual Income", "type": "multiplier", "tiers": [{ "min": 0, "max": 40000, "value": 1.5 }, { "min": 40000, "max": 80000, "value": 1.2 }, { "min": 80000, "max": 999999, "value": 1.0 }] }
+    ],
+    "eligibilityCriteria": [
+      { "field": "creditScore", "label": "Minimum Credit Score", "operator": "gte", "value": 550 },
+      { "field": "income", "label": "Minimum Income", "operator": "gte", "value": 30000 }
+    ],
+    "requiredDocuments": ["Application Form", "Credit Report", "Income Verification", "Employment Letter"],
+    "defaultTermMonths": 12,
+    "minPremium": 300,
+    "maxPremium": 15000,
+    "commissionRate": 0.12,
+    "createdAt": "2025-02-10T09:00:00Z",
+    "updatedAt": "2025-05-20T11:15:00Z",
+    "createdBy": "USR-001"
+  },
+  {
+    "id": "PRD-003",
+    "name": "Coverage Plus Premier",
+    "code": "CVP-PREM",
+    "description": "Premium coverage product with comprehensive protection and low deductibles",
+    "status": "Draft",
+    "policyType": "Coverage Plus",
+    "coverageOptions": [
+      { "name": "Comprehensive Coverage", "minAmount": 100000, "maxAmount": 1000000, "defaultAmount": 500000 },
+      { "name": "Liability Coverage", "minAmount": 50000, "maxAmount": 500000, "defaultAmount": 250000 }
+    ],
+    "ratingFactors": [
+      { "field": "propertyValue", "label": "Property Value", "type": "multiplier", "tiers": [{ "min": 0, "max": 300000, "value": 1.0 }, { "min": 300000, "max": 600000, "value": 1.2 }, { "min": 600000, "max": 999999999, "value": 1.5 }] }
+    ],
+    "eligibilityCriteria": [
+      { "field": "creditScore", "label": "Minimum Credit Score", "operator": "gte", "value": 650 },
+      { "field": "propertyValue", "label": "Min Property Value", "operator": "gte", "value": 200000 }
+    ],
+    "requiredDocuments": ["Application Form", "Credit Report", "Property Appraisal", "Title Search", "Inspection Report"],
+    "defaultTermMonths": 24,
+    "minPremium": 1000,
+    "maxPremium": 50000,
+    "commissionRate": 0.18,
+    "createdAt": "2025-03-05T08:30:00Z",
+    "updatedAt": "2025-03-05T08:30:00Z",
+    "createdBy": "USR-001"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "userId": "USR001",
+    "userName": "Admin User",
+    "maxCoverageAmount": 999999999,
+    "maxRiskScore": 100,
+    "allowedDecisions": ["Auto-Approve", "Refer", "Reject"],
+    "canOverride": true,
+    "updatedAt": "2024-06-01T00:00:00Z",
+    "updatedBy": "system"
+  },
+  {
+    "userId": "USR004",
+    "userName": "Senior Underwriter",
+    "maxCoverageAmount": 50000000,
+    "maxRiskScore": 75,
+    "allowedDecisions": ["Auto-Approve", "Refer", "Reject"],
+    "canOverride": true,
+    "updatedAt": "2024-06-01T00:00:00Z",
+    "updatedBy": "USR001"
+  },
+  {
+    "userId": "USR006",
+    "userName": "Junior Underwriter",
+    "maxCoverageAmount": 10000000,
+    "maxRiskScore": 50,
+    "allowedDecisions": ["Auto-Approve", "Refer"],
+    "canOverride": false,
+    "updatedAt": "2025-01-15T00:00:00Z",
+    "updatedBy": "USR001"
+  }
+]

@@ -1,0 +1,42 @@
+import { Router } from 'express';
+import authRoutes from './auth.routes';
+import policyRoutes from './policy.routes';
+import customerRoutes from './customer.routes';
+import underwritingRoutes from './underwriting.routes';
+import claimRoutes from './claim.routes';
+import documentRoutes from './document.routes';
+import dashboardRoutes from './dashboard.routes';
+import adminRoutes from './admin.routes';
+import reportRoutes from './report.routes';
+import notificationRoutes from './notification.routes';
+import taskRoutes from './task.routes';
+import billingRoutes from './billing.routes';
+import uwRulesRoutes from './uwRules.routes';
+import activityRoutes from './activity.routes';
+import integrationRoutes from './integration.routes';
+import productRoutes from './product.routes';
+import complianceRoutes from './compliance.routes';
+import bulkRoutes from './bulk.routes';
+
+const router = Router();
+
+router.use('/auth', authRoutes);
+router.use('/policies', policyRoutes);
+router.use('/customers', customerRoutes);
+router.use('/underwriting', underwritingRoutes);
+router.use('/uw', uwRulesRoutes);
+router.use('/claims', claimRoutes);
+router.use('/documents', documentRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/admin', adminRoutes);
+router.use('/reports', reportRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/tasks', taskRoutes);
+router.use('/billing', billingRoutes);
+router.use('/activity', activityRoutes);
+router.use('/integrations', integrationRoutes);
+router.use('/products', productRoutes);
+router.use('/compliance', complianceRoutes);
+router.use('/bulk', bulkRoutes);
+
+export default router;

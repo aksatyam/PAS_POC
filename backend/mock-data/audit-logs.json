@@ -1,0 +1,2765 @@
+[
+  {
+    "id": "LOG-4f948b24-d1a0-48fb-ac04-84767e128ee2",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:11:49.665Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-c464e5c2-1526-44c8-aae1-9d40b17dc7c3",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:13:42.132Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-0ecaf081-18fc-4271-b48f-52d252b1da29",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:13:51.858Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-07bd1af2-c81b-45d3-ae12-bfbc71a4ee11",
+    "actor": {
+      "userId": "USR008",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR008"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:15:12.927Z",
+    "metadata": {
+      "email": "viewer1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-284fe104-dae0-4471-abbb-b3a860687aee",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:33:20.720Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-4b815841-c424-456a-8719-b8e7a8306b4a",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:36:24.894Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-cd95dbe4-8a37-47ce-aa5a-9e7186ebf2f5",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:37:22.529Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-e7fd8123-e916-4c1e-b605-e5069c7c7b9a",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:37:43.456Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-a054a0a5-68ab-45f0-afdf-dd6ee1347ad1",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T14:55:45.654Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-84d28b7b-9261-4075-8564-c4cf9c12a610",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:06:34.576Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-e158fbe7-c5d3-4125-82a0-d636857da40f",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:06:41.219Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-be0c0d15-3ae3-416f-8671-352c98e8b603",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:06:59.281Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-43cdcfaa-341a-4c75-b26c-29e263dca96e",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:07:05.671Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-141d84dd-3276-4087-8cc1-e7a9fc4139f4",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:31:35.232Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-28b6965d-2b90-4b6d-b5a2-0c28a33eaabb",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:38:14.166Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-e1091b49-baca-4060-9908-01fd0ca9d444",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:38:22.734Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-bb45669b-7eb4-4bec-b005-eb4ca050533d",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:44:15.588Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-6da4e8bc-b7a9-445f-92b4-f8f8a6d38c3d",
+    "actor": {
+      "userId": "USR008",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR008"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:44:19.171Z",
+    "metadata": {
+      "email": "viewer1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-a37a384a-a6e8-4e81-a04b-de40844c6334",
+    "actor": {
+      "userId": "USR008",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR008"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:44:27.889Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-67bda8da-0f37-46a3-9c06-b7c6df3ed538",
+    "actor": {
+      "userId": "USR002",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR002"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:44:31.223Z",
+    "metadata": {
+      "email": "ops1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-ba8d212c-2d8d-4f87-9846-2535328b49ad",
+    "actor": {
+      "userId": "USR002",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR002"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:44:43.834Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-ebd584b7-8e6c-4fe3-b0c7-c597ed397e21",
+    "actor": {
+      "userId": "USR004",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR004"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T15:44:47.875Z",
+    "metadata": {
+      "email": "uw1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-4b036590-09f2-49dc-86dd-ec93a2338ff8",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:12:37.752Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-a2a589a6-3fe4-41c8-aa7f-fc90638964bb",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:12:56.206Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-56ee73ae-1a76-46d7-ae93-f63d10bba5c7",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:15:47.970Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-8c0b3613-9c9d-44cf-a7aa-53b3e48279ae",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:16:02.932Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-cb655c2a-38d6-41f3-94ec-2cf9ed4e41cb",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:16:33.931Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-1375a3e7-1e2c-425c-924c-caca7eae03a4",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:17:27.651Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-3e9c5798-b59d-4d12-a7cf-28c976afb00c",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:17:36.750Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-7d4fae57-e286-458f-b0ec-384f2dd8c27d",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:27:27.963Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-631e6f0f-7e3d-4517-8fed-f3799fb26062",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:27:31.606Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-ecf33348-3c4b-482a-bb15-22ce88b9f38b",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:27:48.540Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-52054620-5e41-4c19-9554-6de6538401e5",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:31:45.778Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-7d1cac0c-6aea-4862-967a-a469d1ae446a",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:33:12.994Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-a622fec3-e52a-43e7-a1a2-e36c802793ba",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:41:30.755Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-dcceef62-bbc9-4ed0-b5a2-c1ee41183016",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "QUOTE",
+    "resource": {
+      "type": "policy",
+      "id": "POL-2026-00051"
+    },
+    "after": {
+      "policy": {
+        "id": "POL-2026-00051",
+        "status": "Quoted",
+        "premiumAmount": null,
+        "version": 1,
+        "createdAt": "2026-03-03T21:42:57.300Z",
+        "updatedAt": "2026-03-03T21:42:57.300Z",
+        "createdBy": "USR001"
+      },
+      "premium": {
+        "coverageMultiplier": 1,
+        "totalPremium": null,
+        "breakdown": [
+          {
+            "factor": "Base Rate",
+            "impact": null
+          },
+          {
+            "factor": "Risk Category",
+            "impact": null
+          },
+          {
+            "factor": "Policy Type",
+            "impact": null
+          },
+          {
+            "factor": "Coverage Volume",
+            "value": 1,
+            "impact": null
+          }
+        ]
+      }
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T21:42:57.302Z"
+  },
+  {
+    "id": "LOG-1fcf4c31-194e-4697-b0b3-7e4d39bc1a02",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "quote",
+      "id": "unknown"
+    },
+    "before": {},
+    "after": {
+      "policy": {
+        "id": "POL-2026-00051",
+        "status": "Quoted",
+        "premiumAmount": null,
+        "version": 1,
+        "createdAt": "2026-03-03T21:42:57.300Z",
+        "updatedAt": "2026-03-03T21:42:57.300Z",
+        "createdBy": "USR001"
+      },
+      "premium": {
+        "coverageMultiplier": 1,
+        "totalPremium": null,
+        "breakdown": [
+          {
+            "factor": "Base Rate",
+            "impact": null
+          },
+          {
+            "factor": "Risk Category",
+            "impact": null
+          },
+          {
+            "factor": "Policy Type",
+            "impact": null
+          },
+          {
+            "factor": "Coverage Volume",
+            "value": 1,
+            "impact": null
+          }
+        ]
+      }
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:42:57.303Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/policies/quote",
+      "statusCode": 201
+    }
+  },
+  {
+    "id": "LOG-830c4563-0b3b-45a3-b8a5-535768a887fd",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM021"
+    },
+    "after": {
+      "id": "CLM021",
+      "policyId": "",
+      "claimType": "Other",
+      "description": "",
+      "amount": 0,
+      "status": "Filed",
+      "filedDate": "2026-03-03T21:42:57.403Z",
+      "documents": [],
+      "createdBy": "USR001",
+      "updatedAt": "2026-03-03T21:42:57.403Z",
+      "fraudScore": 18,
+      "fraudIndicators": [
+        "Claim filed within 30 days of policy creation"
+      ]
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T21:42:57.406Z"
+  },
+  {
+    "id": "LOG-c0d5a762-883f-4b17-b022-5717d4353bec",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM021"
+    },
+    "before": {},
+    "after": {
+      "id": "CLM021",
+      "policyId": "",
+      "claimType": "Other",
+      "description": "",
+      "amount": 0,
+      "status": "Filed",
+      "filedDate": "2026-03-03T21:42:57.403Z",
+      "documents": [],
+      "createdBy": "USR001",
+      "updatedAt": "2026-03-03T21:42:57.403Z",
+      "fraudScore": 18,
+      "fraudIndicators": [
+        "Claim filed within 30 days of policy creation"
+      ]
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:42:57.406Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/claims",
+      "statusCode": 201
+    }
+  },
+  {
+    "id": "LOG-c8cf029a-50e9-49c5-9397-e77c5af90d33",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "Task",
+      "id": "unknown"
+    },
+    "before": {},
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:42:57.508Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/tasks",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-3d900b73-b169-4097-9995-8d205f636536",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "policy",
+      "id": "POL-2025-00001"
+    },
+    "before": {
+      "status": "Draft"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:42:57.621Z",
+    "metadata": {
+      "method": "PATCH",
+      "path": "/api/v1/policies/POL-2025-00001/status",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-b6cce05b-56cc-4565-849f-9d24841c9ad2",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "QUOTE",
+    "resource": {
+      "type": "policy",
+      "id": "POL-2026-00052"
+    },
+    "after": {
+      "policy": {
+        "id": "POL-2026-00052",
+        "status": "Quoted",
+        "premiumAmount": null,
+        "version": 1,
+        "createdAt": "2026-03-03T21:43:32.205Z",
+        "updatedAt": "2026-03-03T21:43:32.205Z",
+        "createdBy": "USR001"
+      },
+      "premium": {
+        "coverageMultiplier": 1,
+        "totalPremium": null,
+        "breakdown": [
+          {
+            "factor": "Base Rate",
+            "impact": null
+          },
+          {
+            "factor": "Risk Category",
+            "impact": null
+          },
+          {
+            "factor": "Policy Type",
+            "impact": null
+          },
+          {
+            "factor": "Coverage Volume",
+            "value": 1,
+            "impact": null
+          }
+        ]
+      }
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T21:43:32.205Z"
+  },
+  {
+    "id": "LOG-28874a6a-0eb7-4542-96ca-77fea3d7fd90",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "quote",
+      "id": "unknown"
+    },
+    "before": {},
+    "after": {
+      "policy": {
+        "id": "POL-2026-00052",
+        "status": "Quoted",
+        "premiumAmount": null,
+        "version": 1,
+        "createdAt": "2026-03-03T21:43:32.205Z",
+        "updatedAt": "2026-03-03T21:43:32.205Z",
+        "createdBy": "USR001"
+      },
+      "premium": {
+        "coverageMultiplier": 1,
+        "totalPremium": null,
+        "breakdown": [
+          {
+            "factor": "Base Rate",
+            "impact": null
+          },
+          {
+            "factor": "Risk Category",
+            "impact": null
+          },
+          {
+            "factor": "Policy Type",
+            "impact": null
+          },
+          {
+            "factor": "Coverage Volume",
+            "value": 1,
+            "impact": null
+          }
+        ]
+      }
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:43:32.206Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/policies/quote",
+      "statusCode": 201
+    }
+  },
+  {
+    "id": "LOG-13d5c055-b494-48e2-89d3-96e4c5670f8c",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM022"
+    },
+    "after": {
+      "id": "CLM022",
+      "policyId": "",
+      "claimType": "Other",
+      "description": "",
+      "amount": 0,
+      "status": "Filed",
+      "filedDate": "2026-03-03T21:43:32.313Z",
+      "documents": [],
+      "createdBy": "USR001",
+      "updatedAt": "2026-03-03T21:43:32.313Z",
+      "fraudScore": 39,
+      "fraudIndicators": [
+        "Claim filed within 30 days of policy creation",
+        "Multiple claims on same policy within 90 days"
+      ]
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T21:43:32.314Z"
+  },
+  {
+    "id": "LOG-8ed76e48-436f-4086-a3a9-6d8792d29f1f",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM022"
+    },
+    "before": {},
+    "after": {
+      "id": "CLM022",
+      "policyId": "",
+      "claimType": "Other",
+      "description": "",
+      "amount": 0,
+      "status": "Filed",
+      "filedDate": "2026-03-03T21:43:32.313Z",
+      "documents": [],
+      "createdBy": "USR001",
+      "updatedAt": "2026-03-03T21:43:32.313Z",
+      "fraudScore": 39,
+      "fraudIndicators": [
+        "Claim filed within 30 days of policy creation",
+        "Multiple claims on same policy within 90 days"
+      ]
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:43:32.314Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/claims",
+      "statusCode": 201
+    }
+  },
+  {
+    "id": "LOG-ca675749-af03-463a-b1a8-3e80fe9da121",
+    "actor": {
+      "userId": "unknown",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "unknown"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:44:45.955Z",
+    "metadata": {
+      "email": "priya@pas.com"
+    }
+  },
+  {
+    "id": "LOG-96118294-5179-4faf-96d9-0927f57ddb9c",
+    "actor": {
+      "userId": "USR008",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR008"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:45:23.265Z",
+    "metadata": {
+      "email": "viewer1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-9a1078f5-0b66-432f-83df-dea33622a639",
+    "actor": {
+      "userId": "USR006",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR006"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:45:24.364Z",
+    "metadata": {
+      "email": "claims1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-5fd0894b-fbbd-4b6d-bf9b-78355cb9b776",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:52:37.019Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-d0269170-5b0e-4470-bbc8-0aafd1f637f8",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:52:53.390Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-c1e62b05-387b-458a-8e05-58a3b8909684",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:02.338Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-b0d09dac-2ad3-4f1a-8527-ddb7aba7717d",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:22.078Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-304eac56-3fcd-47e7-b11e-68db249a6439",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "quote",
+      "id": "unknown"
+    },
+    "before": {},
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:22.094Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/policies/quote",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-f872cba7-dd4a-4439-890e-71bde409232c",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "claim",
+      "id": "unknown"
+    },
+    "before": {},
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:22.216Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/claims",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-e492e912-0478-4057-bc92-ef3cdffa7206",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "customer",
+      "id": "unknown"
+    },
+    "before": {
+      "name": "T***",
+      "email": "notvalid",
+      "phone": "******0100"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:22.335Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/customers",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-5cb2bfd9-870e-4c93-bf05-6c87f86a0c94",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "invoice",
+      "id": "unknown"
+    },
+    "before": {
+      "billingAccountId": "BA001",
+      "amount": -50,
+      "dueDate": "2025-01-01"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:22.467Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/billing/invoices",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-bd77046e-c8b0-42db-8ca0-ea0b62f157c6",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "PAYMENT",
+    "resource": {
+      "type": "payment",
+      "id": "unknown"
+    },
+    "before": {},
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:53:22.602Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/billing/payments",
+      "statusCode": 400
+    }
+  },
+  {
+    "id": "LOG-32fa4915-e9c2-4b42-911d-a33f161869c9",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:56:09.512Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-6f34966e-cafc-4355-b45c-8808ceed6753",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T21:57:34.013Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-86a25728-a414-434b-952f-89d1b68cd7af",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:10:14.644Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-3341afad-da83-4a31-a988-448cbc3cddb0",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:10:37.558Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-503983ab-071a-4e8b-8b91-060444313be7",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:12:33.955Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-85e30eb7-8335-405c-b277-02d5ecb3364d",
+    "actor": {
+      "userId": "USR004",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR004"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:12:38.183Z",
+    "metadata": {
+      "email": "uw1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-3e59e409-2ca4-4616-8e75-49658807ca6d",
+    "actor": {
+      "userId": "USR004",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR004"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:13:14.242Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-4f683996-9dec-41e1-b220-9f9fa558295d",
+    "actor": {
+      "userId": "USR002",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR002"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:13:18.575Z",
+    "metadata": {
+      "email": "ops1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-e536eb98-b35f-429f-8016-f94cd03201d6",
+    "actor": {
+      "userId": "USR002",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR002"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:13:25.039Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-083043c0-9cca-4f2b-8442-8be9f16e0e57",
+    "actor": {
+      "userId": "USR008",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR008"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:13:29.397Z",
+    "metadata": {
+      "email": "viewer1@pas.com"
+    }
+  },
+  {
+    "id": "LOG-c9c32a25-bc92-4f88-9ec5-1aae5b7cce2e",
+    "actor": {
+      "userId": "USR008",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR008"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:16:12.610Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-ebedd91e-4913-4416-ad01-43680aa6caf7",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:16:16.730Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-a12fb48e-da55-4062-9819-5081cff2c431",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T22:43:07.786Z",
+    "metadata": {
+      "email": ""
+    }
+  },
+  {
+    "id": "LOG-e7b2c345-d2c6-47bb-964b-36dccbf7b017",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:13:23.711Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-c2876c34-f63c-4eee-b033-c3f3331a0803",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:14:45.468Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-5ed25ac3-e8d3-4366-905f-864a424485e2",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:14:57.244Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-55eae86c-11f2-404b-ae4d-0b6700271c54",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:17:50.245Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-da6b390c-3f90-4ebc-8858-91a31460dbad",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Filed",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-02-01T10:00:00Z"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:31.049Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Investigation"
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T23:18:31.051Z"
+  },
+  {
+    "id": "LOG-097e39c3-921f-4e23-8d0d-6c29fe8fbcd1",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "status": "Under Review"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "c*************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "d****************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:31.049Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Investigation"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:18:31.051Z",
+    "metadata": {
+      "method": "PATCH",
+      "path": "/api/v1/claims/CLM001/status",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-6a11a99a-81db-4d5a-b1a4-15e3aacedbd9",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:31.049Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Investigation"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:36.832Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Evaluation"
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T23:18:36.833Z"
+  },
+  {
+    "id": "LOG-6a07117d-92a5-4cbf-88bb-e15420387156",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "adjudicationStatus": "Evaluation"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "c*************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "d****************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:36.832Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Evaluation"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:18:36.834Z",
+    "metadata": {
+      "method": "PUT",
+      "path": "/api/v1/claims/CLM001/adjudicate",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-8deaf1a6-0fdf-4fec-901b-c115f78d8d3f",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:36.832Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Evaluation"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:41.496Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Negotiation"
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T23:18:41.497Z"
+  },
+  {
+    "id": "LOG-58ce4253-592a-4ab6-b0f7-50eac79fcb32",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "adjudicationStatus": "Negotiation"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "c*************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "d****************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:41.496Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Negotiation"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:18:41.498Z",
+    "metadata": {
+      "method": "PUT",
+      "path": "/api/v1/claims/CLM001/adjudicate",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-ac4243f8-7ec0-4897-874c-9b8eb3eb67cd",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Under Review",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:41.496Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Negotiation"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Approved",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "claim_form.pdf",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "damage_photos.zip",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:48.133Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Negotiation"
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-03T23:18:48.134Z"
+  },
+  {
+    "id": "LOG-923ba9ba-b3d2-4d9d-bad6-b15ff7b1bc6c",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM001"
+    },
+    "before": {
+      "status": "Approved"
+    },
+    "after": {
+      "id": "CLM001",
+      "policyId": "POL-2025-00001",
+      "claimType": "Default",
+      "description": "Borrower defaulted on mortgage payments for 3 consecutive months",
+      "amount": 50000,
+      "status": "Approved",
+      "filedDate": "2025-01-01T10:00:00Z",
+      "resolvedDate": null,
+      "documents": [
+        {
+          "name": "c*************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        },
+        {
+          "name": "d****************",
+          "uploadedAt": "2025-01-01T10:00:00Z"
+        }
+      ],
+      "createdBy": "USR006",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2026-03-03T23:18:48.133Z",
+      "reviewDate": "2026-03-03T23:18:31.049Z",
+      "assignedTo": "USR001",
+      "adjudicationStatus": "Negotiation"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:18:48.135Z",
+    "metadata": {
+      "method": "PATCH",
+      "path": "/api/v1/claims/CLM001/status",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-994594e9-1cdd-4b2e-8173-62626e9dd991",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "Document",
+      "id": "DOC033"
+    },
+    "before": {},
+    "after": {
+      "id": "DOC033",
+      "policyId": "POL-2026-00033",
+      "type": "Property Valuation Report",
+      "filename": "property_valuation_report_2026_00033.pdf",
+      "mimeType": "application/pdf",
+      "size": 1580260,
+      "uploadDate": "2026-09-05T12:00:00Z",
+      "uploadedBy": "USR004",
+      "metadata": {
+        "version": 3,
+        "pages": 17,
+        "isVerified": "true",
+        "verifiedBy": "USR001",
+        "verifiedAt": "2026-03-03T23:19:28.504Z",
+        "tags": [
+          "property",
+          "coverage"
+        ]
+      },
+      "category": "Underwriting",
+      "version": 3
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:19:28.508Z",
+    "metadata": {
+      "method": "PUT",
+      "path": "/api/v1/documents/DOC033/verify",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-379d3dfe-770c-463c-832a-314bef592f99",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "ApiKey",
+      "id": "KEY003"
+    },
+    "before": {
+      "isActive": true
+    },
+    "after": {
+      "id": "KEY003",
+      "name": "D******* S******",
+      "key": "pk_live_doc4...",
+      "createdBy": "USR001",
+      "isActive": true,
+      "rateLimit": 50,
+      "usageCount": 890,
+      "permissions": [
+        "documents.read",
+        "documents.write"
+      ],
+      "createdAt": "2025-02-01T09:00:00Z"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:20:19.936Z",
+    "metadata": {
+      "method": "PUT",
+      "path": "/api/v1/integrations/keys/KEY003",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-66c818c3-68c7-4601-ab07-9f55bc3bc82b",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "ApiKey",
+      "id": "KEY003"
+    },
+    "before": {
+      "isActive": false
+    },
+    "after": {
+      "id": "KEY003",
+      "name": "D******* S******",
+      "key": "pk_live_doc4...",
+      "createdBy": "USR001",
+      "isActive": false,
+      "rateLimit": 50,
+      "usageCount": 890,
+      "permissions": [
+        "documents.read",
+        "documents.write"
+      ],
+      "createdAt": "2025-02-01T09:00:00Z"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:20:21.191Z",
+    "metadata": {
+      "method": "PUT",
+      "path": "/api/v1/integrations/keys/KEY003",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-3ad68313-079b-494f-8fb3-37fa2912a6f8",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:39:40.805Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-8da13000-abda-40f5-ad16-2956e6791aa0",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-03T23:45:34.540Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-871e66e0-9a49-4572-bca6-1e8e7f41f7b0",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:31:16.973Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-af1bfb74-bb72-4d6a-a5a2-f20e42563371",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:31:23.577Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-247e1859-973a-43a1-9039-136e3f98bc06",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:31:32.628Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-7f21e877-96d6-457c-8bae-2bc37ac8f731",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:31:39.891Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-d8f82923-fac4-4627-ab02-42dbf30aed99",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:31:51.473Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-6b0d1632-7e48-444e-90ab-987e508fe244",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:32:47.164Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-b13baf42-679d-41b1-a4f1-d040f7e6aabd",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "CREATE",
+    "resource": {
+      "type": "claim",
+      "id": "CLM023"
+    },
+    "after": {
+      "id": "CLM023",
+      "policyId": "POL-2025-00002",
+      "claimType": "Property_Damage",
+      "description": "Water pipe burst in basement causing extensive flooding. Damage to flooring, walls, and stored equipment. Building was occupied at the time of incident.",
+      "amount": 850000,
+      "status": "Filed",
+      "filedDate": "2026-03-04T00:35:41.703Z",
+      "documents": [],
+      "createdBy": "USR001",
+      "updatedAt": "2026-03-04T00:35:41.703Z",
+      "incidentDate": "2026-03-01T14:30:00Z",
+      "incidentLocation": "45 MG Road, Bengaluru, Karnataka 560001",
+      "reportedBy": "Ananya Desai",
+      "contactPhone": "+91-9876543210",
+      "fraudScore": 50,
+      "fraudIndicators": [
+        "Claim amount exceeds 80% of coverage",
+        "Claim filed within 30 days of policy creation",
+        "Claim amount is suspiciously round number",
+        "Claimant has 3+ claims across all policies"
+      ]
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-04T00:35:41.706Z"
+  },
+  {
+    "id": "LOG-5ed3229b-4b28-4b8b-85e2-3c0307cf7245",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "fnol",
+      "id": "unknown"
+    },
+    "before": {},
+    "after": {
+      "fnol": {
+        "id": "FNOL-001",
+        "policyId": "POL-2025-00002",
+        "claimType": "Property_Damage",
+        "incidentDate": "2026-03-01T14:30:00Z",
+        "incidentLocation": "45 MG Road, Bengaluru, Karnataka 560001",
+        "description": "Water pipe burst in basement causing extensive flooding. Damage to flooring, walls, and stored equipment. Building was occupied at the time of incident.",
+        "reportedBy": "Ananya Desai",
+        "contactPhone": "+91-9876543210",
+        "contactEmail": "ananya.desai@email.com",
+        "damageDescription": "Basement flooring completely waterlogged, drywall damage on two walls extending 3 feet high, electrical panel exposed to water, stored office furniture and equipment damaged.",
+        "estimatedAmount": 850000,
+        "partiesInvolved": [
+          {
+            "name": "A***** D****",
+            "role": "Property Owner",
+            "contact": "+91-9876543210"
+          },
+          {
+            "name": "R** P******* S*******",
+            "role": "Maintenance Contractor",
+            "contact": "+91-9845012345"
+          }
+        ],
+        "documents": [
+          "water_damage_photos.zip",
+          "plumber_assessment_report.pdf"
+        ],
+        "status": "Claim Created",
+        "claimId": "CLM023",
+        "createdAt": "2026-03-02T09:15:00Z",
+        "createdBy": "USR002"
+      },
+      "claim": {
+        "id": "CLM023",
+        "policyId": "POL-2025-00002",
+        "claimType": "Property_Damage",
+        "description": "Water pipe burst in basement causing extensive flooding. Damage to flooring, walls, and stored equipment. Building was occupied at the time of incident.",
+        "amount": 850000,
+        "status": "Filed",
+        "filedDate": "2026-03-04T00:35:41.703Z",
+        "documents": [],
+        "createdBy": "USR001",
+        "updatedAt": "2026-03-04T00:35:41.703Z",
+        "incidentDate": "2026-03-01T14:30:00Z",
+        "incidentLocation": "45 MG Road, Bengaluru, Karnataka 560001",
+        "reportedBy": "Ananya Desai",
+        "contactPhone": "+91-9876543210",
+        "fraudScore": 50,
+        "fraudIndicators": [
+          "Claim amount exceeds 80% of coverage",
+          "Claim filed within 30 days of policy creation",
+          "Claim amount is suspiciously round number",
+          "Claimant has 3+ claims across all policies"
+        ]
+      }
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:35:41.708Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/claims/fnol/FNOL-001/process",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-463d3a43-7133-4a64-b2bd-87b47673bc73",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:40:06.836Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-efdbcda9-49b4-4c59-8701-83bc73f06569",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "policy",
+      "id": "POL-2025-00002"
+    },
+    "before": {
+      "id": "POL-2025-00002",
+      "customerId": "CUST002",
+      "policyType": "Credit Protection",
+      "status": "Active",
+      "premiumAmount": 27551,
+      "coverageAmount": 591837,
+      "startDate": "2025-02-02",
+      "endDate": "2026-02-02",
+      "riskCategory": "Medium",
+      "version": 2,
+      "createdAt": "2025-02-02T09:00:00Z",
+      "updatedAt": "2025-03-02T09:00:00Z",
+      "createdBy": "USR003"
+    },
+    "after": {
+      "id": "POL-2025-00002",
+      "customerId": "CUST002",
+      "policyType": "Credit Protection",
+      "status": "Endorsed",
+      "premiumAmount": 27551,
+      "coverageAmount": 591837,
+      "startDate": "2025-02-02",
+      "endDate": "2026-02-02",
+      "riskCategory": "Medium",
+      "version": 2,
+      "createdAt": "2025-02-02T09:00:00Z",
+      "updatedAt": "2026-03-04T00:49:17.790Z",
+      "createdBy": "USR003"
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-04T00:49:17.792Z"
+  },
+  {
+    "id": "LOG-e6c42ae2-c5df-4593-8c12-e375c2a75c98",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "STATUS_CHANGE",
+    "resource": {
+      "type": "policy",
+      "id": "POL-2025-00002"
+    },
+    "before": {
+      "status": "Endorsed"
+    },
+    "after": {
+      "id": "POL-2025-00002",
+      "customerId": "CUST002",
+      "policyType": "Credit Protection",
+      "status": "Endorsed",
+      "premiumAmount": 27551,
+      "coverageAmount": 591837,
+      "startDate": "2025-02-02",
+      "endDate": "2026-02-02",
+      "riskCategory": "Medium",
+      "version": 2,
+      "createdAt": "2025-02-02T09:00:00Z",
+      "updatedAt": "2026-03-04T00:49:17.790Z",
+      "createdBy": "USR003"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:49:17.794Z",
+    "metadata": {
+      "method": "PATCH",
+      "path": "/api/v1/policies/POL-2025-00002/status",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-c9ff3ff3-1229-455e-ad98-edb964cf4b24",
+    "actor": {
+      "userId": "USR001",
+      "role": ""
+    },
+    "action": "ENDORSE",
+    "resource": {
+      "type": "policy",
+      "id": "POL-2025-00010"
+    },
+    "before": {
+      "id": "POL-2025-00010",
+      "customerId": "CUST010",
+      "policyType": "Mortgage Guarantee",
+      "status": "Active",
+      "premiumAmount": 47959,
+      "coverageAmount": 1326533,
+      "startDate": "2025-10-10",
+      "endDate": "2026-10-10",
+      "riskCategory": "Low",
+      "version": 1,
+      "createdAt": "2025-10-10T09:00:00Z",
+      "updatedAt": "2025-11-10T09:00:00Z",
+      "createdBy": "USR003"
+    },
+    "after": {
+      "id": "POL-2025-00010",
+      "customerId": "CUST010",
+      "policyType": "Mortgage Guarantee",
+      "status": "Endorsed",
+      "premiumAmount": 60459,
+      "coverageAmount": 1326533,
+      "startDate": "2025-10-10",
+      "endDate": "2026-10-01",
+      "riskCategory": "Low",
+      "version": 1,
+      "createdAt": "2025-10-10T09:00:00Z",
+      "updatedAt": "2026-03-04T00:49:50.566Z",
+      "createdBy": "USR003"
+    },
+    "ipAddress": "internal",
+    "timestamp": "2026-03-04T00:49:50.567Z"
+  },
+  {
+    "id": "LOG-bba5b858-11b3-4748-9581-c2f7614666b8",
+    "actor": {
+      "userId": "USR001",
+      "role": "Admin"
+    },
+    "action": "UPDATE",
+    "resource": {
+      "type": "endorsement",
+      "id": "unknown"
+    },
+    "before": {},
+    "after": {
+      "endorsement": {
+        "id": "END-00004",
+        "policyId": "POL-2025-00010",
+        "type": "Term Extension",
+        "description": "Extend policy term by 6 months",
+        "changes": {
+          "endDate": {
+            "from": "2026-04-01",
+            "to": "2026-10-01"
+          }
+        },
+        "premiumDelta": 12500,
+        "effectiveDate": "2026-03-15",
+        "status": "Applied",
+        "createdAt": "2026-03-01T09:00:00Z",
+        "createdBy": "USR002",
+        "approvedBy": "USR001",
+        "approvedAt": "2026-03-02T16:00:00Z"
+      },
+      "policy": {
+        "id": "POL-2025-00010",
+        "customerId": "CUST010",
+        "policyType": "Mortgage Guarantee",
+        "status": "Endorsed",
+        "premiumAmount": 60459,
+        "coverageAmount": 1326533,
+        "startDate": "2025-10-10",
+        "endDate": "2026-10-01",
+        "riskCategory": "Low",
+        "version": 1,
+        "createdAt": "2025-10-10T09:00:00Z",
+        "updatedAt": "2026-03-04T00:49:50.566Z",
+        "createdBy": "USR003"
+      }
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T00:49:50.568Z",
+    "metadata": {
+      "method": "POST",
+      "path": "/api/v1/policies/endorsements/END-00004/apply",
+      "statusCode": 200
+    }
+  },
+  {
+    "id": "LOG-cbabdc0b-aff4-4848-b331-35ef10ed7cad",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T03:49:41.790Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-be19f8bf-7977-41c4-839a-81ad72116f86",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T03:52:14.883Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-e7a542e2-7fe2-451a-9146-514d7b895bad",
+    "actor": {
+      "userId": "unknown",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "unknown"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:27:39.745Z",
+    "metadata": {
+      "email": "admin@imgc.com"
+    }
+  },
+  {
+    "id": "LOG-532d5321-ea17-483a-8c77-4a79507f0594",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:28:25.884Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-bf478ed0-f744-457a-94db-e81a6e6b4b2a",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:28:49.699Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-f8c85c1c-9a46-4332-a6d7-dec55a57f6e4",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:29:38.613Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-5f86ceae-4c43-40ab-ba37-553fa38ea993",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:29:56.008Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-493a19f1-3d5c-4b78-9df8-110a2d8d9a5e",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:30:19.764Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-740578a6-3580-4fa5-853d-6c02d4241e91",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:47:44.268Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-81061464-4de4-4810-a903-15553688cbc5",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "FAILED_LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:47:50.403Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-47f35a51-d49b-42e9-a5ee-98f97274914e",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T04:49:33.646Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-6f81e2f6-c014-434f-be1a-87cd38a115e1",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T05:11:51.865Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-1a678b13-8d94-47eb-a8f4-12535e7f079e",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T05:16:44.161Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-01d6c470-4674-4306-b173-c213613ae058",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGIN",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T05:22:59.892Z",
+    "metadata": {
+      "email": "admin@pas.com"
+    }
+  },
+  {
+    "id": "LOG-204bd330-d723-42d3-8f6d-94a886c2e093",
+    "actor": {
+      "userId": "USR001",
+      "role": "system"
+    },
+    "action": "LOGOUT",
+    "resource": {
+      "type": "auth",
+      "id": "USR001"
+    },
+    "ipAddress": "::1",
+    "timestamp": "2026-03-04T05:31:55.030Z",
+    "metadata": {
+      "email": ""
+    }
+  }
+]

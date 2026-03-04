@@ -1,0 +1,215 @@
+[
+  {
+    "id": "FNOL-001",
+    "policyId": "POL-2025-00002",
+    "claimType": "Property_Damage",
+    "incidentDate": "2026-03-01T14:30:00Z",
+    "incidentLocation": "45 MG Road, Bengaluru, Karnataka 560001",
+    "description": "Water pipe burst in basement causing extensive flooding. Damage to flooring, walls, and stored equipment. Building was occupied at the time of incident.",
+    "reportedBy": "Ananya Desai",
+    "contactPhone": "+91-9876543210",
+    "contactEmail": "ananya.desai@email.com",
+    "damageDescription": "Basement flooring completely waterlogged, drywall damage on two walls extending 3 feet high, electrical panel exposed to water, stored office furniture and equipment damaged.",
+    "estimatedAmount": 850000,
+    "partiesInvolved": [
+      {
+        "name": "Ananya Desai",
+        "role": "Property Owner",
+        "contact": "+91-9876543210"
+      },
+      {
+        "name": "Raj Plumbing Services",
+        "role": "Maintenance Contractor",
+        "contact": "+91-9845012345"
+      }
+    ],
+    "documents": [
+      "water_damage_photos.zip",
+      "plumber_assessment_report.pdf"
+    ],
+    "status": "Claim Created",
+    "claimId": "CLM023",
+    "createdAt": "2026-03-02T09:15:00Z",
+    "createdBy": "USR002"
+  },
+  {
+    "id": "FNOL-002",
+    "policyId": "POL-2025-00004",
+    "claimType": "Mortgage_Default",
+    "incidentDate": "2026-02-15T00:00:00Z",
+    "incidentLocation": "Loan Account #LN-2025-4421, HDFC Bank, Mumbai Branch",
+    "description": "Borrower missed three consecutive EMI payments. Bank issued demand notice on 2026-02-01. Borrower cited job loss as reason for default.",
+    "reportedBy": "HDFC Bank — Collections Dept",
+    "contactPhone": "+91-2245678900",
+    "contactEmail": "collections.mumbai@hdfcbank.com",
+    "damageDescription": "Outstanding loan balance ₹42,50,000. Three EMIs of ₹35,200 each overdue. Total overdue amount ₹1,05,600 plus late fees of ₹8,400.",
+    "estimatedAmount": 4250000,
+    "partiesInvolved": [
+      {
+        "name": "Suresh Malhotra",
+        "role": "Borrower",
+        "contact": "+91-9823456789"
+      },
+      {
+        "name": "HDFC Bank",
+        "role": "Lender",
+        "contact": "+91-2245678900"
+      },
+      {
+        "name": "Kavita Malhotra",
+        "role": "Co-Borrower",
+        "contact": "+91-9823456790"
+      }
+    ],
+    "documents": [
+      "demand_notice.pdf",
+      "payment_history.xlsx",
+      "borrower_communication.pdf"
+    ],
+    "status": "Processing",
+    "claimId": null,
+    "createdAt": "2026-02-20T11:00:00Z",
+    "createdBy": "USR006"
+  },
+  {
+    "id": "FNOL-003",
+    "policyId": "POL-2025-00001",
+    "claimType": "Property_Damage",
+    "incidentDate": "2026-02-28T03:00:00Z",
+    "incidentLocation": "12 Jubilee Hills, Hyderabad, Telangana 500033",
+    "description": "Fire broke out in the kitchen area due to electrical short circuit. Fire department responded within 20 minutes. Structure sustained partial damage to kitchen and adjacent living room.",
+    "reportedBy": "Vikram Reddy",
+    "contactPhone": "+91-9900112233",
+    "contactEmail": "vikram.reddy@email.com",
+    "damageDescription": "Kitchen completely gutted. Living room wall and ceiling damaged by smoke and heat. Electrical wiring needs complete replacement in affected area. No injuries reported.",
+    "estimatedAmount": 1200000,
+    "partiesInvolved": [
+      {
+        "name": "Vikram Reddy",
+        "role": "Property Owner",
+        "contact": "+91-9900112233"
+      },
+      {
+        "name": "Hyderabad Fire Department",
+        "role": "Emergency Services",
+        "contact": "101"
+      }
+    ],
+    "documents": [
+      "fire_incident_report.pdf",
+      "fire_dept_certificate.pdf",
+      "damage_photos.zip"
+    ],
+    "status": "Claim Created",
+    "claimId": "CLM001",
+    "createdAt": "2026-02-28T10:30:00Z",
+    "createdBy": "USR002"
+  },
+  {
+    "id": "FNOL-004",
+    "policyId": "POL-2025-00005",
+    "claimType": "Natural_Disaster",
+    "incidentDate": "2026-03-02T18:00:00Z",
+    "incidentLocation": "78 Marine Drive, Kochi, Kerala 682001",
+    "description": "Severe flooding due to heavy monsoon rainfall caused water ingress into ground floor commercial property. Inventory and fixtures damaged.",
+    "reportedBy": "Thomas George",
+    "contactPhone": "+91-9447012345",
+    "contactEmail": "thomas.george@email.com",
+    "damageDescription": "Ground floor flooded to 2-foot depth. Commercial inventory (textiles) severely water-damaged. Display fixtures, POS systems, and security cameras destroyed. Estimated inventory loss ₹15L.",
+    "estimatedAmount": 2500000,
+    "partiesInvolved": [
+      {
+        "name": "Thomas George",
+        "role": "Business Owner",
+        "contact": "+91-9447012345"
+      },
+      {
+        "name": "Kerala State Disaster Management",
+        "role": "Government Authority",
+        "contact": "+91-4712364424"
+      }
+    ],
+    "documents": [
+      "flood_photos.zip",
+      "inventory_list.xlsx",
+      "disaster_declaration.pdf"
+    ],
+    "status": "Submitted",
+    "claimId": null,
+    "createdAt": "2026-03-03T07:45:00Z",
+    "createdBy": "USR003"
+  },
+  {
+    "id": "FNOL-005",
+    "policyId": "POL-2025-00003",
+    "claimType": "Liability",
+    "incidentDate": "2026-03-01T11:30:00Z",
+    "incidentLocation": "ABC Tech Park, Whitefield, Bengaluru, Karnataka 560066",
+    "description": "Visitor slipped on wet floor in office lobby and sustained a knee injury. Security camera footage available. Visitor was transported to hospital by office staff.",
+    "reportedBy": "Deepa Nair",
+    "contactPhone": "+91-9876500001",
+    "contactEmail": "deepa.nair@abctech.com",
+    "damageDescription": "Visitor Ravi Kumar sustained knee ligament injury requiring surgery. Hospital bills estimated at ₹3,50,000. Potential liability claim for medical expenses and lost wages.",
+    "estimatedAmount": 500000,
+    "partiesInvolved": [
+      {
+        "name": "Ravi Kumar",
+        "role": "Injured Party",
+        "contact": "+91-9812345678"
+      },
+      {
+        "name": "Deepa Nair",
+        "role": "Facility Manager",
+        "contact": "+91-9876500001"
+      },
+      {
+        "name": "SafeClean Services",
+        "role": "Cleaning Contractor",
+        "contact": "+91-8045678900"
+      }
+    ],
+    "documents": [
+      "cctv_footage_ref.txt",
+      "medical_report.pdf",
+      "incident_report.pdf"
+    ],
+    "status": "Processing",
+    "claimId": null,
+    "createdAt": "2026-03-01T16:00:00Z",
+    "createdBy": "USR006"
+  },
+  {
+    "id": "FNOL-006",
+    "policyId": "POL-2025-00007",
+    "claimType": "Mortgage_Default",
+    "incidentDate": "2026-02-28T00:00:00Z",
+    "incidentLocation": "Loan Account #LN-2025-7893, SBI, Delhi Branch",
+    "description": "Borrower defaulted after 90+ days of non-payment. Property value has declined below outstanding loan balance. Bank initiated foreclosure proceedings.",
+    "reportedBy": "SBI — Asset Recovery Dept",
+    "contactPhone": "+91-1145678900",
+    "contactEmail": "recovery.delhi@sbi.co.in",
+    "damageDescription": "Outstanding balance ₹68,00,000. Current property valuation ₹55,00,000 (LTV now 124%). Shortfall exposure ₹13,00,000. Borrower unresponsive to workout proposals.",
+    "estimatedAmount": 1300000,
+    "partiesInvolved": [
+      {
+        "name": "Rahul Verma",
+        "role": "Borrower",
+        "contact": "+91-9811234567"
+      },
+      {
+        "name": "State Bank of India",
+        "role": "Lender",
+        "contact": "+91-1145678900"
+      }
+    ],
+    "documents": [
+      "foreclosure_notice.pdf",
+      "property_valuation.pdf",
+      "payment_history.xlsx"
+    ],
+    "status": "Submitted",
+    "claimId": null,
+    "createdAt": "2026-03-03T14:00:00Z",
+    "createdBy": "USR006"
+  }
+]

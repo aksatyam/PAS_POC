@@ -1,0 +1,74 @@
+[
+  {
+    "id": "TPL-001",
+    "name": "Policy Declaration Page",
+    "type": "POLICY_DECLARATION",
+    "description": "Standard policy declaration document with coverage details and terms",
+    "category": "Policy",
+    "fields": ["policyNumber", "insuredName", "effectiveDate", "expiryDate", "coverageAmount", "premium", "policyType", "propertyAddress"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-002",
+    "name": "Certificate of Insurance",
+    "type": "CERTIFICATE_OF_INSURANCE",
+    "description": "Certificate confirming active insurance coverage",
+    "category": "Policy",
+    "fields": ["policyNumber", "insuredName", "effectiveDate", "expiryDate", "coverageAmount", "policyType"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-003",
+    "name": "Endorsement Schedule",
+    "type": "ENDORSEMENT_SCHEDULE",
+    "description": "Document detailing policy endorsement changes",
+    "category": "Policy",
+    "fields": ["policyNumber", "endorsementId", "effectiveDate", "changeDescription", "premiumDelta", "newPremium"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-004",
+    "name": "Renewal Notice",
+    "type": "RENEWAL_NOTICE",
+    "description": "Notification of upcoming policy renewal with new terms",
+    "category": "Policy",
+    "fields": ["policyNumber", "insuredName", "expiryDate", "renewalPremium", "coverageAmount", "renewalDeadline"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-005",
+    "name": "Claims Acknowledgement",
+    "type": "CLAIMS_ACKNOWLEDGEMENT",
+    "description": "Acknowledgement letter for received claim",
+    "category": "Claims",
+    "fields": ["claimId", "policyNumber", "insuredName", "dateOfLoss", "claimType", "filedDate"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-006",
+    "name": "Settlement Offer",
+    "type": "SETTLEMENT_OFFER",
+    "description": "Offer letter for claim settlement",
+    "category": "Claims",
+    "fields": ["claimId", "policyNumber", "insuredName", "settlementAmount", "claimDescription", "approvedDate"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-007",
+    "name": "Billing Invoice",
+    "type": "BILLING_INVOICE",
+    "description": "Premium billing invoice",
+    "category": "Billing",
+    "fields": ["invoiceNumber", "policyNumber", "insuredName", "amount", "dueDate", "paymentTerms"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "TPL-008",
+    "name": "Cancellation Notice",
+    "type": "CANCELLATION_NOTICE",
+    "description": "Policy cancellation notification",
+    "category": "Policy",
+    "fields": ["policyNumber", "insuredName", "cancellationDate", "reason", "refundAmount"],
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  }
+]

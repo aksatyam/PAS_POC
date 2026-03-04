@@ -1,0 +1,922 @@
+[
+  {
+    "id": "DOC001",
+    "policyId": "POL-2025-00001",
+    "type": "Application Form",
+    "filename": "application_form_2025_00001.pdf",
+    "mimeType": "application/pdf",
+    "size": 398499,
+    "uploadDate": "2025-01-01T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 1,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "application",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC002",
+    "policyId": "POL-2025-00002",
+    "type": "Identity Proof",
+    "filename": "identity_proof_2025_00002.pdf",
+    "mimeType": "application/pdf",
+    "size": 111733,
+    "uploadDate": "2025-02-02T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 2,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2025-02-04T14:00:00Z",
+      "tags": [
+        "identity",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC003",
+    "policyId": "POL-2025-00003",
+    "type": "Address Proof",
+    "filename": "address_proof_2025_00003.pdf",
+    "mimeType": "application/pdf",
+    "size": 108205,
+    "uploadDate": "2025-03-03T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 3,
+      "isVerified": true,
+      "verifiedBy": "USR005",
+      "verifiedAt": "2025-03-05T14:00:00Z",
+      "tags": [
+        "address",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC004",
+    "policyId": "POL-2025-00004",
+    "type": "Income Proof",
+    "filename": "income_proof_2025_00004.pdf",
+    "mimeType": "application/pdf",
+    "size": 186420,
+    "uploadDate": "2025-04-04T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 4,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2025-04-06T14:00:00Z",
+      "tags": [
+        "income",
+        "mortgage"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 1
+  },
+  {
+    "id": "DOC005",
+    "policyId": "POL-2025-00005",
+    "type": "Property Valuation Report",
+    "filename": "property_valuation_report_2025_00005.pdf",
+    "mimeType": "application/pdf",
+    "size": 1032100,
+    "uploadDate": "2025-05-05T12:00:00Z",
+    "uploadedBy": "USR006",
+    "metadata": {
+      "version": 2,
+      "pages": 9,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "property",
+        "credit"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 2
+  },
+  {
+    "id": "DOC006",
+    "policyId": "POL-2025-00006",
+    "type": "Credit Report",
+    "filename": "credit_report_2025_00006.pdf",
+    "mimeType": "application/pdf",
+    "size": 369691,
+    "uploadDate": "2025-06-06T12:00:00Z",
+    "uploadedBy": "USR007",
+    "metadata": {
+      "version": 3,
+      "pages": 10,
+      "isVerified": true,
+      "verifiedBy": "USR002",
+      "verifiedAt": "2025-06-08T14:00:00Z",
+      "tags": [
+        "credit",
+        "coverage"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 3
+  },
+  {
+    "id": "DOC007",
+    "policyId": "POL-2025-00007",
+    "type": "Insurance Certificate",
+    "filename": "insurance_certificate_2025_00007.pdf",
+    "mimeType": "application/pdf",
+    "size": 240066,
+    "uploadDate": "2025-07-07T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 2,
+      "isVerified": true,
+      "verifiedBy": "USR003",
+      "verifiedAt": "2025-07-09T14:00:00Z",
+      "tags": [
+        "insurance",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC008",
+    "policyId": "POL-2025-00008",
+    "type": "NOC Document",
+    "filename": "noc_document_2025_00008.pdf",
+    "mimeType": "application/pdf",
+    "size": 67517,
+    "uploadDate": "2025-08-08T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 3,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2025-08-10T14:00:00Z",
+      "tags": [
+        "noc",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC009",
+    "policyId": "POL-2025-00009",
+    "type": "Sanction Letter",
+    "filename": "sanction_letter_2025_00009.pdf",
+    "mimeType": "application/pdf",
+    "size": 158937,
+    "uploadDate": "2025-09-09T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 4,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "sanction",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC010",
+    "policyId": "POL-2025-00010",
+    "type": "Agreement Copy",
+    "filename": "agreement_copy_2025_00010.pdf",
+    "mimeType": "application/pdf",
+    "size": 773255,
+    "uploadDate": "2025-10-10T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 14,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2025-10-12T14:00:00Z",
+      "tags": [
+        "agreement",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC011",
+    "policyId": "POL-2025-00011",
+    "type": "Claim Form",
+    "filename": "claim_form_2025_00011.pdf",
+    "mimeType": "application/pdf",
+    "size": 176285,
+    "uploadDate": "2025-11-11T12:00:00Z",
+    "uploadedBy": "USR006",
+    "metadata": {
+      "version": 2,
+      "pages": 1,
+      "isVerified": true,
+      "verifiedBy": "USR007",
+      "verifiedAt": "2025-11-13T14:00:00Z",
+      "tags": [
+        "claim",
+        "credit"
+      ]
+    },
+    "category": "Claims",
+    "version": 2
+  },
+  {
+    "id": "DOC012",
+    "policyId": "POL-2025-00012",
+    "type": "Damage Assessment",
+    "filename": "damage_assessment_2025_00012.zip",
+    "mimeType": "application/zip",
+    "size": 2276081,
+    "uploadDate": "2025-12-12T12:00:00Z",
+    "uploadedBy": "USR007",
+    "metadata": {
+      "version": 3,
+      "pages": 2,
+      "isVerified": true,
+      "verifiedBy": "USR002",
+      "verifiedAt": "2025-12-14T14:00:00Z",
+      "tags": [
+        "damage",
+        "coverage"
+      ]
+    },
+    "category": "Claims",
+    "version": 3
+  },
+  {
+    "id": "DOC013",
+    "policyId": "POL-2025-00013",
+    "type": "Police Report",
+    "filename": "police_report_2025_00013.pdf",
+    "mimeType": "application/pdf",
+    "size": 186611,
+    "uploadDate": "2025-01-13T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 17,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "police",
+        "mortgage"
+      ]
+    },
+    "category": "Claims",
+    "version": 1
+  },
+  {
+    "id": "DOC014",
+    "policyId": "POL-2025-00014",
+    "type": "Medical Report",
+    "filename": "medical_report_2025_00014.pdf",
+    "mimeType": "application/pdf",
+    "size": 386228,
+    "uploadDate": "2025-02-14T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 18,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2025-02-16T14:00:00Z",
+      "tags": [
+        "medical",
+        "credit"
+      ]
+    },
+    "category": "Claims",
+    "version": 2
+  },
+  {
+    "id": "DOC015",
+    "policyId": "POL-2025-00015",
+    "type": "Application Form",
+    "filename": "application_form_2025_00015.pdf",
+    "mimeType": "application/pdf",
+    "size": 371529,
+    "uploadDate": "2025-03-15T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 5,
+      "isVerified": true,
+      "verifiedBy": "USR005",
+      "verifiedAt": "2025-03-17T14:00:00Z",
+      "tags": [
+        "application",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC016",
+    "policyId": "POL-2025-00016",
+    "type": "Identity Proof",
+    "filename": "identity_proof_2025_00016.pdf",
+    "mimeType": "application/pdf",
+    "size": 103562,
+    "uploadDate": "2025-04-16T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 1,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2025-04-18T14:00:00Z",
+      "tags": [
+        "identity",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC017",
+    "policyId": "POL-2025-00017",
+    "type": "Address Proof",
+    "filename": "address_proof_2025_00017.pdf",
+    "mimeType": "application/pdf",
+    "size": 132902,
+    "uploadDate": "2025-05-17T12:00:00Z",
+    "uploadedBy": "USR006",
+    "metadata": {
+      "version": 2,
+      "pages": 2,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "address",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC018",
+    "policyId": "POL-2025-00018",
+    "type": "Income Proof",
+    "filename": "income_proof_2025_00018.pdf",
+    "mimeType": "application/pdf",
+    "size": 188678,
+    "uploadDate": "2025-06-18T12:00:00Z",
+    "uploadedBy": "USR007",
+    "metadata": {
+      "version": 3,
+      "pages": 3,
+      "isVerified": true,
+      "verifiedBy": "USR002",
+      "verifiedAt": "2025-06-20T14:00:00Z",
+      "tags": [
+        "income",
+        "coverage"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 3
+  },
+  {
+    "id": "DOC019",
+    "policyId": "POL-2025-00019",
+    "type": "Property Valuation Report",
+    "filename": "property_valuation_report_2025_00019.pdf",
+    "mimeType": "application/pdf",
+    "size": 606534,
+    "uploadDate": "2025-07-19T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 23,
+      "isVerified": true,
+      "verifiedBy": "USR003",
+      "verifiedAt": "2025-07-21T14:00:00Z",
+      "tags": [
+        "property",
+        "mortgage"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 1
+  },
+  {
+    "id": "DOC020",
+    "policyId": "POL-2025-00020",
+    "type": "Credit Report",
+    "filename": "credit_report_2025_00020.pdf",
+    "mimeType": "application/pdf",
+    "size": 271400,
+    "uploadDate": "2025-08-20T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 24,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2025-08-22T14:00:00Z",
+      "tags": [
+        "credit",
+        "credit"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 2
+  },
+  {
+    "id": "DOC021",
+    "policyId": "POL-2025-00021",
+    "type": "Insurance Certificate",
+    "filename": "insurance_certificate_2025_00021.pdf",
+    "mimeType": "application/pdf",
+    "size": 181029,
+    "uploadDate": "2025-09-21T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 1,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "insurance",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC022",
+    "policyId": "POL-2025-00022",
+    "type": "NOC Document",
+    "filename": "noc_document_2025_00022.pdf",
+    "mimeType": "application/pdf",
+    "size": 100030,
+    "uploadDate": "2025-10-22T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 2,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2025-10-24T14:00:00Z",
+      "tags": [
+        "noc",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC023",
+    "policyId": "POL-2025-00023",
+    "type": "Sanction Letter",
+    "filename": "sanction_letter_2025_00023.pdf",
+    "mimeType": "application/pdf",
+    "size": 104435,
+    "uploadDate": "2025-11-23T12:00:00Z",
+    "uploadedBy": "USR006",
+    "metadata": {
+      "version": 2,
+      "pages": 3,
+      "isVerified": true,
+      "verifiedBy": "USR007",
+      "verifiedAt": "2025-11-25T14:00:00Z",
+      "tags": [
+        "sanction",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC024",
+    "policyId": "POL-2025-00024",
+    "type": "Agreement Copy",
+    "filename": "agreement_copy_2025_00024.pdf",
+    "mimeType": "application/pdf",
+    "size": 632117,
+    "uploadDate": "2025-12-24T12:00:00Z",
+    "uploadedBy": "USR007",
+    "metadata": {
+      "version": 3,
+      "pages": 8,
+      "isVerified": true,
+      "verifiedBy": "USR002",
+      "verifiedAt": "2025-12-26T14:00:00Z",
+      "tags": [
+        "agreement",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC025",
+    "policyId": "POL-2025-00025",
+    "type": "Claim Form",
+    "filename": "claim_form_2025_00025.pdf",
+    "mimeType": "application/pdf",
+    "size": 191938,
+    "uploadDate": "2025-01-25T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 5,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "claim",
+        "mortgage"
+      ]
+    },
+    "category": "Claims",
+    "version": 1
+  },
+  {
+    "id": "DOC026",
+    "policyId": "POL-2025-00026",
+    "type": "Damage Assessment",
+    "filename": "damage_assessment_2025_00026.zip",
+    "mimeType": "application/zip",
+    "size": 4237634,
+    "uploadDate": "2026-02-26T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 1,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2026-02-28T14:00:00Z",
+      "tags": [
+        "damage",
+        "credit"
+      ]
+    },
+    "category": "Claims",
+    "version": 2
+  },
+  {
+    "id": "DOC027",
+    "policyId": "POL-2025-00027",
+    "type": "Police Report",
+    "filename": "police_report_2025_00027.pdf",
+    "mimeType": "application/pdf",
+    "size": 378253,
+    "uploadDate": "2026-03-27T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 11,
+      "isVerified": true,
+      "verifiedBy": "USR005",
+      "verifiedAt": "2026-03-28T14:00:00Z",
+      "tags": [
+        "police",
+        "coverage"
+      ]
+    },
+    "category": "Claims",
+    "version": 3
+  },
+  {
+    "id": "DOC028",
+    "policyId": "POL-2025-00028",
+    "type": "Medical Report",
+    "filename": "medical_report_2025_00028.pdf",
+    "mimeType": "application/pdf",
+    "size": 231392,
+    "uploadDate": "2026-04-28T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 12,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2026-04-28T14:00:00Z",
+      "tags": [
+        "medical",
+        "mortgage"
+      ]
+    },
+    "category": "Claims",
+    "version": 1
+  },
+  {
+    "id": "DOC029",
+    "policyId": "POL-2025-00029",
+    "type": "Application Form",
+    "filename": "application_form_2025_00029.pdf",
+    "mimeType": "application/pdf",
+    "size": 255557,
+    "uploadDate": "2026-05-01T12:00:00Z",
+    "uploadedBy": "USR006",
+    "metadata": {
+      "version": 2,
+      "pages": 4,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "application",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC030",
+    "policyId": "POL-2025-00030",
+    "type": "Identity Proof",
+    "filename": "identity_proof_2025_00030.pdf",
+    "mimeType": "application/pdf",
+    "size": 143451,
+    "uploadDate": "2026-06-02T12:00:00Z",
+    "uploadedBy": "USR007",
+    "metadata": {
+      "version": 3,
+      "pages": 5,
+      "isVerified": true,
+      "verifiedBy": "USR002",
+      "verifiedAt": "2026-06-04T14:00:00Z",
+      "tags": [
+        "identity",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC031",
+    "policyId": "POL-2026-00031",
+    "type": "Address Proof",
+    "filename": "address_proof_2026_00031.pdf",
+    "mimeType": "application/pdf",
+    "size": 70454,
+    "uploadDate": "2026-07-03T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 1,
+      "isVerified": true,
+      "verifiedBy": "USR003",
+      "verifiedAt": "2026-07-05T14:00:00Z",
+      "tags": [
+        "address",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC032",
+    "policyId": "POL-2026-00032",
+    "type": "Income Proof",
+    "filename": "income_proof_2026_00032.pdf",
+    "mimeType": "application/pdf",
+    "size": 202666,
+    "uploadDate": "2026-08-04T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 2,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2026-08-06T14:00:00Z",
+      "tags": [
+        "income",
+        "credit"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 2
+  },
+  {
+    "id": "DOC033",
+    "policyId": "POL-2026-00033",
+    "type": "Property Valuation Report",
+    "filename": "property_valuation_report_2026_00033.pdf",
+    "mimeType": "application/pdf",
+    "size": 1580260,
+    "uploadDate": "2026-09-05T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 17,
+      "isVerified": "true",
+      "verifiedBy": "USR001",
+      "verifiedAt": "2026-03-03T23:19:28.504Z",
+      "tags": [
+        "property",
+        "coverage"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 3
+  },
+  {
+    "id": "DOC034",
+    "policyId": "POL-2026-00034",
+    "type": "Credit Report",
+    "filename": "credit_report_2026_00034.pdf",
+    "mimeType": "application/pdf",
+    "size": 490120,
+    "uploadDate": "2026-10-06T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 18,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2026-10-08T14:00:00Z",
+      "tags": [
+        "credit",
+        "mortgage"
+      ]
+    },
+    "category": "Underwriting",
+    "version": 1
+  },
+  {
+    "id": "DOC035",
+    "policyId": "POL-2026-00035",
+    "type": "Insurance Certificate",
+    "filename": "insurance_certificate_2026_00035.pdf",
+    "mimeType": "application/pdf",
+    "size": 229417,
+    "uploadDate": "2026-11-07T12:00:00Z",
+    "uploadedBy": "USR006",
+    "metadata": {
+      "version": 2,
+      "pages": 5,
+      "isVerified": true,
+      "verifiedBy": "USR007",
+      "verifiedAt": "2026-11-09T14:00:00Z",
+      "tags": [
+        "insurance",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC036",
+    "policyId": "POL-2026-00036",
+    "type": "NOC Document",
+    "filename": "noc_document_2026_00036.pdf",
+    "mimeType": "application/pdf",
+    "size": 65124,
+    "uploadDate": "2026-12-08T12:00:00Z",
+    "uploadedBy": "USR007",
+    "metadata": {
+      "version": 3,
+      "pages": 1,
+      "isVerified": true,
+      "verifiedBy": "USR002",
+      "verifiedAt": "2026-12-10T14:00:00Z",
+      "tags": [
+        "noc",
+        "coverage"
+      ]
+    },
+    "category": "Policy",
+    "version": 3
+  },
+  {
+    "id": "DOC037",
+    "policyId": "POL-2026-00037",
+    "type": "Sanction Letter",
+    "filename": "sanction_letter_2026_00037.pdf",
+    "mimeType": "application/pdf",
+    "size": 149947,
+    "uploadDate": "2026-01-09T12:00:00Z",
+    "uploadedBy": "USR002",
+    "metadata": {
+      "version": 1,
+      "pages": 2,
+      "isVerified": false,
+      "verifiedBy": null,
+      "verifiedAt": null,
+      "tags": [
+        "sanction",
+        "mortgage"
+      ]
+    },
+    "category": "Policy",
+    "version": 1
+  },
+  {
+    "id": "DOC038",
+    "policyId": "POL-2026-00038",
+    "type": "Agreement Copy",
+    "filename": "agreement_copy_2026_00038.pdf",
+    "mimeType": "application/pdf",
+    "size": 646100,
+    "uploadDate": "2026-02-10T12:00:00Z",
+    "uploadedBy": "USR003",
+    "metadata": {
+      "version": 2,
+      "pages": 22,
+      "isVerified": true,
+      "verifiedBy": "USR004",
+      "verifiedAt": "2026-02-12T14:00:00Z",
+      "tags": [
+        "agreement",
+        "credit"
+      ]
+    },
+    "category": "Policy",
+    "version": 2
+  },
+  {
+    "id": "DOC039",
+    "policyId": "POL-2026-00039",
+    "type": "Claim Form",
+    "filename": "claim_form_2026_00039.pdf",
+    "mimeType": "application/pdf",
+    "size": 206584,
+    "uploadDate": "2026-03-11T12:00:00Z",
+    "uploadedBy": "USR004",
+    "metadata": {
+      "version": 3,
+      "pages": 4,
+      "isVerified": true,
+      "verifiedBy": "USR005",
+      "verifiedAt": "2026-03-13T14:00:00Z",
+      "tags": [
+        "claim",
+        "coverage"
+      ]
+    },
+    "category": "Claims",
+    "version": 3
+  },
+  {
+    "id": "DOC040",
+    "policyId": "POL-2026-00040",
+    "type": "Damage Assessment",
+    "filename": "damage_assessment_2026_00040.zip",
+    "mimeType": "application/zip",
+    "size": 2104891,
+    "uploadDate": "2026-04-12T12:00:00Z",
+    "uploadedBy": "USR005",
+    "metadata": {
+      "version": 1,
+      "pages": 5,
+      "isVerified": true,
+      "verifiedBy": "USR006",
+      "verifiedAt": "2026-04-14T14:00:00Z",
+      "tags": [
+        "damage",
+        "mortgage"
+      ]
+    },
+    "category": "Claims",
+    "version": 1
+  }
+]
