@@ -79,6 +79,7 @@ export default function DashboardPage() {
   const [uwSummary, setUwSummary] = useState<any>(null);
   const [billingSummary, setBillingSummary] = useState<any>(null);
   const [kpis, setKpis] = useState<any>(null);
+  const [recentUW, setRecentUW] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   const role = user?.role || 'Viewer';
@@ -91,6 +92,7 @@ export default function DashboardPage() {
           api.get('/dashboard/claims'),
           api.get('/dashboard/underwriting'),
           api.get('/billing/summary').catch(() => ({ success: false, data: null })),
+          api.get('/underwriting').catch(() => ({ success: false, data: [] })),
         ];
         if (['Admin', 'Executive', 'Operations'].includes(role)) {
           promises.push(api.get('/dashboard/kpis').catch(() => ({ success: false, data: null })));
@@ -100,7 +102,8 @@ export default function DashboardPage() {
         if (results[1].success) setClaimsSummary(results[1].data);
         if (results[2].success) setUwSummary(results[2].data);
         if (results[3].success) setBillingSummary(results[3].data);
-        if (results[4]?.success) setKpis(results[4].data);
+        if (results[4]?.success) setRecentUW(Array.isArray(results[4].data) ? results[4].data.slice(0, 6) : []);
+        if (results[5]?.success) setKpis(results[5].data);
       } catch (err) {
         console.error('Dashboard load error:', err);
       } finally {
@@ -303,27 +306,79 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {/* ── My Tasks + UW Summary ────────────────────────────────── */}
+      {/* ── My Tasks + UW Review ──────────────────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <MyTasksWidget />
         {uwSummary && (
           <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-elevation-1 border border-surface-border dark:border-neutral-700 overflow-hidden hover:shadow-card-hover transition-shadow duration-standard">
             <div className="px-5 py-3.5 border-b border-surface-border dark:border-neutral-700 flex items-center justify-between">
-              <h3 className="text-body-sm font-semibold text-neutral-700 dark:text-neutral-200">Underwriting Overview</h3>
-              <Link href="/underwriting" className="text-small font-medium text-accent-500 hover:text-accent-600 dark:text-accent-400 flex items-center gap-1">
-                View All <ArrowRight size={12} />
-              </Link>
-            </div>
-            <div className="p-5 grid grid-cols-2 gap-6">
-              <div>
-                <p className="text-small text-neutral-500 dark:text-neutral-400">Total Evaluations</p>
-                <p className="text-data-lg font-bold text-neutral-900 dark:text-neutral-100 mt-1">{uwSummary.totalEvaluations}</p>
+              <div className="flex items-center gap-2">
+                <ShieldCheck size={16} className="text-accent-500" />
+                <h3 className="text-body-sm font-semibold text-neutral-700 dark:text-neutral-200">Underwriting Review</h3>
               </div>
-              <div>
-                <p className="text-small text-neutral-500 dark:text-neutral-400">Avg Risk Score</p>
-                <p className="text-data-lg font-bold text-neutral-900 dark:text-neutral-100 mt-1">{uwSummary.averageRiskScore?.toFixed(1)}</p>
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-warning animate-pulse" />
+                  <span className="text-small text-neutral-500 dark:text-neutral-400">{uwSummary.decisionDistribution?.['Refer'] || 0} pending</span>
+                </div>
+                <Link href="/underwriting" className="text-small font-medium text-accent-500 hover:text-accent-600 dark:text-accent-400 flex items-center gap-1">
+                  View All <ArrowRight size={12} />
+                </Link>
               </div>
             </div>
+            <div className="p-4 grid grid-cols-4 gap-3 border-b border-surface-border dark:border-neutral-700">
+              <div className="text-center">
+                <p className="text-data-md font-bold text-neutral-900 dark:text-neutral-100">{uwSummary.totalEvaluations}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Evaluations</p>
+              </div>
+              <div className="text-center">
+                <p className="text-data-md font-bold text-neutral-900 dark:text-neutral-100">{uwSummary.averageRiskScore?.toFixed(1)}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Avg Risk</p>
+              </div>
+              <div className="text-center">
+                <p className="text-data-md font-bold text-success">{uwSummary.decisionDistribution?.['Auto-Approve'] || 0}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Approved</p>
+              </div>
+              <div className="text-center">
+                <p className="text-data-md font-bold text-error">{uwSummary.decisionDistribution?.['Reject'] || 0}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Rejected</p>
+              </div>
+            </div>
+            <div className="divide-y divide-surface-border dark:divide-neutral-700 max-h-[280px] overflow-y-auto">
+              {recentUW.length > 0 ? recentUW.map((uw) => (
+                <Link key={uw.id} href={`/policies/${uw.policyId}`} className="flex items-center justify-between px-4 py-3 hover:bg-neutral-50 dark:hover:bg-neutral-750 transition-colors">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${
+                      uw.decision === 'Auto-Approve' ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/30 dark:text-emerald-400' :
+                      uw.decision === 'Refer' ? 'bg-amber-50 text-amber-600 dark:bg-amber-950/30 dark:text-amber-400' :
+                      'bg-red-50 text-red-600 dark:bg-red-950/30 dark:text-red-400'
+                    }`}>
+                      {uw.riskScore}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-body-sm font-medium text-neutral-900 dark:text-neutral-100 truncate">{uw.policyId}</p>
+                      <p className="text-xs text-neutral-500 dark:text-neutral-400">Score {uw.creditScore} · LTV {uw.ltvRatio}% · {uw.propertyZone}</p>
+                    </div>
+                  </div>
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap ${
+                    uw.decision === 'Auto-Approve' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
+                    uw.decision === 'Refer' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' :
+                    'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
+                  }`}>
+                    {uw.decision}
+                  </span>
+                </Link>
+              )) : (
+                <div className="px-4 py-8 text-center text-small text-neutral-400">No recent evaluations</div>
+              )}
+            </div>
+            {recentUW.length > 0 && (
+              <div className="px-4 py-2.5 border-t border-surface-border dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-850">
+                <Link href="/underwriting" className="text-small font-medium text-accent-500 hover:text-accent-600 dark:text-accent-400 flex items-center justify-center gap-1">
+                  View all evaluations <ArrowRight size={12} />
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </div>
