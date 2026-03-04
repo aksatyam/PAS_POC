@@ -82,7 +82,7 @@ The IMGC Policy Administration System (PAS) is an enterprise-grade insurance pol
 ┌─────────────────────────────────────────────────────────────┐
 │                     CLIENT LAYER                             │
 │  ┌──────────────────────────────────────────────────────┐   │
-│  │         Next.js 14 (App Router) — Port 3002          │   │
+│  │         Next.js 14 (App Router) — Port 3000          │   │
 │  │   React 18 │ TypeScript │ Tailwind CSS │ Recharts    │   │
 │  └──────────────────────┬───────────────────────────────┘   │
 │                         │ HTTP/REST                          │
@@ -118,6 +118,32 @@ The IMGC Policy Administration System (PAS) is an enterprise-grade insurance pol
 │  │  27 JSON data files in /backend/mock-data/            │   │
 │  │  Read/write via fs module │ In-memory caching         │   │
 │  └──────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Deployment Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                  GITHUB PAGES (STATIC DEMO)                  │
+│                                                               │
+│  URL: https://aksatyam.github.io/PAS_POC/                    │
+│  Build: Next.js static export (output: 'export')             │
+│  Auth: Client-side mock (NEXT_PUBLIC_DEMO_MODE=true)         │
+│  Data: Mock data layer (frontend/lib/mock-data.ts)           │
+│  Routing: 404.html SPA fallback                              │
+│  CI/CD: GitHub Actions on push to main                       │
+│                                                               │
+│  Note: Dynamic [id] routes removed during CI build.          │
+│        Detail pages available only in local development.     │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│              DOCKER / LOCAL (FULL-STACK)                      │
+│                                                               │
+│  Frontend: localhost:3000  │  Backend: localhost:4000         │
+│  Full API with real data   │  Swagger: localhost:4000/api-docs│
+│  All routes including [id] │  JSON file persistence           │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -218,17 +244,19 @@ Next.js App Router Structure:
 - macOS / Linux / Windows (WSL recommended)
 - Modern browser (Chrome, Firefox, Edge)
 
-### Quick Start
+### Live Demo (GitHub Pages)
+
+The frontend is deployed as a static demo with mock data — no backend required:
+
+| Service | URL | Description |
+|---------|-----|-------------|
+| **Live Demo** | https://aksatyam.github.io/PAS_POC/ | Static frontend with mock data |
+
+**Demo Credentials:** `admin@imgc.com` / `demo123` (see login page for all roles)
+
+### Quick Start (Local Full-Stack)
 
 ```bash
-# Clone and navigate
-cd /path/to/pas-prototype
-
-# Option 1: Use the start script (recommended)
-chmod +x start.sh
-./start.sh
-
-# Option 2: Start manually
 # Terminal 1 — Backend
 cd backend && npm install && npm run dev
 
@@ -236,11 +264,11 @@ cd backend && npm install && npm run dev
 cd frontend && npm install && npm run dev
 ```
 
-### Access Points
+### Access Points (Local)
 
 | Service | URL | Description |
 |---------|-----|-------------|
-| **Frontend** | http://localhost:3002 | Main application UI |
+| **Frontend** | http://localhost:3000 | Main application UI |
 | **Backend API** | http://localhost:4000/api/v1 | REST API base URL |
 | **Swagger Docs** | http://localhost:4000/api-docs | Interactive API documentation |
 | **Health Check** | http://localhost:4000/health | Server health status |
@@ -257,8 +285,10 @@ NODE_ENV=development
 
 **Frontend** (`frontend/.env.local`):
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1
+NEXT_PUBLIC_API_URL=/api/v1
 ```
+
+> **Note:** For the GitHub Pages deployment, `NEXT_PUBLIC_DEMO_MODE=true` is set at build time to enable mock data mode.
 
 ---
 
@@ -315,6 +345,18 @@ The system implements 5 user roles with granular permissions:
 | **Viewer** | Read-only access | View all data, no create/update/delete |
 
 ### Test User Accounts
+
+#### Live Demo (GitHub Pages — `NEXT_PUBLIC_DEMO_MODE=true`)
+
+| Role | Email | Password |
+|------|-------|----------|
+| **Admin** | admin@imgc.com | demo123 |
+| **Underwriter** | underwriter@imgc.com | demo123 |
+| **Claims** | claims@imgc.com | demo123 |
+| **Operations** | ops@imgc.com | demo123 |
+| **Viewer** | viewer@imgc.com | demo123 |
+
+#### Local Development (Full-Stack with Backend)
 
 | Role | Email | Name | User ID | Password |
 |------|-------|------|---------|----------|

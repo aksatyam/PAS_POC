@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # PAS Prototype - Start Script
-# Runs both backend (port 4000) and frontend (port 3002)
+# Runs both backend (port 4000) and frontend (port 3000)
 
 cleanup() {
   echo ""
@@ -22,7 +22,7 @@ echo "========================================="
 echo ""
 
 # Kill any existing processes on configured ports
-for PORT in 4000 3002; do
+for PORT in 4000 3000; do
   PID=$(lsof -ti :$PORT 2>/dev/null)
   if [ -n "$PID" ]; then
     echo "[Cleanup] Killing process on port $PORT (PID: $PID)..."
@@ -42,14 +42,14 @@ BACKEND_PID=$!
 sleep 2
 
 # Start frontend
-echo "[Frontend] Starting on port 3002..."
+echo "[Frontend] Starting on port 3000..."
 cd "$DIR/frontend" && npm run dev &
 FRONTEND_PID=$!
 
 echo ""
 echo "========================================="
 echo "  Backend:  http://localhost:4000/api-docs"
-echo "  Frontend: http://localhost:3002"
+echo "  Frontend: http://localhost:3000"
 echo "========================================="
 echo ""
 echo "Press Ctrl+C to stop both."
