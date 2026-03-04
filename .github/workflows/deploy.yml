@@ -32,11 +32,21 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Remove dynamic routes for static export
+        run: |
+          rm -rf frontend/app/\(main\)/billing/\[id\]
+          rm -rf frontend/app/\(main\)/claims/\[id\]
+          rm -rf frontend/app/\(main\)/customers/\[id\]
+          rm -rf frontend/app/\(main\)/policies/\[id\]
+
       - name: Build
         working-directory: frontend
         env:
           NEXT_PUBLIC_BASE_PATH: /PAS_POC
         run: npm run build
+
+      - name: Add 404 fallback for SPA routing
+        run: cp frontend/out/index.html frontend/out/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
