@@ -237,6 +237,8 @@ export interface Claim {
   reserveAmount?: number;
   fraudScore?: number;
   fraudIndicators?: string[];
+  dpd?: number;
+  npaCategory?: string;
   documents: { name: string; type: string; uploadedAt: string }[];
   createdBy: string;
   updatedAt?: string;

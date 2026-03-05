@@ -29,6 +29,12 @@ const routeLabels: Record<string, string> = {
   quote: 'Quote',
   new: 'New',
   login: 'Login',
+  'service-desk': 'Service Desk',
+  dde: 'DDE',
+  servicing: 'Servicing',
+  finance: 'Finance',
+  'master-setup': 'Master Setup',
+  'audit-logs': 'Audit Logs',
 };
 
 function formatSegment(segment: string): string {

@@ -99,6 +99,28 @@ const mockResponses: Record<string, () => any> = {
     },
   }),
 
+  '/dashboard/alerts': () => ({
+    success: true,
+    data: [
+      { id: 'ALT-001', severity: 'error', title: 'SLA Breach Alert', message: '3 underwriting cases have exceeded 48-hour SLA. Immediate action required.', timestamp: '10 min ago' },
+      { id: 'ALT-002', severity: 'warning', title: 'High-Risk Pending', message: '5 high-risk applications pending review in UW queue for >24 hours.', timestamp: '1 hr ago' },
+      { id: 'ALT-003', severity: 'info', title: 'Batch Processing Complete', message: 'Servicing batch #B-2026-0305 processed successfully. 847 records updated.', timestamp: '2 hrs ago' },
+      { id: 'ALT-004', severity: 'success', title: 'Monthly Reconciliation', message: 'February 2026 reconciliation completed. 99.2% match rate achieved.', timestamp: '5 hrs ago' },
+      { id: 'ALT-005', severity: 'warning', title: 'Premium Collection Due', message: '12 policies with premium collection due within next 7 days.', timestamp: '6 hrs ago' },
+    ],
+  }),
+
+  '/dashboard/recent-applications': () => ({
+    success: true,
+    data: [
+      { id: 'LN-2026-0891', customer: 'Rajesh Kumar', amount: 4500000, status: 'In Review', date: '2026-03-05', stage: 'DDE' },
+      { id: 'LN-2026-0890', customer: 'Priya Mehta', amount: 7200000, status: 'Approved', date: '2026-03-04', stage: 'Issuance' },
+      { id: 'LN-2026-0889', customer: 'Vikram Singh', amount: 3200000, status: 'Pending', date: '2026-03-04', stage: 'QDE' },
+      { id: 'LN-2026-0888', customer: 'Anita Desai', amount: 5800000, status: 'In Review', date: '2026-03-03', stage: 'Underwriting' },
+      { id: 'LN-2026-0887', customer: 'Suresh Reddy', amount: 9100000, status: 'Approved', date: '2026-03-03', stage: 'Decision' },
+    ],
+  }),
+
   '/billing/summary': () => ({
     success: true,
     data: {
@@ -355,6 +377,138 @@ const mockResponses: Record<string, () => any> = {
     data: generateMockProducts(),
     pagination: { total: 6, page: 1, limit: 20, totalPages: 1 },
   }),
+
+  // ── Service Desk endpoints ───────────────────────────────────
+  '/service-desk/applications': () => ({
+    success: true,
+    data: generateMockServiceDeskApplications(),
+  }),
+
+  '/service-desk/auto-allocation': () => ({
+    success: true,
+    data: [
+      { queueName: 'QDE Queue - HDFC', assignedUser: 'Priya Sharma', pendingCount: 12, lastAllocated: '2026-03-05T09:30:00Z', status: 'Active' },
+      { queueName: 'QDE Queue - ICICI', assignedUser: 'Amit Kumar', pendingCount: 8, lastAllocated: '2026-03-05T08:45:00Z', status: 'Active' },
+      { queueName: 'QDE Queue - SBI', assignedUser: 'Kavita Joshi', pendingCount: 15, lastAllocated: '2026-03-04T17:20:00Z', status: 'Active' },
+      { queueName: 'QDE Queue - Axis', assignedUser: 'Suresh Iyer', pendingCount: 5, lastAllocated: '2026-03-05T10:00:00Z', status: 'Active' },
+      { queueName: 'QDE Queue - Kotak', assignedUser: 'Deepa Nair', pendingCount: 3, lastAllocated: '2026-03-04T14:15:00Z', status: 'Paused' },
+    ],
+  }),
+
+  '/service-desk/user-dashboard': () => ({
+    success: true,
+    data: [
+      { id: 'LN-2026-0891', customer: 'Rajesh Kumar', stage: 'QDE', status: 'In Progress', dueDate: '2026-03-06T00:00:00Z', priority: 'High' },
+      { id: 'LN-2026-0885', customer: 'Meera Pillai', stage: 'QDE', status: 'Pending', dueDate: '2026-03-07T00:00:00Z', priority: 'Medium' },
+      { id: 'LN-2026-0878', customer: 'Karan Mehta', stage: 'QDE', status: 'In Progress', dueDate: '2026-03-05T00:00:00Z', priority: 'High' },
+      { id: 'LN-2026-0872', customer: 'Suman Das', stage: 'QDE', status: 'Pending', dueDate: '2026-03-08T00:00:00Z', priority: 'Low' },
+      { id: 'LN-2026-0869', customer: 'Arjun Rao', stage: 'QDE', status: 'Review', dueDate: '2026-03-06T00:00:00Z', priority: 'Medium' },
+    ],
+  }),
+
+  // ── DDE endpoints ────────────────────────────────────────────
+  '/dde/current': () => ({
+    success: true,
+    data: {
+      loanId: 'LN-2026-0891', lender: 'HDFC Bank', dealId: 'DL-4521', borrowerName: 'Rajesh Kumar',
+      pan: 'ABCPK1234R', mobile: '+91 9876543210', employmentType: 'Salaried', employer: 'TCS Ltd.',
+      designation: 'Senior Engineer', experience: 8, salary: 125000,
+      loanAmount: 4500000, tenure: 240, interestRate: 8.75, productType: 'Home Loan', purpose: 'Purchase',
+      disbursementDate: '2026-04-01T00:00:00Z',
+      propertyType: 'Apartment', propertyValue: 6200000, propertyLocation: 'Mumbai - Andheri West',
+      grossIncome: 145000, netIncome: 118000, otherIncome: 15000,
+      primaryBank: 'HDFC Bank', accountType: 'Savings', avgBalance: 285000, statementPeriod: 'Dec 2025 - Feb 2026',
+      existingEmi: 18000, totalLiabilities: 320000, existingLoans: 1, creditCardOutstanding: 45000,
+      ltv: 72, foir: 42, cibilScore: 742, emiNmi: 38,
+    },
+  }),
+
+  '/dde/documents': () => ({
+    success: true,
+    data: [
+      { name: 'KYC - Aadhaar', status: 'Verified' },
+      { name: 'KYC - PAN Card', status: 'Verified' },
+      { name: 'Income Proof - Salary Slips', status: 'Verified' },
+      { name: 'Bank Statements (6M)', status: 'Pending' },
+      { name: 'Property Valuation Report', status: 'Pending' },
+      { name: 'Loan Sanction Letter', status: 'Verified' },
+      { name: 'Title Deed', status: 'Not Uploaded' },
+      { name: 'Insurance Certificate', status: 'Not Uploaded' },
+    ],
+  }),
+
+  '/dde/eligibility': () => ({
+    success: true,
+    data: {
+      maxEligible: 5200000,
+      applied: 4500000,
+      buffer: 700000,
+    },
+  }),
+
+  // ── Finance endpoints ────────────────────────────────────────
+  '/finance/summary': () => ({
+    success: true,
+    data: {
+      totalRevenue: 127500000,
+      outstanding: 18450000,
+      collected: 109050000,
+      reconciledPct: 96.8,
+    },
+  }),
+
+  '/finance/invoices': () => ({
+    success: true,
+    data: generateMockFinanceInvoices(),
+  }),
+
+  '/finance/payments': () => ({
+    success: true,
+    data: generateMockFinancePayments(),
+  }),
+
+  '/finance/reconciliation': () => ({
+    success: true,
+    data: {
+      matched: 847,
+      unmatched: 23,
+      pending: 15,
+      entries: generateMockReconciliationEntries(),
+    },
+  }),
+
+  // ── Servicing endpoints ──────────────────────────────────────
+  '/servicing/npa': () => ({
+    success: true,
+    data: generateMockNPA(),
+  }),
+
+  '/servicing/delinquency': () => ({
+    success: true,
+    data: {
+      totalDelinquent: 156,
+      avgDPD: 45,
+      recoveryRate: 72.4,
+      entries: generateMockDelinquencyEntries(),
+    },
+  }),
+
+  '/servicing/batches': () => ({
+    success: true,
+    data: [
+      { id: 'B-2026-0305', lender: 'HDFC Bank', month: 'Feb 2026', records: 1247, status: 'Processed', uploadDate: '2026-03-05T09:00:00Z' },
+      { id: 'B-2026-0228', lender: 'ICICI Bank', month: 'Feb 2026', records: 892, status: 'Processed', uploadDate: '2026-02-28T14:30:00Z' },
+      { id: 'B-2026-0225', lender: 'SBI', month: 'Feb 2026', records: 2134, status: 'Processed', uploadDate: '2026-02-25T11:00:00Z' },
+      { id: 'B-2026-0220', lender: 'Axis Bank', month: 'Jan 2026', records: 567, status: 'Processed', uploadDate: '2026-02-20T16:45:00Z' },
+      { id: 'B-2026-0215', lender: 'Kotak Mahindra', month: 'Jan 2026', records: 345, status: 'Error', uploadDate: '2026-02-15T10:20:00Z' },
+    ],
+  }),
+
+  // ── Audit Logs endpoint ──────────────────────────────────────
+  '/audit-logs': () => ({
+    success: true,
+    data: generateMockFieldAuditLogs(),
+  }),
 };
 
 export function getMockResponse(endpoint: string): any | null {
@@ -454,6 +608,43 @@ function matchDetailRoute(endpoint: string): any | null {
     return { success: true, data: [] };
   }
 
+  // Underwriting detail
+  match = endpoint.match(/^\/underwriting\/(UW-\d+)$/);
+  if (match) {
+    const records = generateMockUnderwriting();
+    const record = records.find(r => r.id === match![1]) || records[0];
+    return {
+      success: true,
+      data: {
+        ...record,
+        applicantName: ['Rajesh Kumar', 'Sunita Patel', 'Amit Singh', 'Neha Sharma', 'Vikram Reddy'][Math.floor(Math.random() * 5)],
+        loanAmount: Math.round(record.propertyValue * record.ltvRatio / 100),
+        aiRecommendation: {
+          decision: record.decision === 'Auto-Approve' ? 'Approve' : record.decision,
+          confidence: record.riskScore < 40 ? 92 : record.riskScore < 60 ? 74 : 61,
+          summary: `Based on comprehensive analysis of ${record.rulesApplied?.length || 3} underwriting rules, the application shows a ${record.riskScore < 40 ? 'low' : record.riskScore < 60 ? 'moderate' : 'high'} risk profile.`,
+          factors: [
+            { label: 'Credit Score', impact: (record.creditScore >= 700 ? 'positive' : 'negative') as 'positive' | 'negative', detail: `Score of ${record.creditScore}` },
+            { label: 'LTV Ratio', impact: (record.ltvRatio <= 75 ? 'positive' : 'negative') as 'positive' | 'negative', detail: `${record.ltvRatio}% LTV` },
+            { label: 'Income Adequacy', impact: 'positive' as const, detail: `Annual income ${record.income.toLocaleString()}` },
+            { label: 'Property Zone', impact: 'neutral' as const, detail: `${record.propertyZone} classification` },
+          ],
+        },
+        comments: [
+          { user: 'Priya Sharma', role: 'Underwriter', text: 'Credit score is strong. Reviewing property valuation.', time: '2 hrs ago' },
+          { user: 'Rahul Verma', role: 'Senior UW', text: 'Property valuation report received. Recommend proceeding with standard terms.', time: '1 hr ago' },
+        ],
+        timeline: [
+          { id: 'tl-1', title: 'Case Created', description: 'Application submitted via QDE', timestamp: '2026-03-01T09:00:00Z', status: 'success' },
+          { id: 'tl-2', title: 'DDE Completed', description: 'Data entry verified', timestamp: '2026-03-02T14:30:00Z', status: 'success' },
+          { id: 'tl-3', title: 'UW Assigned', description: 'Auto-assigned to Rahul Verma', timestamp: '2026-03-03T10:00:00Z', status: 'success' },
+          { id: 'tl-4', title: 'AI Analysis', description: `Risk score: ${record.riskScore}`, timestamp: '2026-03-04T11:15:00Z', status: 'info' },
+          { id: 'tl-5', title: 'Pending Decision', description: 'Awaiting underwriter review', timestamp: '2026-03-05T08:00:00Z', status: 'warning' },
+        ],
+      },
+    };
+  }
+
   return null;
 }
 
@@ -507,19 +698,28 @@ function generateMockCustomers() {
 function generateMockClaims() {
   const statuses = ['Filed', 'Under Review', 'Approved', 'Settled', 'Rejected'] as const;
   const types = ['Default', 'Property Damage', 'Fraud', 'Other'] as const;
-  return Array.from({ length: 15 }, (_, i) => ({
-    id: `CLM-${String(2001 + i).padStart(4, '0')}`,
-    policyId: `POL-${String(1001 + (i % 10)).padStart(4, '0')}`,
-    claimType: types[i % 4],
-    description: `Claim for ${types[i % 4].toLowerCase()} - case ${i + 1}`,
-    amount: 100000 + Math.floor(Math.random() * 500000),
-    status: statuses[i % 5],
-    filedDate: `2024-${String((i % 12) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`,
-    assignedTo: 'Rahul Verma',
-    documents: [],
-    createdBy: 'demo-user-001',
-    updatedAt: '2024-06-15T10:00:00Z',
-  }));
+  const npaCategories = ['Standard', 'Sub-Standard', 'Doubtful', 'Loss'] as const;
+  const adjStatuses = ['Investigation', 'Evaluation', 'Negotiation', 'Settlement'] as const;
+  return Array.from({ length: 15 }, (_, i) => {
+    const dpd = i < 5 ? 0 : [30, 45, 60, 90, 120, 150, 180][i % 7];
+    return {
+      id: `CLM-${String(2001 + i).padStart(4, '0')}`,
+      policyId: `POL-${String(1001 + (i % 10)).padStart(4, '0')}`,
+      claimType: types[i % 4],
+      description: `Claim for ${types[i % 4].toLowerCase()} - case ${i + 1}`,
+      amount: 100000 + Math.floor(Math.random() * 500000),
+      status: statuses[i % 5],
+      filedDate: `2024-${String((i % 12) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`,
+      assignedTo: 'Rahul Verma',
+      dpd,
+      npaCategory: dpd > 90 ? npaCategories[3] : dpd > 60 ? npaCategories[2] : dpd > 30 ? npaCategories[1] : npaCategories[0],
+      adjudicationStatus: i % 3 === 0 ? adjStatuses[i % 4] : undefined,
+      fraudScore: i % 4 === 2 ? 65 + (i * 3) : i % 5 === 0 ? 15 + i : undefined,
+      documents: [],
+      createdBy: 'demo-user-001',
+      updatedAt: '2024-06-15T10:00:00Z',
+    };
+  });
 }
 
 function generateMockBillingAccounts() {
@@ -1063,5 +1263,122 @@ function generateMockActivity() {
     actor: { userId: 'demo-user-001', userName: 'Akash Satyam' },
     summary: `${actions[i % 5].replace(/_/g, ' ')} by Akash Satyam`,
     timestamp: new Date(Date.now() - i * 7200000).toISOString(),
+  }));
+}
+
+function generateMockServiceDeskApplications() {
+  const lenders = ['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra'];
+  const stages = ['QDE', 'DDE', 'Underwriting', 'Decision', 'Issuance'] as const;
+  const statuses = ['In Progress', 'Pending', 'Review', 'Approved', 'Submitted'] as const;
+  const customers = ['Rajesh Kumar', 'Priya Mehta', 'Vikram Singh', 'Anita Desai', 'Suresh Reddy',
+    'Kavita Joshi', 'Manoj Tiwari', 'Deepa Nair', 'Rohit Malhotra', 'Suman Das',
+    'Arjun Rao', 'Meera Pillai', 'Karan Mehta', 'Sneha Reddy', 'Amit Patel'];
+  return Array.from({ length: 15 }, (_, i) => ({
+    id: `LN-2026-${String(891 - i).padStart(4, '0')}`,
+    customer: customers[i],
+    lender: lenders[i % 5],
+    amount: 2000000 + i * 500000,
+    stage: stages[i % 5],
+    status: statuses[i % 5],
+    date: new Date(Date.now() - i * 86400000).toISOString(),
+  }));
+}
+
+function generateMockFinanceInvoices() {
+  const lenders = ['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra'];
+  const types = ['Premium', 'Processing Fee', 'Guarantee Fee', 'Renewal Fee'];
+  const statuses = ['Paid', 'Pending', 'Overdue', 'Paid', 'Paid'] as const;
+  return Array.from({ length: 12 }, (_, i) => ({
+    id: `INV-2026-${String(1001 + i).padStart(4, '0')}`,
+    lender: lenders[i % 5],
+    dealId: `DL-${4500 + i}`,
+    type: types[i % 4],
+    amount: 50000 + i * 25000,
+    status: statuses[i % 5],
+    date: new Date(Date.now() - i * 86400000 * 3).toISOString(),
+  }));
+}
+
+function generateMockFinancePayments() {
+  const methods = ['NEFT', 'RTGS', 'UPI', 'Cheque', 'IMPS'];
+  const statuses = ['Completed', 'Completed', 'Processing', 'Completed', 'Failed'] as const;
+  return Array.from({ length: 10 }, (_, i) => ({
+    id: `PAY-2026-${String(5001 + i).padStart(4, '0')}`,
+    invoiceId: `INV-2026-${String(1001 + i).padStart(4, '0')}`,
+    amount: 50000 + i * 25000,
+    method: methods[i % 5],
+    status: statuses[i % 5],
+    processedDate: new Date(Date.now() - i * 86400000 * 2).toISOString(),
+  }));
+}
+
+function generateMockReconciliationEntries() {
+  const statuses = ['Matched', 'Matched', 'Unmatched', 'Pending', 'Matched'] as const;
+  return Array.from({ length: 10 }, (_, i) => ({
+    id: `REC-${String(7001 + i).padStart(4, '0')}`,
+    invoiceId: `INV-2026-${String(1001 + i).padStart(4, '0')}`,
+    paymentId: statuses[i % 5] !== 'Unmatched' ? `PAY-2026-${String(5001 + i).padStart(4, '0')}` : '—',
+    amount: 50000 + i * 25000,
+    status: statuses[i % 5],
+    date: new Date(Date.now() - i * 86400000).toISOString(),
+  }));
+}
+
+function generateMockNPA() {
+  const npaCategories = ['Sub-Standard', 'Doubtful', 'Loss', 'Sub-Standard', 'Doubtful'] as const;
+  const statuses = ['Active', 'Recovery', 'Written Off', 'Active', 'Recovery'] as const;
+  const customers = ['Ramesh Gupta', 'Sunita Devi', 'Harish Chandra', 'Pooja Verma', 'Rajiv Menon',
+    'Geeta Sharma', 'Mohan Lal', 'Nisha Patel', 'Vijay Kumar', 'Lakshmi Iyer'];
+  return Array.from({ length: 10 }, (_, i) => ({
+    loanId: `LN-2025-${String(500 + i).padStart(4, '0')}`,
+    customer: customers[i],
+    dpd: 30 + i * 15,
+    npaCategory: npaCategories[i % 5],
+    outstanding: 500000 + i * 250000,
+    status: statuses[i % 5],
+  }));
+}
+
+function generateMockDelinquencyEntries() {
+  const buckets = ['30-60 DPD', '60-90 DPD', '90-120 DPD', '120+ DPD'];
+  const statuses = ['Notice Sent', 'Follow Up', 'Legal', 'Recovery', 'Settled'] as const;
+  const customers = ['Anil Sharma', 'Bhavna Patel', 'Chetan Desai', 'Divya Nair', 'Eshan Reddy',
+    'Farhan Ali', 'Gauri Singh', 'Hemant Joshi', 'Isha Mehta', 'Jayant Rao'];
+  return Array.from({ length: 10 }, (_, i) => ({
+    loanId: `LN-2025-${String(600 + i).padStart(4, '0')}`,
+    customer: customers[i],
+    dpd: 35 + i * 12,
+    amount: 200000 + i * 100000,
+    bucket: buckets[Math.min(Math.floor(i / 3), 3)],
+    status: statuses[i % 5],
+  }));
+}
+
+function generateMockFieldAuditLogs() {
+  const modules = ['Policy', 'Claims', 'Underwriting', 'Finance', 'Servicing'];
+  const users = ['Akash Satyam', 'Priya Sharma', 'Rahul Verma', 'Sneha Patel', 'Amit Kumar'];
+  const changes = [
+    { field: 'Status', oldValue: 'Draft', newValue: 'Active', entityId: 'POL-1001' },
+    { field: 'Premium Amount', oldValue: '₹45,000', newValue: '₹52,000', entityId: 'POL-1003' },
+    { field: 'Claim Status', oldValue: 'Filed', newValue: 'Under Review', entityId: 'CLM-2001' },
+    { field: 'Risk Score', oldValue: '42', newValue: '38', entityId: 'UW-4005' },
+    { field: 'Payment Status', oldValue: 'Pending', newValue: 'Completed', entityId: 'PAY-5001' },
+    { field: 'NPA Category', oldValue: '', newValue: 'Sub-Standard', entityId: 'LN-2025-0500' },
+    { field: 'LTV Ratio', oldValue: '78%', newValue: '72%', entityId: 'LN-2026-0891' },
+    { field: 'Coverage Amount', oldValue: '₹50,00,000', newValue: '₹75,00,000', entityId: 'POL-1007' },
+    { field: 'Assigned To', oldValue: 'Priya Sharma', newValue: 'Kavita Joshi', entityId: 'UW-4002' },
+    { field: 'Deal Status', oldValue: 'Active', newValue: 'Closed', entityId: 'DL-4521' },
+    { field: 'CIBIL Score', oldValue: '710', newValue: '742', entityId: 'LN-2026-0891' },
+    { field: 'Invoice Amount', oldValue: '₹1,25,000', newValue: '₹1,30,000', entityId: 'INV-2026-1001' },
+    { field: 'Delinquency Bucket', oldValue: '30-60 DPD', newValue: '60-90 DPD', entityId: 'LN-2025-0600' },
+    { field: 'Policy Type', oldValue: 'Standard', newValue: 'Enhanced', entityId: 'POL-1012' },
+    { field: 'Claim Amount', oldValue: '₹2,50,000', newValue: '₹3,15,000', entityId: 'CLM-2004' },
+  ];
+  return changes.map((change, i) => ({
+    id: `AUD-${String(30001 + i).padStart(5, '0')}`,
+    timestamp: new Date(Date.now() - i * 3600000 * 3).toISOString(),
+    user: users[i % 5],
+    module: modules[i % 5],
+    ...change,
   }));
 }

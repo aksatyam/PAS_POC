@@ -64,10 +64,12 @@ export default function EnterpriseTopBar() {
           </div>
         </div>
 
-        {/* Environment badge */}
-        <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-accent-100 text-accent-700 dark:bg-accent-950 dark:text-accent-400 uppercase tracking-wider">
-          DEV
-        </span>
+        {/* Environment badge — only show in actual dev */}
+        {process.env.NODE_ENV === 'development' && (
+          <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-accent-100 text-accent-700 dark:bg-accent-950 dark:text-accent-400 uppercase tracking-wider">
+            DEV
+          </span>
+        )}
       </div>
 
       {/* Center: Global Search */}
@@ -77,7 +79,7 @@ export default function EnterpriseTopBar() {
           <input
             id="global-search"
             type="text"
-            placeholder="Search policies, customers, claims..."
+            placeholder="Search Policy ID, Customer, Claim, Loan..."
             className={cn(
               'w-full pl-9 pr-16 py-2 rounded-lg text-body-sm transition-all duration-micro',
               'bg-neutral-50 border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700',

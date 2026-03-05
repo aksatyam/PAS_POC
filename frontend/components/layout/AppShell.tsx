@@ -26,23 +26,37 @@ export function useAppShell() {
 
 /** Enterprise application shell with collapsible sidebar, top bar, and breadcrumb context bar. */
 export default function AppShell({ children }: { children: React.ReactNode }) {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsedState] = useState(false);
   const pathname = usePathname();
 
-  // Auto-collapse sidebar on mobile
+  // Wrap setSidebarCollapsed to persist to localStorage
+  const setSidebarCollapsed = useCallback((v: boolean) => {
+    setSidebarCollapsedState(v);
+    try { localStorage.setItem('sidebar-collapsed', JSON.stringify(v)); } catch {}
+  }, []);
+
+  // Restore sidebar state from localStorage on mount; auto-collapse on mobile
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 1024px)');
-    const handler = (e: MediaQueryListEvent | MediaQueryList) => {
-      if (e.matches) setSidebarCollapsed(true);
+    if (mq.matches) {
+      setSidebarCollapsedState(true);
+    } else {
+      try {
+        const saved = localStorage.getItem('sidebar-collapsed');
+        if (saved !== null) setSidebarCollapsedState(JSON.parse(saved));
+        // Default: expanded (false) — no change needed
+      } catch {}
+    }
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) setSidebarCollapsedState(true);
     };
-    handler(mq);
     mq.addEventListener('change', handler);
     return () => mq.removeEventListener('change', handler);
   }, []);
 
   const toggleSidebar = useCallback(() => {
-    setSidebarCollapsed((prev) => !prev);
-  }, []);
+    setSidebarCollapsed(!sidebarCollapsed);
+  }, [sidebarCollapsed, setSidebarCollapsed]);
 
   return (
     <AppShellContext.Provider value={{ sidebarCollapsed, setSidebarCollapsed, toggleSidebar }}>

@@ -10,7 +10,8 @@ import {
   LayoutDashboard, FileText, Users, Shield, AlertTriangle,
   FolderOpen, BarChart3, Settings, LogOut, BookOpen, CreditCard,
   ClipboardList, ShieldCheck, RefreshCw, Bell, Layers,
-  ChevronLeft, ChevronRight,
+  ChevronLeft, ChevronRight, Inbox, FileEdit, HardDriveUpload,
+  Landmark, Cog, ScrollText,
 } from 'lucide-react';
 
 interface NavItem {
@@ -25,13 +26,17 @@ interface NavItem {
 const navItems: NavItem[] = [
   // Core Operations
   { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, roles: ['Admin', 'Operations', 'Underwriter', 'Claims', 'Viewer'], group: 'core' },
+  { label: 'Service Desk', href: '/service-desk', icon: Inbox, roles: ['Admin', 'Operations', 'Underwriter'], group: 'core' },
+  { label: 'DDE', href: '/dde', icon: FileEdit, roles: ['Admin', 'Operations', 'Underwriter'], group: 'core' },
   { label: 'Policies', href: '/policies', icon: FileText, roles: ['Admin', 'Operations', 'Underwriter', 'Claims', 'Viewer'], group: 'core' },
   { label: 'Renewals', href: '/renewals', icon: RefreshCw, roles: ['Admin', 'Operations', 'Underwriter'], group: 'core' },
   { label: 'Customers', href: '/customers', icon: Users, roles: ['Admin', 'Operations', 'Underwriter', 'Claims', 'Viewer'], group: 'core' },
   { label: 'Underwriting', href: '/underwriting', icon: Shield, roles: ['Admin', 'Operations', 'Underwriter', 'Viewer'], group: 'core' },
   { label: 'Claims', href: '/claims', icon: AlertTriangle, roles: ['Admin', 'Operations', 'Claims', 'Viewer'], group: 'core' },
   { label: 'FNOL', href: '/claims/fnol', icon: Bell, roles: ['Admin', 'Operations', 'Claims'], group: 'core' },
+  { label: 'Servicing', href: '/servicing', icon: HardDriveUpload, roles: ['Admin', 'Operations'], group: 'core' },
   // Financial
+  { label: 'Finance', href: '/finance', icon: Landmark, roles: ['Admin', 'Operations', 'Viewer'], group: 'financial' },
   { label: 'Billing', href: '/billing', icon: CreditCard, roles: ['Admin', 'Operations', 'Viewer'], group: 'financial' },
   { label: 'Tasks', href: '/tasks', icon: ClipboardList, roles: ['Admin', 'Operations', 'Underwriter', 'Claims'], group: 'financial' },
   // Reports & Docs
@@ -39,6 +44,8 @@ const navItems: NavItem[] = [
   { label: 'Reports', href: '/reports', icon: BarChart3, roles: ['Admin', 'Operations', 'Underwriter', 'Claims', 'Viewer'], group: 'reports' },
   { label: 'Docs', href: '/documentation', icon: BookOpen, roles: ['Admin', 'Operations', 'Underwriter', 'Claims', 'Viewer'], group: 'reports' },
   // Administration
+  { label: 'Master Setup', href: '/master-setup', icon: Cog, roles: ['Admin'], group: 'admin' },
+  { label: 'Audit Logs', href: '/audit-logs', icon: ScrollText, roles: ['Admin'], group: 'admin' },
   { label: 'Compliance', href: '/admin/compliance', icon: ShieldCheck, roles: ['Admin'], group: 'admin' },
   { label: 'Admin', href: '/admin', icon: Settings, roles: ['Admin'], group: 'admin' },
 ];
@@ -72,8 +79,16 @@ export default function EnterpriseSidebar() {
         'max-lg:w-[72px]'
       )}
     >
-      {/* Collapse toggle */}
-      <div className="flex items-center justify-end px-3 py-2 max-lg:hidden">
+      {/* Branding + Collapse toggle */}
+      <div className="flex items-center justify-between px-3 py-3 max-lg:hidden border-b border-white/10 mb-1">
+        {!sidebarCollapsed && (
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+              <span className="text-white font-bold text-[8px]">IMGC</span>
+            </div>
+            <span className="text-body-sm font-semibold text-white tracking-wide">IMGC PAS</span>
+          </div>
+        )}
         <button
           onClick={toggleSidebar}
           className="p-1.5 rounded-md hover:bg-white/10 transition-colors duration-micro"
@@ -89,7 +104,7 @@ export default function EnterpriseSidebar() {
           <div key={group} className="mb-2">
             {/* Group label — hidden when collapsed */}
             {!sidebarCollapsed && (
-              <p className="px-4 py-1.5 text-overline text-white/40 max-lg:hidden">
+              <p className="px-4 py-1.5 text-[10px] uppercase tracking-widest font-semibold text-white/50 max-lg:hidden">
                 {groupLabels[group]}
               </p>
             )}
@@ -117,7 +132,7 @@ export default function EnterpriseSidebar() {
                   >
                     {/* Active indicator bar */}
                     {isActive && (
-                      <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 bg-white rounded-r-full" />
+                      <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-7 bg-orange-500 rounded-r-full" />
                     )}
 
                     <Icon size={18} className="flex-shrink-0" />

@@ -30,10 +30,10 @@ interface TabItem {
 interface TabsProps {
   /** Array of tab definitions. */
   tabs: TabItem[];
-  /** The currently active tab value (controlled mode). */
-  value: string;
-  /** Callback fired when the active tab changes. */
-  onChange: (value: string) => void;
+  /** The currently active tab value (controlled mode). Optional for uncontrolled mode. */
+  value?: string;
+  /** Callback fired when the active tab changes. Optional for uncontrolled mode. */
+  onChange?: (value: string) => void;
   /** Additional class names for the root container. */
   className?: string;
 }
@@ -68,10 +68,18 @@ interface TabsProps {
  * />
  * ```
  */
-function Tabs({ tabs, value, onChange, className }: TabsProps): ReactNode {
+function Tabs({ tabs, value: controlledValue, onChange, className }: TabsProps): ReactNode {
   const instanceId = useId();
   const tabListRef = useRef<HTMLDivElement>(null);
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
+  const [internalValue, setInternalValue] = useState<string>(tabs[0]?.value ?? '');
+
+  const isControlled = controlledValue !== undefined;
+  const value = isControlled ? controlledValue : internalValue;
+  const handleChange = useCallback((v: string) => {
+    if (!isControlled) setInternalValue(v);
+    onChange?.(v);
+  }, [isControlled, onChange]);
 
   const enabledTabs = tabs.filter((tab) => !tab.disabled);
   const activeTab = tabs.find((tab) => tab.value === value);
@@ -157,7 +165,7 @@ function Tabs({ tabs, value, onChange, className }: TabsProps): ReactNode {
 
       if (targetIndex !== null && targetIndex !== currentIndex) {
         event.preventDefault();
-        onChange(tabs[targetIndex].value);
+        handleChange(tabs[targetIndex].value);
         setFocusedIndex(targetIndex);
         focusTabAtIndex(targetIndex);
       }
@@ -165,7 +173,7 @@ function Tabs({ tabs, value, onChange, className }: TabsProps): ReactNode {
     [
       tabs,
       value,
-      onChange,
+      handleChange,
       findNextEnabledIndex,
       findFirstEnabledIndex,
       findLastEnabledIndex,
@@ -211,7 +219,7 @@ function Tabs({ tabs, value, onChange, className }: TabsProps): ReactNode {
               tabIndex={isActive ? 0 : -1}
               onClick={() => {
                 if (!isDisabled) {
-                  onChange(tab.value);
+                  handleChange(tab.value);
                   setFocusedIndex(index);
                 }
               }}

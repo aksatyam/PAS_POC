@@ -15,6 +15,9 @@ const statusIcons: Record<string, LucideIcon> = {
   'Auto-Approve': ShieldCheck, Refer: ShieldAlert, Reject: ShieldX,
   Low: ArrowDown, Medium: ArrowRight, High: ArrowUp,
   Verified: CheckCircle,
+  Investigation: FileSearch, Evaluation: Timer, Negotiation: ArrowRight, Settlement: CheckCircle,
+  Submitted: Send, Processing: RefreshCw, 'Claim Created': FileCheck,
+  Standard: CheckCircle, 'Sub-Standard': ShieldAlert, Doubtful: ShieldAlert, Loss: XCircle,
 };
 
 const pulseStatuses = new Set(['Under Review', 'Filed', 'Pending', 'Renewal_Pending', 'Quoted']);

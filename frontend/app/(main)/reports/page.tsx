@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
 import { formatCurrency } from '@/lib/utils';
 import { SkeletonChart, SkeletonKPICard } from '@/components/ui/Skeleton';
-import { FileText, AlertTriangle, Shield, CreditCard, TrendingUp, Download } from 'lucide-react';
+import { FileText, AlertTriangle, Shield, CreditCard, TrendingUp, Download, Play, Calendar, Users, BarChart3 } from 'lucide-react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Legend,
@@ -94,7 +94,10 @@ export default function ReportsPage() {
 
   return (
     <div className="animate-fade-in">
-      <h1 className="text-h1 font-bold text-neutral-900 dark:text-neutral-100">Reports</h1>
+      <div className="mb-2">
+        <h1 className="text-h1 font-bold text-neutral-900 dark:text-neutral-100">Reports</h1>
+        <p className="text-body-sm text-neutral-500 dark:text-neutral-400 mt-0.5">Analytics, KPIs, and report generation</p>
+      </div>
 
       {/* Date Filters */}
       <div className="flex flex-wrap gap-4 mb-6 items-end">
@@ -331,6 +334,42 @@ export default function ReportsPage() {
           )}
         </div>
       )}
+
+      {/* Report Templates */}
+      <div className="mt-8">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-body-sm font-semibold text-neutral-800 dark:text-neutral-200">Report Templates</h2>
+          <span className="text-small text-neutral-400">Quick-run pre-configured reports</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { name: 'Monthly Portfolio Summary', desc: 'Active policies, premium collected, claims ratio, and NPA status', icon: BarChart3, schedule: 'Monthly' },
+            { name: 'Claims Aging Report', desc: 'Outstanding claims grouped by DPD buckets with NPA classification', icon: Calendar, schedule: 'Weekly' },
+            { name: 'Underwriting Pipeline', desc: 'Pending evaluations, approval rates, and referral queue status', icon: Shield, schedule: 'Daily' },
+            { name: 'Premium Collection Report', desc: 'Collection efficiency, overdue accounts, and payment method breakdown', icon: CreditCard, schedule: 'Monthly' },
+            { name: 'Regulatory Compliance', desc: 'IRDAI-mandated metrics including solvency ratio and grievance resolution', icon: FileText, schedule: 'Quarterly' },
+            { name: 'Lender-wise Performance', desc: 'Portfolio performance segmented by lender with delinquency trends', icon: Users, schedule: 'Monthly' },
+          ].map((template) => (
+            <div key={template.name} className="bg-white dark:bg-neutral-800 rounded-xl shadow-elevation-1 border border-surface-border dark:border-neutral-700 p-4 hover:shadow-elevation-2 transition-shadow">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-accent-50 dark:bg-accent-950/30 flex items-center justify-center shrink-0">
+                  <template.icon size={18} className="text-accent-500" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-body-sm font-medium text-neutral-900 dark:text-neutral-100">{template.name}</h4>
+                  <p className="text-small text-neutral-500 dark:text-neutral-400 mt-0.5">{template.desc}</p>
+                  <div className="flex items-center justify-between mt-3">
+                    <span className="text-[10px] text-neutral-400 uppercase font-medium">{template.schedule}</span>
+                    <button className="flex items-center gap-1 px-2.5 py-1 text-small font-medium text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-950/30 hover:bg-accent-100 dark:hover:bg-accent-950/50 rounded-md transition-colors">
+                      <Play size={12} /> Run
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

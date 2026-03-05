@@ -132,7 +132,7 @@ export default function UnderwritingPage() {
     { key: 'decision', label: 'Decision', render: (row) => <StatusBadge status={row.decision} /> },
     { key: 'rulesApplied', label: 'Rules', render: (row) => <span className="text-small">{row.rulesApplied?.join(', ')}</span> },
     { key: 'overridden' as any, label: '', render: (row) => (
-      <button onClick={() => setShowDetail(row)} className="text-accent-600 hover:text-accent-800 dark:text-accent-400 dark:hover:text-accent-300"><Eye size={16} /></button>
+      <Link href={`/underwriting/${row.id}`} className="text-accent-600 hover:text-accent-800 dark:text-accent-400 dark:hover:text-accent-300"><Eye size={16} /></Link>
     )},
   ];
 

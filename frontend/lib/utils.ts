@@ -63,6 +63,11 @@ export const statusColors: Record<string, string> = {
   Evaluation: 'bg-indigo-100 text-indigo-800',
   Negotiation: 'bg-amber-100 text-amber-800',
   Settlement: 'bg-green-100 text-green-800',
+  // NPA categories
+  Standard: 'bg-green-100 text-green-800',
+  'Sub-Standard': 'bg-orange-100 text-orange-800',
+  Doubtful: 'bg-amber-100 text-amber-800',
+  Loss: 'bg-red-100 text-red-800',
   // Mitigation statuses
   Proposed: 'bg-gray-100 text-gray-800',
   Completed: 'bg-green-100 text-green-800',
