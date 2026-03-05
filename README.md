@@ -8,12 +8,15 @@ Enterprise-grade Policy Administration System for mortgage guarantee and credit 
 
 ## Features
 
-- **14+ Modules** — Dashboard, Policies, Renewals, Customers, Underwriting, Claims, FNOL, Billing, Tasks, Documents, Reports, Admin, Compliance, Docs
+- **20+ Modules** — Dashboard, Service Desk (QDE), DDE, Policies, Renewals, Customers, Underwriting, Claims, FNOL, Servicing, Finance, Billing, Tasks, Documents, Reports, Master Setup, Audit Logs, Admin, Compliance, Docs
 - **150+ API Endpoints** — Full REST API with Swagger documentation
 - **5 RBAC Roles** — Admin, Operations, Underwriter, Claims, Viewer
+- **Full Workflow Lifecycle** — QDE → DDE → Underwriting → Decision → Issuance
 - **Full Insurance Lifecycle** — Quote → Bind → Issue → Endorse → Renew → Cancel → Reinstate
 - **Claims Processing** — FNOL intake, reserves, fraud scoring, loss mitigation
-- **Automated Underwriting** — Rule engine, referral workflows, delegated authority
+- **Automated Underwriting** — Rule engine, referral workflows, delegated authority, AI recommendations
+- **Servicing & NPA** — File upload, NPA tracking, delinquency monitoring, premium checks
+- **Master Setup** — Lender, deal, scheme, pricing, template, role, workflow configuration
 - **Billing & Payments** — Invoicing, installment plans, ledger, aging reports
 - **Executive KPIs** — Loss ratio, combined ratio, retention rate, real-time dashboards
 
@@ -96,9 +99,10 @@ The frontend auto-deploys to GitHub Pages on every push to `main` via GitHub Act
 
 ## Documentation
 
-- **[APPLICATION_GUIDE.md](./APPLICATION_GUIDE.md)** — Complete enterprise application guide (modules, API reference, RBAC, data models, business flows)
-- **[GAP_ANALYSIS_REPORT.md](./GAP_ANALYSIS_REPORT.md)** — Full-stack audit report with findings and fixes
-- **[UX_PRODUCTION_GRADE_PROMPT.md](./UX_PRODUCTION_GRADE_PROMPT.md)** — Production UX enhancement specifications
+- **[docs/APPLICATION_GUIDE.md](./docs/APPLICATION_GUIDE.md)** — Complete enterprise application guide (modules, API reference, RBAC, data models, business flows)
+- **[docs/GAP_ANALYSIS_REPORT.md](./docs/GAP_ANALYSIS_REPORT.md)** — Full-stack audit report with findings and fixes
+- **[docs/IMPROVEMENT_PLAN.md](./docs/IMPROVEMENT_PLAN.md)** — Reference site comparison and improvement plan (all items completed)
+- **[docs/UX_PRODUCTION_GRADE_PROMPT.md](./docs/UX_PRODUCTION_GRADE_PROMPT.md)** — Production UX enhancement specifications
 
 ---
 
@@ -116,8 +120,8 @@ pas-prototype/
 ├── frontend/              # Next.js 14 application
 │   ├── app/
 │   │   ├── (auth)/        # Public routes (login)
-│   │   └── (main)/        # Protected routes (14+ modules)
-│   ├── components/        # Reusable UI components (39+)
+│   │   └── (main)/        # Protected routes (20+ modules)
+│   ├── components/        # Reusable UI components (45+)
 │   ├── lib/               # API client, auth, utilities, mock data
 │   └── types/             # TypeScript type definitions
 ├── .github/workflows/     # GitHub Actions CI/CD

@@ -28,7 +28,14 @@
    - 6.12 [Reports & Analytics](#612-reports--analytics)
    - 6.13 [Administration](#613-administration)
    - 6.14 [Compliance](#614-compliance)
+   - 6.15 [Service Desk (QDE)](#615-service-desk-qde)
+   - 6.16 [DDE (Detailed Data Entry)](#616-dde-detailed-data-entry)
+   - 6.17 [Finance](#617-finance)
+   - 6.18 [Servicing](#618-servicing)
+   - 6.19 [Master Setup](#619-master-setup)
+   - 6.20 [Audit Logs](#620-audit-logs)
 7. [End-to-End Business Flows](#7-end-to-end-business-flows)
+   - 7.0 [Loan Application Workflow (QDE → Issuance)](#70-loan-application-workflow-qde--issuance)
    - 7.1 [Policy Lifecycle Flow](#71-policy-lifecycle-flow)
    - 7.2 [Claims Processing Flow](#72-claims-processing-flow)
    - 7.3 [FNOL to Claim Settlement Flow](#73-fnol-to-claim-settlement-flow)
@@ -62,6 +69,12 @@ The IMGC Policy Administration System (PAS) is an enterprise-grade insurance pol
 | **Notifications** | Event-driven in-app notifications, real-time bell with unread count |
 | **Reporting** | Executive KPIs, date-filtered reports, CSV export, role-based dashboards |
 | **Compliance** | Regulatory requirement tracking, status monitoring, deadline management |
+| **Service Desk (QDE)** | Multi-step loan application wizard, auto allocation, draft management |
+| **DDE** | Detailed data entry workspace, metric cards, document checklists, eligibility |
+| **Finance** | Invoicing, payments, reconciliation, revenue tracking |
+| **Servicing** | File upload, NPA tracking, delinquency monitoring, premium checks |
+| **Master Setup** | 14 configuration areas: lender, deal, scheme, pricing, templates, roles, workflows |
+| **Audit Logs** | Field-level change tracking, module filtering, date range, export |
 | **Administration** | User CRUD, RBAC (5 roles), audit logs, API key management, webhooks |
 
 ### Supported Insurance Products
@@ -996,7 +1009,180 @@ DELETE /api/v1/compliance/requirements/:id      — Delete requirement
 
 ---
 
+### 6.15 Service Desk (QDE)
+
+**Route:** `/service-desk`
+**Access:** Admin, Operations
+**Purpose:** Quick Data Entry for new loan/guarantee applications with multi-step wizard
+
+#### Features
+- **Add New Loan**: 5-step wizard (Loan Basic → Applicant Details → Loan Characteristics → Obligations → Verification)
+- **Auto Allocation**: Rules-based assignment of applications to underwriters
+- **QDE Search**: Search existing QDE applications by ID, customer, or status
+- **User Dashboard**: Personal queue showing assigned and pending items
+- **Draft Auto-Save**: Applications saved as drafts with timestamp indicator
+- **Workflow Progress**: Visual QDE → DDE → Underwriting → Decision → Issuance progress bar
+
+#### Mock Data Endpoints
+```
+GET    /api/v1/service-desk/applications       — List QDE applications
+GET    /api/v1/service-desk/allocations        — Auto allocation rules
+GET    /api/v1/service-desk/search             — Search applications
+```
+
+---
+
+### 6.16 DDE (Detailed Data Entry)
+
+**Route:** `/dde`
+**Access:** Admin, Operations
+**Purpose:** Detailed data entry workspace for loan applications with comprehensive metrics and document management
+
+#### Features
+- **Loan Header Bar**: Key identifiers (Loan ID, Lender, Deal ID, Employment Type, Outstanding)
+- **Workflow Progress**: 5-step horizontal progress indicator
+- **Key Metrics**: 4 metric cards (LTV ratio, FOIR, CIBIL Score, EMI/NMI ratio) with check/alert icons
+- **Tabbed Data Entry**: 6 tabs (Loan Chars, General Data, Employment, Income Details, Banking, Obligations)
+- **Documents Sidebar**: Document checklist with Approved/Pending status per document
+- **Eligibility Sidebar**: Max Eligible, Applied, Buffer amounts
+- **Remarks/Case Notes**: Notes textarea with save functionality
+- **Sticky Footer**: Save + Submit to Underwriting action buttons
+
+#### Mock Data Endpoints
+```
+GET    /api/v1/dde/loan-details                — Loan detail data
+GET    /api/v1/dde/documents-checklist         — Documents status
+GET    /api/v1/dde/eligibility                 — Eligibility calculation
+```
+
+---
+
+### 6.17 Finance
+
+**Route:** `/finance`
+**Access:** Admin, Operations
+**Purpose:** Financial management including invoicing, payments, and reconciliation
+
+#### Features
+- **KPI Cards**: Total Revenue, Outstanding, Collected, Reconciled percentage
+- **Invoices Tab**: Invoice table with ID, Lender, Deal, Type, Amount, Status, Date columns
+- **Payments Tab**: Payment records with method, reference, and status tracking
+- **Reconciliation Tab**: Bank reconciliation with match status and variance tracking
+- **Generate Invoice**: Action button for new invoice creation
+
+#### Mock Data Endpoints
+```
+GET    /api/v1/finance/summary                 — Finance KPI summary
+GET    /api/v1/finance/invoices                — Invoice listing
+GET    /api/v1/finance/payments                — Payment records
+GET    /api/v1/finance/reconciliation          — Reconciliation data
+```
+
+---
+
+### 6.18 Servicing
+
+**Route:** `/servicing`
+**Access:** Admin, Operations
+**Purpose:** Loan servicing data management including file uploads, NPA tracking, and delinquency monitoring
+
+#### Features
+- **File Upload**: Servicing file upload with Lender Name, Month, Batch Received Date, Batch ID
+- **Data Analysis**: Uploaded file analysis results with validation status
+- **NPA Tracking**: Non-Performing Asset tracking with NPA status, classification, and provisioning
+- **Premium Check**: Premium payment verification and status
+- **Delinquency**: Delinquency metrics with DPD buckets and trend analysis
+
+#### Mock Data Endpoints
+```
+GET    /api/v1/servicing/batches               — Batch upload history
+GET    /api/v1/servicing/npa-tracking          — NPA status records
+GET    /api/v1/servicing/delinquency           — Delinquency metrics
+```
+
+---
+
+### 6.19 Master Setup
+
+**Route:** `/master-setup`
+**Access:** Admin
+**Purpose:** System configuration and master data management
+
+#### Features
+- **Configuration Cards**: 14 clickable configuration areas in responsive grid
+  - Lender Setup, Deal Setup, Scheme Setup, Pricing Upload
+  - Template Management, Role Management, Workflow Config, Builder/Project Master
+  - City Classification, Vendor Mapping, Deviation Master, Collateral Master
+  - Regulatory Compliance, System Settings
+- Each card shows: icon, title, description, record count
+
+#### Mock Data Endpoints
+```
+GET    /api/v1/master-setup/configurations     — Configuration card data
+```
+
+---
+
+### 6.20 Audit Logs
+
+**Route:** `/audit-logs`
+**Access:** Admin
+**Purpose:** Comprehensive field-level audit trail with change tracking
+
+#### Features
+- **Field-Level Change Tracking**: Old → New value display with visual diff (red strikethrough → green new)
+- **Module Filter**: Dropdown filter by module (Underwriting, DDE, QDE, Workflow, etc.)
+- **Date Range Filter**: Filter logs by date range
+- **Search**: Free-text search across all log fields
+- **Export Logs**: CSV export of filtered audit data
+- **Table Columns**: Timestamp, User, Module, Field, Old Value, New Value, Record ID
+
+#### Mock Data Endpoints
+```
+GET    /api/v1/audit-logs/logs                 — Audit log entries
+GET    /api/v1/audit-logs/field-changes        — Field-level changes
+```
+
+---
+
 ## 7. End-to-End Business Flows
+
+### 7.0 Loan Application Workflow (QDE → Issuance)
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                QDE → DDE → UNDERWRITING → DECISION → ISSUANCE│
+│                                                              │
+│  ┌─────────┐    ┌─────────┐    ┌──────────────┐             │
+│  │   QDE   │───▶│   DDE   │───▶│ Underwriting │             │
+│  │(Service │    │(Detail  │    │ (Risk Eval,  │             │
+│  │  Desk)  │    │  Data   │    │  AI Recom,   │             │
+│  │         │    │  Entry) │    │  BRE Check)  │             │
+│  └─────────┘    └─────────┘    └──────┬───────┘             │
+│                                        │                     │
+│                              ┌─────────▼─────────┐          │
+│                              │     Decision       │          │
+│                              │ Approve/Reject/    │          │
+│                              │ Defer/Query/       │          │
+│                              │ Send Back          │          │
+│                              └─────────┬──────────┘          │
+│                                        │ (if Approved)       │
+│                              ┌─────────▼─────────┐          │
+│                              │     Issuance       │          │
+│                              │ Policy/Guarantee   │          │
+│                              │    Generated       │          │
+│                              └────────────────────┘          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+**Steps:**
+1. **QDE (Service Desk)**: Quick data entry — basic loan/borrower info captured via 5-step wizard
+2. **DDE (Detailed Data Entry)**: Comprehensive data entry with 6 tabs, document verification, eligibility check
+3. **Underwriting**: Risk evaluation with AI recommendation, BRE check, metric analysis (LTV, FOIR, CIBIL, EMI/NMI)
+4. **Decision**: Underwriter makes decision — Approve, Reject, Defer, Query to Lender, Send Back, or Raise Deviation
+5. **Issuance**: Upon approval, policy/guarantee certificate is generated
+
+---
 
 ### 7.1 Policy Lifecycle Flow
 

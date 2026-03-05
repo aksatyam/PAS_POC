@@ -2,6 +2,7 @@
 
 > Based on comprehensive audit of reference site (imgcpas.lovable.app) vs current project (aksatyam.github.io/PAS_POC/)
 > Date: March 5, 2026
+> **Status: ALL ITEMS COMPLETED** — All ~60 action items implemented across 10 batches on March 5, 2026.
 
 ---
 
@@ -24,11 +25,11 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Section headers styled differently (gray, uppercase)
 
 ### Action Items
-- [ ] **1.1** Make sidebar expanded by default with icon + text visible
-- [ ] **1.2** Add section group headers ("Operations", "Administration") with muted uppercase styling
-- [ ] **1.3** Add active page highlight with left orange border accent (reference uses dark bg + orange left border)
-- [ ] **1.4** Add collapsible sidebar toggle that remembers state via localStorage
-- [ ] **1.5** Add IMGC PAS logo/branding in sidebar header area
+- [x] **1.1** Make sidebar expanded by default with icon + text visible
+- [x] **1.2** Add section group headers ("Operations", "Administration") with muted uppercase styling
+- [x] **1.3** Add active page highlight with left orange border accent (reference uses dark bg + orange left border)
+- [x] **1.4** Add collapsible sidebar toggle that remembers state via localStorage
+- [x] **1.5** Add IMGC PAS logo/branding in sidebar header area
 
 ---
 
@@ -46,10 +47,10 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - User avatar with initials circle + name/role + dropdown chevron
 
 ### Action Items
-- [ ] **2.1** Update search placeholder to be more domain-specific: "Search Policy ID, Customer, Claim..."
-- [ ] **2.2** Ensure notification bell shows count badge (red circle) when there are unread notifications
-- [ ] **2.3** Remove "DEV" badge for production/demo deployment (or make it environment-aware)
-- [ ] **2.4** Add user initials avatar circle (colored) matching reference style
+- [x] **2.1** Update search placeholder to be more domain-specific: "Search Policy ID, Customer, Claim..."
+- [x] **2.2** Ensure notification bell shows count badge (red circle) when there are unread notifications
+- [x] **2.3** Remove "DEV" badge for production/demo deployment (or make it environment-aware)
+- [x] **2.4** Add user initials avatar circle (colored) matching reference style
 
 ---
 
@@ -68,19 +69,19 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Recent Applications table with clickable rows
 
 ### Action Items
-- [ ] **3.1** Add **Alerts & Notifications** panel with color-coded severity (red/amber/green icons)
+- [x] **3.1** Add **Alerts & Notifications** panel with color-coded severity (red/amber/green icons)
   - SLA breach alerts
   - High-risk pending items
   - Batch processing status
-- [ ] **3.2** Add **Recent Applications** table showing latest 5 entries with:
+- [x] **3.2** Add **Recent Applications** table showing latest 5 entries with:
   - Loan/Policy ID (clickable link)
   - Customer name
   - Amount
   - Status badge (color-coded)
   - Date
-- [ ] **3.3** Add trend indicators (+/-%) to KPI cards (reference shows "+12% from last month")
-- [ ] **3.4** Add icons to stat cards (reference has colored icons in top-right of each card)
-- [ ] **3.5** Add "Export" and "New Application" buttons to dashboard header
+- [x] **3.3** Add trend indicators (+/-%) to KPI cards (reference shows "+12% from last month")
+- [x] **3.4** Add icons to stat cards (reference has colored icons in top-right of each card)
+- [x] **3.5** Add "Export" and "New Application" buttons to dashboard header
 
 ---
 
@@ -98,18 +99,18 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Previous/Save Draft/Next navigation
 
 ### Action Items
-- [ ] **4.1** Create new page `/service-desk` with tab-based layout
-- [ ] **4.2** Implement **5-step wizard form** with:
+- [x] **4.1** Create new page `/service-desk` with tab-based layout
+- [x] **4.2** Implement **5-step wizard form** with:
   - Step progress bar (checkmark for completed, number for current/pending)
   - Step 1: Loan Basic details
   - Step 2: Applicant Details (Borrower info, Address, IMGC details)
   - Step 3: Loan Characteristics
   - Step 4: Obligations
   - Step 5: Verification
-- [ ] **4.3** Add "Draft" status indicator with auto-save timestamp
-- [ ] **4.4** Add "Auto Allocation" tab with allocation rules/queue
-- [ ] **4.5** Add "QDE Search" tab with search functionality
-- [ ] **4.6** Add "User Dashboard" tab showing user's assigned items
+- [x] **4.3** Add "Draft" status indicator with auto-save timestamp
+- [x] **4.4** Add "Auto Allocation" tab with allocation rules/queue
+- [x] **4.5** Add "QDE Search" tab with search functionality
+- [x] **4.6** Add "User Dashboard" tab showing user's assigned items
 
 ---
 
@@ -128,15 +129,15 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Footer: Last modified info, Save + Submit to Underwriting buttons
 
 ### Action Items
-- [ ] **5.1** Create new page `/dde` with loan detail view
-- [ ] **5.2** Add **loan header bar** showing key identifiers
-- [ ] **5.3** Add **workflow progress indicator** (5 stages with checkmarks)
-- [ ] **5.4** Add **4 metric cards** (LTV, FOIR, CIBIL/Credit Score, EMI/NMI ratio)
-- [ ] **5.5** Implement **tabbed data entry form** with 6 tabs
-- [ ] **5.6** Add **Documents sidebar** with checklist (document name + Approved/Pending status)
-- [ ] **5.7** Add **Eligibility sidebar** showing Max Eligible, Applied, Buffer amounts
-- [ ] **5.8** Add **Remarks/Case Notes** textarea with save button
-- [ ] **5.9** Add sticky footer with "Save" + "Submit to Underwriting" actions
+- [x] **5.1** Create new page `/dde` with loan detail view
+- [x] **5.2** Add **loan header bar** showing key identifiers
+- [x] **5.3** Add **workflow progress indicator** (5 stages with checkmarks)
+- [x] **5.4** Add **4 metric cards** (LTV, FOIR, CIBIL/Credit Score, EMI/NMI ratio)
+- [x] **5.5** Implement **tabbed data entry form** with 6 tabs
+- [x] **5.6** Add **Documents sidebar** with checklist (document name + Approved/Pending status)
+- [x] **5.7** Add **Eligibility sidebar** showing Max Eligible, Applied, Buffer amounts
+- [x] **5.8** Add **Remarks/Case Notes** textarea with save button
+- [x] **5.9** Add sticky footer with "Save" + "Submit to Underwriting" actions
 
 ---
 
@@ -159,18 +160,18 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
   - Action buttons: Send Back, Raise Deviation, Defer, Query to Lender, Reject, Approve
 
 ### Action Items
-- [ ] **6.1** Create **UW Workspace** detail page with loan-level view
-- [ ] **6.2** Add **AI Recommendation panel** with:
+- [x] **6.1** Create **UW Workspace** detail page with loan-level view
+- [x] **6.2** Add **AI Recommendation panel** with:
   - Recommendation text (Conditional Approve / Approve / Reject)
   - Confidence percentage
   - Number of factors analyzed
   - BRE status (Passed/Failed)
-- [ ] **6.3** Add **Comment History / Action Log** table (user, timestamp, status, action type)
-- [ ] **6.4** Add **Internal Notes** sidebar with note input + history
-- [ ] **6.5** Add **Flag Case** dropdown (fraud, high-risk, escalation, etc.)
-- [ ] **6.6** Add **Timeline** component (vertical timeline with icons)
-- [ ] **6.7** Add action buttons bar: Send Back, Raise Deviation, Defer, Query, Reject, Approve
-- [ ] **6.8** Add multi-tab data view (at least Summary, Loan Chars, Income, CIBIL tabs)
+- [x] **6.3** Add **Comment History / Action Log** table (user, timestamp, status, action type)
+- [x] **6.4** Add **Internal Notes** sidebar with note input + history
+- [x] **6.5** Add **Flag Case** dropdown (fraud, high-risk, escalation, etc.)
+- [x] **6.6** Add **Timeline** component (vertical timeline with icons)
+- [x] **6.7** Add action buttons bar: Send Back, Raise Deviation, Defer, Query, Reject, Approve
+- [x] **6.8** Add multi-tab data view (at least Summary, Loan Chars, Income, CIBIL tabs)
 
 ---
 
@@ -188,10 +189,10 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Search with filters
 
 ### Action Items
-- [ ] **7.1** Add **tab-based layout** to Claims page (at minimum: Search, Documentation, Verification, Recommendation, Payment)
-- [ ] **7.2** Add **Claim Type** column (Initial, Subsequent, Crystallization)
-- [ ] **7.3** Add **DPD** (Days Past Due) and **NPA** columns
-- [ ] **7.4** Add **Filters** button with filter panel
+- [x] **7.1** Add **tab-based layout** to Claims page (at minimum: Search, Documentation, Verification, Recommendation, Payment)
+- [x] **7.2** Add **Claim Type** column (Initial, Subsequent, Crystallization)
+- [x] **7.3** Add **DPD** (Days Past Due) and **NPA** columns
+- [x] **7.4** Add **Filters** button with filter panel
 
 ---
 
@@ -206,11 +207,11 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Export button + Upload Servicing File button
 
 ### Action Items
-- [ ] **8.1** Create new page `/servicing` with tab-based layout
-- [ ] **8.2** Implement **File Upload** tab with lender/month/batch form
-- [ ] **8.3** Add **NPA Tracking** tab with NPA status table
-- [ ] **8.4** Add **Delinquency** tab with delinquency metrics
-- [ ] **8.5** Add **Data Analysis** tab with uploaded file analysis results
+- [x] **8.1** Create new page `/servicing` with tab-based layout
+- [x] **8.2** Implement **File Upload** tab with lender/month/batch form
+- [x] **8.3** Add **NPA Tracking** tab with NPA status table
+- [x] **8.4** Add **Delinquency** tab with delinquency metrics
+- [x] **8.5** Add **Data Analysis** tab with uploaded file analysis results
 
 ---
 
@@ -226,11 +227,11 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - "Generate Invoice" button
 
 ### Action Items
-- [ ] **9.1** Create new page `/finance` or enhance existing Billing page
-- [ ] **9.2** Add 4 finance KPI cards (Revenue, Outstanding, Collected, Reconciled %)
-- [ ] **9.3** Add tab-based layout with at least: Invoices, Payments, Reconciliation
-- [ ] **9.4** Add invoice table with proper columns
-- [ ] **9.5** Add "Generate Invoice" action button
+- [x] **9.1** Create new page `/finance` or enhance existing Billing page
+- [x] **9.2** Add 4 finance KPI cards (Revenue, Outstanding, Collected, Reconciled %)
+- [x] **9.3** Add tab-based layout with at least: Invoices, Payments, Reconciliation
+- [x] **9.4** Add invoice table with proper columns
+- [x] **9.5** Add "Generate Invoice" action button
 
 ---
 
@@ -248,13 +249,13 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Each card: icon, title, description, record count
 
 ### Action Items
-- [ ] **10.1** Create new page `/master-setup` with card grid layout
-- [ ] **10.2** Add at least 8-10 configuration cards with:
+- [x] **10.1** Create new page `/master-setup` with card grid layout
+- [x] **10.2** Add at least 8-10 configuration cards with:
   - Icon (from Lucide React)
   - Title
   - Description
   - Record count in orange text
-- [ ] **10.3** Make cards clickable (link to detail/sub-pages)
+- [x] **10.3** Make cards clickable (link to detail/sub-pages)
 
 ---
 
@@ -272,12 +273,12 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Visual diff display (old value in red → new value in green)
 
 ### Action Items
-- [ ] **11.1** Create dedicated `/audit-logs` page (separate from Admin)
-- [ ] **11.2** Add **field-level change tracking** with old → new value display
-- [ ] **11.3** Add **module filter** dropdown (Underwriting, DDE, QDE, Workflow, etc.)
-- [ ] **11.4** Add **date range** filter
-- [ ] **11.5** Add **Export Logs** button
-- [ ] **11.6** Style change values: old value with strikethrough in red, new value in green
+- [x] **11.1** Create dedicated `/audit-logs` page (separate from Admin)
+- [x] **11.2** Add **field-level change tracking** with old → new value display
+- [x] **11.3** Add **module filter** dropdown (Underwriting, DDE, QDE, Workflow, etc.)
+- [x] **11.4** Add **date range** filter
+- [x] **11.5** Add **Export Logs** button
+- [x] **11.6** Style change values: old value with strikethrough in red, new value in green
 
 ---
 
@@ -293,22 +294,22 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Report Templates section with "Run" buttons
 
 ### Action Items
-- [ ] **12.1** Add **Report Templates** section with predefined reports and "Run" buttons
-- [ ] **12.2** Add more summary cards with icons
-- [ ] **12.3** Add "Filters" button for date/lender filtering
+- [x] **12.1** Add **Report Templates** section with predefined reports and "Run" buttons
+- [x] **12.2** Add more summary cards with icons
+- [x] **12.3** Add "Filters" button for date/lender filtering
 
 ---
 
 ## 13. UI/UX POLISH (Priority: MEDIUM)
 
 ### Action Items
-- [ ] **13.1** **Color scheme alignment**: Consider switching from yellow/amber accent to orange (#F97316) to match IMGC branding
-- [ ] **13.2** **Status badges**: Standardize colored dot + text badges (green=Approved, amber=Pending, red=Rejected, blue=In Review)
-- [ ] **13.3** **Table row hover**: Ensure all tables have cursor:pointer and hover highlight for clickable rows
-- [ ] **13.4** **Empty states**: Add meaningful empty state illustrations/messages for pages with no data
-- [ ] **13.5** **Loading skeletons**: Add skeleton loaders for all data-fetching components
-- [ ] **13.6** **Breadcrumbs**: Ensure all pages have proper breadcrumb navigation (current has this, keep it)
-- [ ] **13.7** **Favicon**: Fix the 404 error for favicon.ico
+- [x] **13.1** **Color scheme alignment**: Consider switching from yellow/amber accent to orange (#F97316) to match IMGC branding
+- [x] **13.2** **Status badges**: Standardize colored dot + text badges (green=Approved, amber=Pending, red=Rejected, blue=In Review)
+- [x] **13.3** **Table row hover**: Ensure all tables have cursor:pointer and hover highlight for clickable rows
+- [x] **13.4** **Empty states**: Add meaningful empty state illustrations/messages for pages with no data
+- [x] **13.5** **Loading skeletons**: Add skeleton loaders for all data-fetching components
+- [x] **13.6** **Breadcrumbs**: Ensure all pages have proper breadcrumb navigation (current has this, keep it)
+- [x] **13.7** **Favicon**: Fix the 404 error for favicon.ico
 
 ---
 
@@ -323,10 +324,10 @@ The reference site is a **loan-centric mortgage guarantee** platform with a stre
 - Appears on Service Desk, DDE, and Underwriting pages
 
 ### Action Items
-- [ ] **14.1** Create reusable **WorkflowProgress** component
-- [ ] **14.2** Support states: completed (green checkmark), active (orange number), pending (gray number)
-- [ ] **14.3** Connect steps with progress lines (green for completed path, gray for pending)
-- [ ] **14.4** Add to Service Desk, DDE, and Underwriting pages
+- [x] **14.1** Create reusable **WorkflowProgress** component
+- [x] **14.2** Support states: completed (green checkmark), active (orange number), pending (gray number)
+- [x] **14.3** Connect steps with progress lines (green for completed path, gray for pending)
+- [x] **14.4** Add to Service Desk, DDE, and Underwriting pages
 
 ---
 

@@ -1,9 +1,9 @@
 # PAS Enterprise — Production-Grade UX Enhancement Prompt
 
 ## Context
-You are working on a **Policy Administration System (PAS)** prototype built with Next.js 14, React 18, TypeScript, Tailwind CSS, Recharts, and Lucide icons. The backend is Express.js with JSON file-based persistence. The app has 15+ pages across modules: Dashboard, Policies, Renewals, Customers, Underwriting, Claims, FNOL, Billing, Tasks, Documents, Reports, Admin, Compliance, and Documentation.
+You are working on a **Policy Administration System (PAS)** prototype built with Next.js 14, React 18, TypeScript, Tailwind CSS, Recharts, and Lucide icons. The backend is Express.js with JSON file-based persistence. The app has 20+ modules and 34 pages across: Dashboard, Service Desk (QDE), DDE, Policies, Renewals, Customers, Underwriting, Claims, FNOL, Servicing, Finance, Billing, Tasks, Documents, Reports, Master Setup, Audit Logs, Admin, Compliance, and Documentation.
 
-The current UI is functional but has **prototype-level UX**. Your job is to transform it into **production-grade, enterprise-class UX** — the kind you'd see in Guidewire PolicyCenter, Duck Creek, Salesforce, or modern fintech dashboards.
+The current UI is functional with **enterprise-level UX** enhancements completed per the IMPROVEMENT_PLAN.md (all ~60 items). The system now includes 20+ modules with 34 pages across 27+ routes, including new pages for Service Desk (QDE), DDE, Finance, Servicing, Master Setup, and Audit Logs. The remaining items below are further polish opportunities to reach **production-grade, enterprise-class UX** — the kind you'd see in Guidewire PolicyCenter, Duck Creek, Salesforce, or modern fintech dashboards.
 
 ---
 
@@ -368,8 +368,8 @@ The current UI is functional but has **prototype-level UX**. Your job is to tran
 After completing enhancements:
 - [ ] `cd frontend && npx next build` — 0 errors, all pages compile
 - [ ] `cd backend && npx tsc --noEmit` — 0 type errors
-- [ ] All 15+ pages render correctly in light mode
-- [ ] All 15+ pages render correctly in dark mode
+- [ ] All 34 pages render correctly in light mode
+- [ ] All 34 pages render correctly in dark mode
 - [ ] No console errors in browser dev tools
 - [ ] Currency shows ₹ consistently across all pages
 - [ ] No "undefined" values in any charts or displays
